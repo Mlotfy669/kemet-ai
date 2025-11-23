@@ -5,8 +5,8 @@ import { useTransition } from "react";
 import { useRouter, usePathname } from "@/i18n/routing";
 
 const languages = [
-  { code: "en", name: "English", flag: "🇺🇸" },
-  { code: "ar", name: "العربية", flag: "🇸🇦" },
+  { code: "en", name: "English"},
+  { code: "ar", name: "العربية"},
 ];
 
 export function LanguageSwitcher() {
@@ -25,7 +25,7 @@ export function LanguageSwitcher() {
 
   return (
     <div className="flex items-center gap-2">
-      {languages.map((lang) => (
+      {/* {languages.map((lang) => (
         <button
           key={lang.code}
           onClick={() => handleLanguageChange(lang.code)}
@@ -37,10 +37,9 @@ export function LanguageSwitcher() {
           } disabled:opacity-50`}
           aria-label={`Switch to ${lang.name}`}
         >
-          <span className="mr-2">{lang.flag}</span>
           {lang.code.toUpperCase()}
         </button>
-      ))}
+      ))} */}
     </div>
   );
 }

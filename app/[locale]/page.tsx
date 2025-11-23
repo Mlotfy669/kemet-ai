@@ -1,5 +1,5 @@
 import { setRequestLocale } from "next-intl/server";
-import { Navbar } from "@/components/layout/navbar";
+import Navbar from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { HeroSection } from "@/components/sections/hero-section";
 import { BrandsTrustSection } from "@/components/sections/brands-trust-section";

@@ -5,40 +5,42 @@ import Link from "next/link";
 import { useLocale } from "next-intl";
 import Image from "next/image";
 
+import heroBgFrame1 from "@/public/assets/shared/heroBgFrame1.webp";
+import heroBgFrame2 from "@/public/assets/shared/heroBgFrame2.webp";
+import heroBgFrame3 from "@/public/assets/shared/heroBgFrame3.webp";
+
 export function HeroSection() {
   const locale = useLocale();
 
   return (
-    <section className="relative min-h-[90vh] overflow-hidden bg-gradient-to-br from-[#0a0e27] via-[#1e293b] to-[#0f766e]">
-      {/* Decorative Elements */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute left-10 top-20 h-64 w-64 rounded-full bg-kemet-teal/20 blur-3xl" />
-        <div className="absolute bottom-20 right-10 h-64 w-64 rounded-full bg-kemet-purple/20 blur-3xl" />
-      </div>
-
-      <div className="container relative mx-auto px-6 py-20 lg:py-32">
-        <div className="grid items-center gap-12 lg:grid-cols-2">
-          {/* Left Content */}
+    <section className="relative h-screen overflow-hidden bg-[url('@/public/assets/shared/heroBg.webp')] bg-cover bg-center bg-no-repeat">
+      <div className="h-18 container" />
+      <Image src={heroBgFrame1} alt="Hero Background Frame 1" className="absolute bottom-[19vh] left-0"/>
+      <Image src={heroBgFrame2} alt="Hero Background Frame 2" className="absolute bottom-[10vh] right-0"/>
+      <Image src={heroBgFrame3} alt="Hero Background Frame 3" className="absolute top-[12vh] left-0"/>
+      <div className="container relative mx-auto px-6 py-10">
+        <div className="flex flex-col items-center">
+          {/* upper Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-white"
+            className="text-white flex flex-col items-center"
           >
             <motion.span
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-block rounded-full border border-kemet-teal/50 bg-kemet-teal/10 px-4 py-2 text-sm font-medium text-kemet-teal"
+              className="rounded-full bg-[#ffc17a3d] px-4 py-2 text-sm font-medium text-white"
             >
-              Trusted By 20,000+ Clients ⭐⭐⭐⭐
+              Trusted By 150,000+ Users <span className="text-base">👋</span>
             </motion.span>
 
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="mt-6 text-5xl font-bold leading-tight lg:text-6xl xl:text-7xl"
+              className="mt-6 text-5xl font-bold leading-tight lg:text-6xl xl:text-7xl text-center"
             >
               Sovereign Generative AI For The Middle East
             </motion.h1>
