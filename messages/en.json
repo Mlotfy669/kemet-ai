@@ -1,0 +1,19 @@
+{
+  "common": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "learnMore": "Learn More",
+    "getStarted": "Get Started"
+  },
+  "hero": {
+    "title": "Welcome to Kemet",
+    "subtitle": "Your tagline goes here",
+    "cta": "Get Started"
+  },
+  "meta": {
+    "title": "Kemet - Your Landing Page",
+    "description": "Professional landing page built with Next.js 15"
+  }
+}
