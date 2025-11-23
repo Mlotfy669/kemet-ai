@@ -1,11 +1,11 @@
 "use client";
 
-import Link from "next/link";
-import { useLocale } from "next-intl";
-import { Globe, Menu, X } from "lucide-react";
-import Image from "next/image";
-import en from '@/public/assets/shared/en.webp';
+import { Link } from '@/i18n/routing';
 import ar from '@/public/assets/shared/ar.webp';
+import en from '@/public/assets/shared/en.webp';
+import { Menu, X } from "lucide-react";
+import { useLocale, useTranslations } from "next-intl";
+import Image from "next/image";
 
 interface NavbarActionsProps {
   mobileMenuOpen: boolean;
@@ -15,6 +15,7 @@ interface NavbarActionsProps {
 const NavbarActions = ({ mobileMenuOpen, setMobileMenuOpen }: NavbarActionsProps) => {
 
   const locale = useLocale();
+  const t = useTranslations()
 
   const toggleLanguage = () => {
     const newLocale = locale === "en" ? "ar" : "en";
@@ -23,11 +24,11 @@ const NavbarActions = ({ mobileMenuOpen, setMobileMenuOpen }: NavbarActionsProps
   };
 
   return (
-    <div className="flex items-center gap-4">
+    <div className="flex items-center 2xl:gap-4 xl:gap-3 gap-2">
       {/* Language Toggle */}
       <button
         onClick={toggleLanguage}
-        className="flex items-center gap-2 cursor-pointer rounded-full border border-white px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-white/10"
+        className="flex items-center gap-2 cursor-pointer rounded-full border border-transparent px-4 xl:py-2 py-1.5 text-sm font-medium text-white transition-colors hover:bg-white/10"
       >
         <Image
           src={locale === 'en' ? ar : en}
@@ -41,10 +42,10 @@ const NavbarActions = ({ mobileMenuOpen, setMobileMenuOpen }: NavbarActionsProps
 
       {/* Book Demo Button */}
       <Link
-        href={`/${locale}/book-demo`}
-        className="hidden rounded-full border border-primary-normal hover:bg-primary-normal-hover px-4 py-2.5 text-sm font-semibold text-white transition-all lg:block"
+        href="/book-demo"
+        className="hidden rounded-full border border-primary-normal hover:bg-primary-normal-hover px-4 xl:py-2.5 py-1.5 xl:text-sm text-xs xl:font-semibold font-medium text-white transition-all lg:block"
       >
-        Book A Demo
+        {t(`Book A Demo`)}
       </Link>
 
       {/* Mobile Menu Toggle */}

@@ -1,7 +1,6 @@
 import { setRequestLocale } from "next-intl/server";
 import Navbar from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
-import { HeroSection } from "@/components/sections/hero-section";
 import { BrandsTrustSection } from "@/components/sections/brands-trust-section";
 import { IndustriesSection } from "@/components/sections/industries-section";
 import { StatsSection } from "@/components/sections/stats-section";
@@ -9,6 +8,7 @@ import { IdrakSection } from "@/components/sections/idrak-section";
 import { VisionMissionSection } from "@/components/sections/vision-mission-section";
 import { LeadershipSection } from "@/components/sections/leadership-section";
 import { CTASection } from "@/components/sections/cta-section";
+import HeroSection from "./_Components/Hero";
 
 export default async function Home({
   params,
@@ -20,7 +20,7 @@ export default async function Home({
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <main className="flex-1">
         <HeroSection />
         <BrandsTrustSection />

@@ -1,17 +1,22 @@
 {
-  "common": {
-    "home": "Home",
-    "about": "About",
-    "services": "Services",
-    "contact": "Contact",
-    "learnMore": "Learn More",
-    "getStarted": "Get Started"
-  },
-  "hero": {
-    "title": "Welcome to Kemet",
-    "subtitle": "Your tagline goes here",
-    "cta": "Get Started"
-  },
+  "Home": "Home",
+  "Solutions": "Solutions",
+  "Government": "Government",
+  "Finance & Fintech": "Finance & Fintech",
+  "Healthcare": "Healthcare",
+  "Education": "Education",
+  "Compliance & Audit": "Compliance & Audit",
+  "Idrak": "Idrak",
+  "Resources": "Resources",
+  "Blog": "Blog",
+  "FAQ": "FAQ",
+  "Company": "Company",
+  "Book A Demo": "Book A Demo",
+  "Trusted By": "Trusted By",
+  "Sovereign Generative AI For The Middle East": "Sovereign Generative AI For The Middle East",
+  "Trusted Sovereign AI Experts for Enterprise & Critical Sector Solutions Slogan": "Trusted Sovereign AI Experts for Enterprise & Critical Sector Solutions Slogan",
+  "Book Now !": "Book Now !",
+  "Users": "Users",
   "meta": {
     "title": "Kemet - Your Landing Page",
     "description": "Professional landing page built with Next.js 15"

@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { useLocale } from "next-intl";
 import { Shield, Heart, DollarSign, GraduationCap, FileSearch, Eye } from "lucide-react";
+import { Link } from "@/i18n/routing";
 
 export function IndustriesSection() {
   const locale = useLocale();
@@ -83,7 +83,7 @@ export function IndustriesSection() {
               transition={{ delay: index * 0.1 }}
             >
               <Link
-                href={`/${locale}${industry.href}`}
+                href={industry.href}
                 className="group block h-full rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition-all hover:border-kemet-teal hover:shadow-xl"
               >
                 <div

@@ -51,6 +51,12 @@
     @apply bg-background text-foreground;
   }
 
+  .container {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 1rem;
+  }
+
   /* Navbar Hover Animation (STC Solutions Style) */
   .nav-animate {
     position: relative;

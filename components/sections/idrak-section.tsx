@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
+import { Link } from "lucide-react";
 import { useLocale } from "next-intl";
 import Image from "next/image";
 
@@ -58,7 +58,7 @@ export function IdrakSection() {
             Discover The Power Of Idraak In Boosting Your Team's Efficiency.
           </h3>
           <Link
-            href={`/${locale}/book-demo`}
+            href={`/book-demo`}
             className="inline-block rounded-full bg-kemet-teal px-8 py-3 font-semibold text-white transition-all hover:bg-kemet-teal/90 hover:shadow-lg"
           >
             Discover Idraak!

@@ -1,17 +1,22 @@
 {
-  "common": {
-    "home": "الرئيسية",
-    "about": "من نحن",
-    "services": "خدماتنا",
-    "contact": "اتصل بنا",
-    "learnMore": "اعرف المزيد",
-    "getStarted": "ابدأ الآن"
-  },
-  "hero": {
-    "title": "مرحباً بك في كيميت",
-    "subtitle": "شعارك هنا",
-    "cta": "ابدأ الآن"
-  },
+"Home": "الرئيسية",
+  "Solutions": "الحلول",
+  "Government": "الحكومة",
+  "Finance & Fintech": "التمويل والتكنولوجيا المالية",
+  "Healthcare": "الرعاية الصحية",
+  "Education": "التعليم",
+  "Compliance & Audit": "الامتثال والتدقيق",
+  "Idrak": "إدراك",
+  "Resources": "الموارد",
+  "Blog": "المدونة",
+  "FAQ": "الأسئلة الشائعة",
+  "Company": "الشركة",
+  "Book A Demo": "احجز عرضًا تجريبيًا",
+  "Trusted By": "موثوق من قبل",
+  "Sovereign Generative AI For The Middle East": "خبراء الذكاء الاصطناعي السيادي الموثوقه لحلول المؤسسات والقطاعات الحساسة",
+  "Trusted Sovereign AI Experts for Enterprise & Critical Sector Solutions Slogan": "قيادة التحول الرقمي بأمان: السيطرة التامة علي البيانات وكفاءة الذكاء الاصطناعي القصوي.",
+  "Book Now !": "احجز الآن !",
+  "Users": "المستخدمين",
   "meta": {
     "title": "كيميت - صفحتك الرئيسية",
     "description": "صفحة هبوط احترافية مبنية باستخدام Next.js 15"

@@ -1,11 +1,12 @@
 "use client";
 
+import useScrollChange from "@/hooks/useScrollChange";
 import { useState } from "react";
+
 import NavbarLogo from "./logo";
-import NavbarMenu from "./menu";
+import NavbarMenu from "./NavbarMenu";
 import NavbarActions from "./actions";
 import NavbarDrawer from "./drawer";
-import useScrollChange from "@/hooks/useScrollChange";
 
 const Navbar = () => {
 
@@ -14,14 +15,14 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`fixed left-0 right-0 top-0 z-50 ${isScrolled ? "bg-primary-color/80 backdrop-blur-md" : "bg-transparent"}`}>
-        <div className="container mx-auto px-6">
-          <div className="flex h-18 items-center justify-between">
+      <nav className={`fixed left-0 right-0 top-0 z-50 ${isScrolled ? "bg-primary-dark/70 backdrop-blur-md" : "bg-transparent backdrop-blur-md"}`}>
+        <div className="container">
+          <div className="flex 2xl:h-17 xl:h-14 lg:h-13 h-12 items-center justify-between">
             {/* Logo */}
             <NavbarLogo />
 
             {/* Desktop Navigation */}
-            <NavbarMenu />
+            <NavbarMenu isScrolled={isScrolled} />
 
             {/* Right Side Actions */}
             <NavbarActions
@@ -37,9 +38,6 @@ const Navbar = () => {
         isOpen={mobileMenuOpen}
         onClose={() => setMobileMenuOpen(false)}
       />
-
-      {/* Spacer to prevent content from going under fixed navbar */}
-      {/* <div className="h-18 bg-transparent" /> */}
     </>
   );
 }

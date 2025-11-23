@@ -1,7 +1,7 @@
 "use client";
 
+import { Link } from "@/i18n/routing";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { useLocale } from "next-intl";
 
 export function CTASection() {
@@ -34,7 +34,7 @@ export function CTASection() {
             className="mt-8"
           >
             <Link
-              href={`/${locale}/book-demo`}
+              href={`/book-demo`}
               className="inline-block rounded-full bg-kemet-teal px-10 py-4 text-lg font-semibold text-white shadow-lg shadow-kemet-teal/50 transition-all hover:bg-kemet-teal/90 hover:shadow-xl"
             >
               Book A Demo Now !

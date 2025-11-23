@@ -1,10 +1,12 @@
+import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Cairo } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
+import { Cairo, Plus_Jakarta_Sans } from "next/font/google";
 import { notFound } from "next/navigation";
-import { routing } from "@/i18n/routing";
+import NextTopLoader from 'nextjs-toploader';
 import "./globals.css";
+import Navbar from "@/components/layout/navbar";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta-sans",
@@ -19,7 +21,7 @@ const cairo = Cairo({
 });
 
 export const metadata: Metadata = {
-  title: "Kemet - Landing Page",
+  title: "Kemet.AI",
   description: "Professional landing page built with Next.js 15",
 };
 
@@ -44,7 +46,11 @@ export default async function LocaleLayout({
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
       <body className={`${plusJakartaSans.variable} ${cairo.variable} antialiased ${locale === "ar" ? "font-cairo" : "font-plus-jakarta-sans"}`}>
         <NextIntlClientProvider messages={messages}>
-          <div className="flex min-h-screen flex-col">{children}</div>
+          <NextTopLoader showSpinner={false} color="#208E9A" />
+          <div className="flex min-h-screen flex-col">
+            <Navbar />
+            {children}
+          </div>
         </NextIntlClientProvider>
       </body>
     </html>

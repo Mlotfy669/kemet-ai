@@ -1,16 +1,34 @@
 "use client";
 
-import Link from "next/link";
-import { useLocale } from "next-intl";
-import { motion } from "framer-motion";
+import { Link } from "@/i18n/routing";
+import { AnimatePresence, motion } from "framer-motion";
+import { ChevronDown } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { useState } from "react";
 
 interface NavbarDrawerProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
+const solutions = [
+  { title: "Government", href: "/solutions/government" },
+  { title: "Finance & Fintech", href: "/solutions/fintech" },
+  { title: "Healthcare", href: "/solutions/healthcare" },
+  { title: "Education", href: "/solutions/education" },
+  { title: "Compliance & Audit", href: "/solutions/compliance" },
+];
+
+const resourcesMenuItems = [
+  { title: "Blog", href: "/resources/blog" },
+  { title: "FAQ", href: "/resources/faq" }
+];
+
 const NavbarDrawer = ({ isOpen, onClose }: NavbarDrawerProps) => {
-  const locale = useLocale();
+
+  const t = useTranslations();
+  const [solutionsOpen, setSolutionsOpen] = useState(false);
+  const [resourcesOpen, setResourcesOpen] = useState(false);
 
   if (!isOpen) return null;
 
@@ -19,51 +37,101 @@ const NavbarDrawer = ({ isOpen, onClose }: NavbarDrawerProps) => {
       initial={{ opacity: 0, height: 0 }}
       animate={{ opacity: 1, height: "auto" }}
       exit={{ opacity: 0, height: 0 }}
-      className="fixed left-0 right-0 top-20 z-40 bg-kemet-navy lg:hidden"
+      className="fixed left-0 right-0 top-12 z-40 bg-primary-dark/95 backdrop-blur-md lg:hidden"
     >
-      <div className="container mx-auto px-6 py-6">
+      <div className="container px-6 py-4">
         <div className="flex flex-col gap-4">
+          {/* Home */}
           <Link
-            href={`/${locale}`}
-            className="text-white"
+            href={`/`}
+            className="text-white font-medium hover:text-primary-darker transition-colors text-sm"
             onClick={onClose}
           >
-            Home
+            {t(`Home`)}
           </Link>
+
+          {/* Solutions (expandable) */}
+          <div className="flex flex-col gap-2">
+            <button
+              onClick={() => setSolutionsOpen(!solutionsOpen)}
+              className="flex items-center justify-between text-white font-medium hover:text-primary-darker transition-colors text-sm"
+            >
+              <span>{t(`Solutions`)}</span>
+              <ChevronDown size={16} className={`transition-transform duration-300 ${solutionsOpen ? "rotate-180" : ""}`} />
+            </button>
+            <AnimatePresence>
+              {solutionsOpen && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className="flex flex-col gap-2 ps-4 overflow-hidden"
+                >
+                  {solutions.map((solution) => (
+                    <Link
+                      key={solution.title}
+                      href={solution.href}
+                      className="text-white/80 text-sm hover:text-primary-darker transition-colors"
+                      onClick={onClose}
+                    >
+                      {t(solution.title)}
+                    </Link>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
+          {/* Idrak */}
           <Link
-            href={`/${locale}/solutions`}
-            className="text-white"
+            href="/idrak"
+            className="text-white font-medium hover:text-primary-darker transition-colors text-sm"
             onClick={onClose}
           >
-            Solutions
+            {t(`Idrak`)}
           </Link>
+
+          {/* Resources (expandable) */}
+          <div className="flex flex-col gap-2">
+            <button
+              onClick={() => setResourcesOpen(!resourcesOpen)}
+              className="flex items-center justify-between text-white font-medium hover:text-primary-darker transition-colors text-sm"
+            >
+              <span>{t(`Resources`)}</span>
+              <ChevronDown size={16} className={`transition-transform duration-300 ${resourcesOpen ? "rotate-180" : ""}`} />
+            </button>
+            <AnimatePresence>
+              {resourcesOpen && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className="flex flex-col gap-2 ps-4 overflow-hidden"
+                >
+                  {resourcesMenuItems.map((resource) => (
+                    <Link
+                      key={resource.title}
+                      href={resource.href}
+                      className="text-white/80 text-sm hover:text-primary-darker transition-colors"
+                      onClick={onClose}
+                    >
+                      {t(resource.title)}
+                    </Link>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
+          {/* Company */}
           <Link
-            href={`/${locale}/idrak`}
-            className="text-white"
+            href="/company"
+            className="text-white font-medium hover:text-primary-darker transition-colors text-sm"
             onClick={onClose}
           >
-            Idrak
-          </Link>
-          <Link
-            href={`/${locale}/resources`}
-            className="text-white"
-            onClick={onClose}
-          >
-            Resources
-          </Link>
-          <Link
-            href={`/${locale}/company`}
-            className="text-white"
-            onClick={onClose}
-          >
-            Company
-          </Link>
-          <Link
-            href={`/${locale}/book-demo`}
-            className="mt-4 rounded-full bg-kemet-teal px-6 py-2.5 text-center text-sm font-semibold text-white"
-            onClick={onClose}
-          >
-            Book A Demo
+            {t(`Company`)}
           </Link>
         </div>
       </div>

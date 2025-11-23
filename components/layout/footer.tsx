@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
-import { useLocale } from "next-intl";
+import { Link } from "@/i18n/routing";
 import { Mail, Phone } from "lucide-react";
+import { useLocale } from "next-intl";
 import Image from "next/image";
 
 export function Footer() {
@@ -32,7 +32,7 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
           {/* Logo and Contact */}
           <div className="lg:col-span-2">
-            <Link href={`/${locale}`} className="mb-6 flex items-center gap-2">
+            <Link href={`/`} className="mb-6 flex items-center gap-2">
               <div className="relative h-8 w-8">
                 <Image
                   src="/kemet-design/Kemet logo.png"
@@ -68,7 +68,7 @@ export function Footer() {
               {footerLinks.links.map((link) => (
                 <li key={link.href}>
                   <Link
-                    href={`/${locale}${link.href}`}
+                    href={link.href}
                     className="text-sm text-gray-600 hover:text-kemet-teal"
                   >
                     {link.title}
@@ -85,7 +85,7 @@ export function Footer() {
               {footerLinks.legal.map((link) => (
                 <li key={link.href}>
                   <Link
-                    href={`/${locale}${link.href}`}
+                    href={link.href}
                     className="text-sm text-gray-600 hover:text-kemet-teal"
                   >
                     {link.title}
@@ -102,7 +102,7 @@ export function Footer() {
               {footerLinks.resources.map((link) => (
                 <li key={link.href}>
                   <Link
-                    href={`/${locale}${link.href}`}
+                    href={link.href}
                     className="text-sm text-gray-600 hover:text-kemet-teal"
                   >
                     {link.title}
