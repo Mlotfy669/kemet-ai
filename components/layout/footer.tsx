@@ -1,139 +1,231 @@
+
 "use client";
 
-import { Link } from "@/i18n/routing";
+import { motion } from "framer-motion";
 import { Mail, Phone } from "lucide-react";
-import { useLocale } from "next-intl";
 import Image from "next/image";
+import footerLogo from "@/public/assets/shared/footerLogo.png";
 
-export function Footer() {
-  const locale = useLocale();
+export default function FooterSection() {
 
-  const footerLinks = {
-    links: [
-      { title: "About", href: "/about" },
-      { title: "Careers", href: "/careers" },
-      { title: "Contact", href: "/contact" }
-    ],
-    legal: [
-      { title: "Terms Of Use", href: "/terms" },
-      { title: "Privacy Policy", href: "/privacy" },
-      { title: "Cookie Policy", href: "/cookies" }
-    ],
-    resources: [
-      { title: "Blog", href: "/resources/blog" },
-      { title: "FAQ (AR)", href: "/faq-ar" },
-      { title: "FAQ (EN)", href: "/faq-en" }
-    ]
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
   };
 
   return (
-    <footer className="bg-gray-50">
-      <div className="container mx-auto px-6 py-12">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-5">
-          {/* Logo and Contact */}
-          <div className="lg:col-span-2">
-            <Link href={`/`} className="mb-6 flex items-center gap-2">
-              <div className="relative h-8 w-8">
+    <footer className="bg-white py-12 md:py-16 lg:py-20">
+      <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="space-y-12"
+        >
+          {/* Main Footer Content */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12"
+          >
+            {/* Logo and Contact Section */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="lg:col-span-3 space-y-6"
+            >
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="w-32 md:w-40"
+              >
                 <Image
-                  src="/kemet-design/Kemet logo.png"
-                  alt="KEMET.AI"
-                  fill
-                  className="object-contain"
+                  src={footerLogo}
+                  alt="Kemet AI Logo"
+                  className="w-full h-auto"
+
                 />
-              </div>
-              <span className="text-xl font-bold text-kemet-navy">KEMET.AI</span>
-            </Link>
-            <div className="space-y-3">
-              <a
-                href="mailto:Help@Kemetai.Com"
-                className="flex items-center gap-2 text-sm text-gray-600 hover:text-kemet-teal"
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="space-y-4"
               >
-                <Mail className="h-4 w-4" />
-                Help@Kemetai.Com
-              </a>
-              <a
-                href="tel:+01128501210"
-                className="flex items-center gap-2 text-sm text-gray-600 hover:text-kemet-teal"
-              >
-                <Phone className="h-4 w-4" />
-                +01128501210
-              </a>
-            </div>
-          </div>
+                <motion.a
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                  href="mailto:help@kemetai.com"
+                  className="flex items-center gap-3 text-black hover:text-primary-normal transition-colors"
+                >
+                  <Mail className="w-5 h-5 text-secondery-normal" />
+                  <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>help@kemetai.com</motion.span>
+                </motion.a>
+                
+                <motion.a
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                  href="tel:+01128501210"
+                  className="flex items-center gap-3 text-black hover:text-primary-normal transition-colors"
+                >
+                  <Phone className="w-5 h-5 text-secondery-normal" />
+                  <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>+01128501210</motion.span>
+                </motion.a>
+              </motion.div>
+            </motion.div>
 
-          {/* Links */}
-          <div>
-            <h3 className="mb-4 text-sm font-semibold text-gray-900">Links</h3>
-            <ul className="space-y-3">
-              {footerLinks.links.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-gray-600 hover:text-kemet-teal"
-                  >
-                    {link.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+            {/* Links Column */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="lg:col-span-2"
+            >
+              <motion.h3 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-6 text-black capitalize">Links</motion.h3>
+              <motion.ul initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="space-y-3">
+                <motion.li initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+                  <motion.a href="#about" className="text-black hover:text-primary-normal transition-colors capitalize">
+                    About
+                  </motion.a>
+                </motion.li>
+                <motion.li initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+                  <motion.a href="#careers" className="text-black hover:text-primary-normal transition-colors capitalize">
+                    Careers
+                  </motion.a>
+                </motion.li>
+                <motion.li initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+                  <motion.a href="#contact" className="text-black hover:text-primary-normal transition-colors capitalize">
+                    Contact
+                  </motion.a>
+                </motion.li>
+              </motion.ul>
+            </motion.div>
 
-          {/* Legal */}
-          <div>
-            <h3 className="mb-4 text-sm font-semibold text-gray-900">Legal</h3>
-            <ul className="space-y-3">
-              {footerLinks.legal.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-gray-600 hover:text-kemet-teal"
-                  >
-                    {link.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+            {/* Legal Column */}
+            <motion.div
+                initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="lg:col-span-2"
+            >
+              <motion.h3 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-6 text-black capitalize">Legal</motion.h3>
+              <motion.ul initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="space-y-3">
+                <motion.li initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+                  <motion.a href="#terms" className="text-black hover:text-primary-normal transition-colors capitalize">
+                    Terms of Use
+                  </motion.a>
+                </motion.li>
+                <motion.li initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+                  <motion.a href="#privacy" className="text-black hover:text-primary-normal transition-colors capitalize">
+                    Privacy Policy
+                  </motion.a>
+                </motion.li>
+                <motion.li initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+                  <motion.a href="#cookies" className="text-black hover:text-primary-normal transition-colors capitalize">
+                    Cookie Policy
+                  </motion.a>
+                </motion.li>
+              </motion.ul> 
+            </motion.div>
 
-          {/* Resources & Newsletter */}
-          <div>
-            <h3 className="mb-4 text-sm font-semibold text-gray-900">Resources</h3>
-            <ul className="mb-6 space-y-3">
-              {footerLinks.resources.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-sm text-gray-600 hover:text-kemet-teal"
-                  >
-                    {link.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            {/* Resources Column */}
+            <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="lg:col-span-2"
+            >
+              <motion.h3 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-6 text-black capitalize">Resources</motion.h3>
+              <motion.ul initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="space-y-3">
+                <motion.li initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+                  <motion.a href="#blog" className="text-black hover:text-primary-normal transition-colors capitalize">
+                    Blog
+                  </motion.a>
+                </motion.li>
+                <motion.li initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+                  <motion.a href="#faq-ar" className="text-black hover:text-primary-normal transition-colors capitalize">
+                    FAQ (AR)
+                  </motion.a>
+                </motion.li>
+                <motion.li initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+                  <motion.a href="#faq-en" className="text-black hover:text-primary-normal transition-colors capitalize">
+                    FAQ (EN)
+                  </motion.a>
+                </motion.li>
+              </motion.ul>
+            </motion.div>
 
-            <div>
-              <h3 className="mb-4 text-sm font-semibold text-gray-900">Newsletter</h3>
-              <p className="mb-3 text-sm text-gray-600">Stay Up To Date</p>
-              <div className="flex gap-2">
-                <input
+            {/* Newsletter Column */}
+            <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="lg:col-span-3"
+            >
+              <motion.h3 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-2 text-black capitalize">Newsletter</motion.h3>
+              <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-6 text-black capitalize">Stay up to date</motion.p>
+              
+              <motion.form initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="relative" onSubmit={(e) => e.preventDefault()}>
+                <motion.input
                   type="email"
                   placeholder="Your email"
-                  className="flex-1 rounded-full border border-gray-300 px-4 py-2 text-sm focus:border-kemet-teal focus:outline-none focus:ring-2 focus:ring-kemet-teal/20"
+                  className="w-full h-16 md:h-20 px-6 pr-32 md:pr-40 rounded-full border-2 border-[#e1e1e1] bg-white text-black placeholder:text-[#a8a8a8] focus:outline-none focus:border-primatext-primary-normal transition-colors"
                 />
-                <button className="rounded-full bg-kemet-teal px-6 py-2 text-sm font-semibold text-white transition-colors hover:bg-kemet-teal/90">
+                <motion.button
+                  type="submit"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 h-12 md:h-[60px] px-6 md:px-8 bg-primatext-primary-normal text-white rounded-full hover:bg-[var(--color-primary-dark)] transition-colors capitalize"
+                >
                   Subscribe
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+                </motion.button>
+              </motion.form>
+            </motion.div>
+          </motion.div>
 
-        {/* Copyright */}
-        <div className="mt-12 border-t border-gray-200 pt-8 text-center">
-          <p className="text-sm text-gray-600">
-            © Kemet AI - Sovereign Arabic-Native AI
-          </p>
-        </div>
+          {/* Copyright Section */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="pt-8 border-t border-[#d9d9d9]"
+          >
+            <p className="text-center text-black capitalize">
+              © Kemet AI – Sovereign Arabic-Native AI
+            </p>
+          </motion.div>
+        </motion.div>
       </div>
     </footer>
   );

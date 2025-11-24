@@ -1,19 +1,20 @@
-import BrandsTrustSection from "@/app/[locale]/_Components/BrandsTrustSection";
-import { Footer } from "@/components/layout/footer";
-import { CTASection } from "@/components/sections/cta-section";
-import { IdrakSection } from "@/components/sections/idrak-section";
-import { LeadershipSection } from "@/components/sections/leadership-section";
-import { StatsSection } from "@/components/sections/stats-section";
-import { VisionMissionSection } from "@/components/sections/vision-mission-section";
+import Footer from "@/components/layout/footer";
 import { setRequestLocale } from "next-intl/server";
+import BrandsTrustSection from "./_Components/BrandsTrustSection";
+import CTASection from "./_Components/CtaSection";
 import HeroSection from "./_Components/Hero";
+import IdrakSection from "./_Components/IdrakSection";
 import IndustrySection from "./_Components/IndustriesSection";
+import LeadershipSection from "./_Components/LeadershipSection";
+import StatsSection from "./_Components/StatsSection";
+import VisionMissionSection from "./_Components/VisionMissionSection";
 
 export default async function Home({
   params,
 }: {
   params: Promise<{ locale: string }>;
 }) {
+
   const { locale } = await params;
   setRequestLocale(locale);
 
