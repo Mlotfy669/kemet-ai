@@ -17,9 +17,9 @@ const BrandsTrustSection = () => {
   const t = useTranslations()
 
   return (
-    <section className="bg-white py-28">
+    <section className="bg-white lg:py-28 py-14">
       <div className="relative container mx-auto px-6">
-        <span className="size-3 bg-secondery-normal absolute top-0 right-0 rotate-45"></span>
+        <span className="size-3 bg-secondery-normal absolute top-0 md:right-0 right-6 rotate-45"></span>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -39,7 +39,7 @@ const BrandsTrustSection = () => {
               <Star className="fill-[#5B7486] text-[#5B7486]" size={15} />
             </div>
           </div>
-          <h2 className="text-4xl font-bold">
+          <h2 className="lg:text-4xl text-3xl font-bold">
             {t("These Brands Trust Us")}
           </h2>
 
@@ -48,7 +48,7 @@ const BrandsTrustSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="w-full flex flex-wrap items-center justify-center gap-12 mt-8"
+            className="w-full flex flex-wrap items-center justify-center lg:gap-12 gap-6 2xl:mt-8 mt-6"
           >
             {brands.map((brand, index) => (
               <Image

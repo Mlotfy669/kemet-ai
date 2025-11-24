@@ -75,7 +75,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
-              className="2xl:my-8 xl:my-6 lg:my-5 md:my-4 my-3"
+              className="2xl:my-8 xl:my-4 lg:my-3 md:my-4 my-3"
             >
               <Link
                 href={`/book-demo`}
@@ -98,7 +98,7 @@ const HeroSection = () => {
               alt="KEMET.AI Dashboard"
               width={800}
               height={450}
-              className="w-full rounded-[40px] shadow-sm"
+              className="w-full md:rounded-[40px] rounded-[20px] shadow-sm"
             />
           </motion.div>
         </div>
