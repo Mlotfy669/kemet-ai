@@ -1,5 +1,5 @@
 {
-"Home": "الرئيسية",
+  "Home": "الرئيسية",
   "Solutions": "الحلول",
   "Government": "الحكومة",
   "Finance & Fintech": "التمويل والتكنولوجيا المالية",
@@ -17,6 +17,8 @@
   "Trusted Sovereign AI Experts for Enterprise & Critical Sector Solutions Slogan": "قيادة التحول الرقمي بأمان: السيطرة التامة علي البيانات وكفاءة الذكاء الاصطناعي القصوي.",
   "Book Now !": "احجز الآن !",
   "Users": "المستخدمين",
+  "Clients": "عميل",
+  "These Brands Trust Us": "هذه العلامات التجارية تثق بنا.",
   "meta": {
     "title": "كيميت - صفحتك الرئيسية",
     "description": "صفحة هبوط احترافية مبنية باستخدام Next.js 15"
