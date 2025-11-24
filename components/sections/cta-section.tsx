@@ -8,7 +8,7 @@ export function CTASection() {
   const locale = useLocale();
 
   return (
-    <section className="bg-gradient-to-br from-kemet-navy via-gray-900 to-kemet-teal/20 py-20">
+    <section className="from-kemet-navy via-gray-900 to-kemet-teal/20 py-20">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

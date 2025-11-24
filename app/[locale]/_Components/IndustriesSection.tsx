@@ -110,7 +110,7 @@ const industries = [
   },
 ];
 
-export default function IndustrySection() {
+const IndustrySection = () => {
 
   const t = useTranslations();
 
@@ -190,3 +190,5 @@ export default function IndustrySection() {
     </section>
   );
 }
+
+export default IndustrySection
