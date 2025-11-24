@@ -98,7 +98,7 @@ const HeroSection = () => {
               alt="KEMET.AI Dashboard"
               width={800}
               height={450}
-              className="w-full md:rounded-[40px] rounded-[20px] shadow-sm"
+              className="w-full md:rounded-[20px] md:h-[40vh] lg:h-[53vh] h-[40vh] rounded-[20px] shadow-sm"
             />
           </motion.div>
         </div>

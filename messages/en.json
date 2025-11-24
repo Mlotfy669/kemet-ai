@@ -18,7 +18,16 @@
   "Book Now !": "Book Now !",
   "Users": "Users",
   "Clients": "Clients",
-  "These Brands Trust Us": "These Brands Trust Us.",
+  "These Brands Trust Us": "These Brands Trust Us",
+  "One Platform for Every Industry": "One Platform for Every Industry",
+  "Kemet AI empowers governments and banks with secure, Arabic-native AI": "Kemet AI empowers governments and banks with secure, Arabic-native AI",
+  "Comprehensive automation of compliance (KYC/AML) and fraud risk reduction": "Comprehensive automation of compliance (KYC/AML) and fraud risk reduction",
+  "NLP": "NLP",
+  "Analysis of medical records and research while preserving patient data privacy": "Analysis of medical records and research while preserving patient data privacy",
+  "Transforming massive archives into instant intelligence for strategic decision support": "Transforming massive archives into instant intelligence for strategic decision support",
+  "Institutional knowledge management and protection of academic/administrative data": "Institutional knowledge management and protection of academic/administrative data.",
+  "Vision Analysis": "Vision Analysis",
+  "Goverment": "Goverment",
   "meta": {
     "title": "Kemet - Your Landing Page",
     "description": "Professional landing page built with Next.js 15"

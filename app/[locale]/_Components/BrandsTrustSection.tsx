@@ -1,5 +1,6 @@
 "use client";
 
+import orangeBlocks from "@/public/assets/home/orangeBlocks.webp";
 import company1 from "@/public/assets/shared/whyUs/company1.webp";
 import company2 from "@/public/assets/shared/whyUs/company2.webp";
 import company3 from "@/public/assets/shared/whyUs/company3.webp";
@@ -17,7 +18,10 @@ const BrandsTrustSection = () => {
   const t = useTranslations()
 
   return (
-    <section className="bg-white lg:py-28 py-14">
+    <section className="relative bg-white lg:py-28 py-14">
+      <div className="absolute inset-0 w-full h-full">
+        <Image src={orangeBlocks} alt="Hero Background Frame 3" className="absolute 2xl:size-20 xl:size-18 lg:size-16 md:size-14 size-8 bottom-0 left-0" />
+      </div>
       <div className="relative container mx-auto px-6">
         <span className="size-3 bg-secondery-normal absolute top-0 md:right-0 right-6 rotate-45"></span>
         <motion.div
@@ -28,7 +32,7 @@ const BrandsTrustSection = () => {
           className="text-center flex flex-col items-center gap-4"
         >
           <div className="flex items-center justify-center gap-2">
-            <p className="text-base font-bold">
+            <p className="lg:text-base text-sm font-bold">
               {t("Trusted By")} 20,000+ {t("Clients")}
             </p>
             <div className="flex items-center gap-0.5">
@@ -57,7 +61,7 @@ const BrandsTrustSection = () => {
                 alt={`brand-${index}`}
                 width={300}
                 height={100}
-                className="w-auto object-contain"
+                className="md:w-auto w-[100px] object-contain"
               />
             ))}
           </motion.div>

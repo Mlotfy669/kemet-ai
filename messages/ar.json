@@ -18,7 +18,16 @@
   "Book Now !": "احجز الآن !",
   "Users": "المستخدمين",
   "Clients": "عميل",
-  "These Brands Trust Us": "هذه العلامات التجارية تثق بنا.",
+  "These Brands Trust Us": "هذه العلامات التجارية تثق بنا",
+  "One Platform for Every Industry": "منصة واحدة لكل قطاع",
+  "Kemet AI empowers governments and banks with secure, Arabic-native AI": "تعمل Kemet AI على تمكين الحكومات والبنوك بذكاء اصطناعي آمن وناطق باللغة العربية.",
+  "Comprehensive automation of compliance (KYC/AML) and fraud risk reduction": "أتمتة شاملة للامتثال (KYC/AML) وتقليل مخاطر الاحتيال.",
+  "NLP": "معالجة اللغة الطبيعية (NLP)",
+  "Analysis of medical records and research while preserving patient data privacy": "تحليل السجلات الطبية والأبحاث مع الحفاظ على خصوصية بيانات المريض.",
+  "Transforming massive archives into instant intelligence for strategic decision support": "تحويل الأرشيفات الضخمة إلى استخبارات فورية لدعم القرار الاستراتيجي.",
+  "Institutional knowledge management and protection of academic/administrative data": "إدارة المعرفة المؤسسية وحماية البيانات الأكاديمية/الإدارية.",
+  "Vision Analysis": "تحليل الرؤية",
+  "Goverment": "الحكومة",
   "meta": {
     "title": "كيميت - صفحتك الرئيسية",
     "description": "صفحة هبوط احترافية مبنية باستخدام Next.js 15"
