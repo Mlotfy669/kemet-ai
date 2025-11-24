@@ -39,7 +39,7 @@ const NavbarDrawer = ({ isOpen, onClose }: NavbarDrawerProps) => {
       exit={{ opacity: 0, height: 0 }}
       className="fixed left-0 right-0 top-12 z-40 bg-primary-dark/95 backdrop-blur-md lg:hidden"
     >
-      <div className="container px-6 py-4">
+      <div className="container mx-auto px-6 py-4">
         <div className="flex flex-col gap-4">
           {/* Home */}
           <Link

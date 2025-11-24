@@ -1,5 +1,4 @@
 import { setRequestLocale } from "next-intl/server";
-import Navbar from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { BrandsTrustSection } from "@/components/sections/brands-trust-section";
 import { IndustriesSection } from "@/components/sections/industries-section";
@@ -20,7 +19,6 @@ export default async function Home({
 
   return (
     <>
-      {/* <Navbar /> */}
       <main className="flex-1">
         <HeroSection />
         <BrandsTrustSection />

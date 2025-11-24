@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <>
       <nav className={`fixed left-0 right-0 top-0 z-50 ${isScrolled ? "bg-primary-dark/70 backdrop-blur-md" : "bg-transparent backdrop-blur-md"}`}>
-        <div className="container">
+        <div className="container mx-auto">
           <div className="flex 2xl:h-17 xl:h-14 lg:h-13 h-12 items-center justify-between">
             {/* Logo */}
             <NavbarLogo />

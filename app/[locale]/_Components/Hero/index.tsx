@@ -18,14 +18,14 @@ const HeroSection = () => {
   const locale = useLocale()
 
   return (
-    <section className="relative h-dvh md:h-screen overflow-hidden bg-primary-normal-hover bg-[url('@/public/assets/shared/heroBg.webp')] bg-cover bg-center bg-no-repeat">
-      <div className="2xl:h-17 xl:h-14 lg:h-15 h-12 container" />
+    <section className="relative h-dvh md:h-screen bg-primary-normal-hover bg-[url('@/public/assets/shared/heroBg.webp')] bg-cover bg-center bg-no-repeat">
+      <div className="2xl:h-17 xl:h-14 lg:h-15 h-12 container mx-auto" />
       <div className="absolute inset-0 w-full h-full">
         <Image src={heroBgFrame1} alt="Hero Background Frame 1" className="absolute 2xl:size-24 xl:size-22 lg:size-20 md:size-18 size-16 bottom-[19vh] left-0" />
         <Image src={heroBgFrame2} alt="Hero Background Frame 2" className="absolute 2xl:size-20 xl:size-18 lg:size-16 md:size-14 size-12 bottom-[10vh] right-0" />
         <Image src={heroBgFrame3} alt="Hero Background Frame 3" className="absolute 2xl:size-20 xl:size-18 lg:size-16 md:size-14 size-8 top-[15vh] left-0" />
       </div>
-      <div className="container relative 2xl:py-2 xl:py-4 lg:py-3 py-2">
+      <div className="container mx-auto relative 2xl:py-2 xl:py-4 lg:py-3 py-2">
         <div className={`flex flex-col items-center gap-4 mx-auto ${locale === "ar" ? "xl:max-w-[850px] lg:max-w-[750px] md:max-w-[700px] max-w-[550px]" : "2xl:max-w-[840px] xl:max-w-[630px] lg:max-w-[550px] md:max-w-[450px] max-w-[415px]"}`}>
           {/* upper Content */}
           <motion.div
@@ -86,19 +86,19 @@ const HeroSection = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right Content - Dashboard Preview */}
+          {/* lower content */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="relative w-full"
+            className="w-full"
           >
             <Image
               src={idrak}
               alt="KEMET.AI Dashboard"
               width={800}
               height={450}
-              className="w-full"
+              className="w-full rounded-[40px] shadow-sm"
             />
           </motion.div>
         </div>

@@ -2,8 +2,6 @@
 @import "tw-animate-css";
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-plus-jakarta-sans: var(--font-plus-jakarta-sans);
   --font-cairo: var(--font-cairo);
   --color-ring: var(--ring);
@@ -43,58 +41,5 @@
 
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-
-  body {
-    @apply bg-background text-foreground;
-  }
-
-  .container {
-    margin: 0 auto;
-    width: 100%;
-    padding: 0 1rem;
-  }
-
-  /* Navbar Hover Animation (STC Solutions Style) */
-  .nav-animate {
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-    padding-bottom: 2px;
-    color: transparent;
-  }
-
-  .nav-animate::before,
-  .nav-animate::after {
-    content: attr(data-text);
-    position: absolute;
-    left: 0;
-    width: 100%;
-    transition: transform .3s ease;
-    white-space: nowrap;
-  }
-
-  .nav-animate::before {
-    top: 0;
-    color: rgba(255, 255, 255, 0.85);
-    transform: translateY(0);
-  }
-
-  .nav-animate::after {
-    top: 0;
-    color: #00e0d3;
-    /* hover color */
-    transform: translateY(100%);
-  }
-
-  .nav-animate:hover::before {
-    transform: translateY(-100%);
-  }
-
-  .nav-animate:hover::after {
-    transform: translateY(0);
-  }
-
+  
 }
