@@ -96,9 +96,11 @@ const HeroSection = () => {
             <Image
               src={idrak}
               alt="KEMET.AI Dashboard"
-              width={800}
-              height={450}
-              className="w-full md:rounded-[20px] md:h-[40vh] lg:h-[53vh] h-[40vh] rounded-[20px] shadow-sm"
+              width={1200}
+              height={700}
+              priority
+              className="w-full rounded-[20px] shadow-sm object-cover"
+              sizes="(max-width: 768px) 100vw, 1200px"
             />
           </motion.div>
         </div>
