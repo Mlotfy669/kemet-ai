@@ -7,6 +7,7 @@ import Image from "next/image";
 import footerLogo from "@/public/assets/shared/footerLogo.webp";
 import arrowDown from "@/public/assets/shared/arrowDown.webp";
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 
 export default function FooterSection() {
 
@@ -116,27 +117,27 @@ export default function FooterSection() {
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}>
-                  <motion.a href="#about" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
+                  <Link href="/about" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
                     {t("About")}
-                  </motion.a>
+                  </Link>
                 </motion.li>
                 <motion.li
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}>
-                  <motion.a href="#careers" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
+                  <Link href="/careers" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
                     {t("Careers")}
-                  </motion.a>
+                  </Link>
                 </motion.li>
                 <motion.li
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}>
-                  <motion.a href="#contact" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
+                  <Link href="/contact" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
                     {t("Contact")}
-                  </motion.a>
+                  </Link>
                 </motion.li>
               </motion.ul>
             </motion.div>
@@ -171,9 +172,9 @@ export default function FooterSection() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
                 >
-                  <motion.a href="#terms" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
+                  <Link href="/terms" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
                     {t("Terms of Use")}
-                  </motion.a>
+                  </Link>
                 </motion.li>
                 <motion.li
                   initial={{ opacity: 0 }}
@@ -181,9 +182,9 @@ export default function FooterSection() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
                 >
-                  <motion.a href="#privacy" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
+                  <Link href="/privacy" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
                     {t("Privacy Policy")}
-                  </motion.a>
+                  </Link>
                 </motion.li>
                 <motion.li
                   initial={{ opacity: 0 }}
@@ -191,9 +192,9 @@ export default function FooterSection() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
                 >
-                  <motion.a href="#cookies" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
+                  <Link href="/cookies" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
                     {t("Cookie Policy")}
-                  </motion.a>
+                  </Link>
                 </motion.li>
               </motion.ul>
             </motion.div>
@@ -228,9 +229,9 @@ export default function FooterSection() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
                 >
-                  <motion.a href="#blog" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
+                  <Link href="/blog" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
                     {t("Blog")}
-                  </motion.a>
+                  </Link>
                 </motion.li>
                 <motion.li
                   initial={{ opacity: 0 }}
@@ -238,19 +239,9 @@ export default function FooterSection() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
                 >
-                  <motion.a href="#faq-ar" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
-                    {t("FAQ (AR)")}
-                  </motion.a>
-                </motion.li>
-                <motion.li
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <motion.a href="#faq-en" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
-                    {t("FAQ (EN)")}
-                  </motion.a>
+                  <Link href="/faq" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
+                    {t("FAQ")}
+                  </Link>
                 </motion.li>
               </motion.ul>
             </motion.div>

@@ -1,12 +1,12 @@
 "use client";
 
+import TrustedBy from "@/components/ui/TrustedBy";
 import company1 from "@/public/assets/shared/whyUs/company1.webp";
 import company2 from "@/public/assets/shared/whyUs/company2.webp";
 import company3 from "@/public/assets/shared/whyUs/company3.webp";
 import company4 from "@/public/assets/shared/whyUs/company4.webp";
 import company5 from "@/public/assets/shared/whyUs/company5.webp";
 import { motion } from "framer-motion";
-import { Star } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
@@ -17,36 +17,31 @@ const BrandsTrustSection = () => {
   const t = useTranslations()
 
   return (
-    <section className="absolute -bottom-20 container bg-white p-6 rounded-se-[50px]">
+    <section className="absolute 2xl:-bottom-20 xl:-bottom-30 lg:-bottom-16 md:-bottom-4 bottom-0 container bg-white p-6 rounded-se-[50px]">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-center flex flex-col items-center gap-4"
+        className="text-center flex flex-col items-center xl:gap-4 gap-2"
       >
-        <div className="flex items-center justify-center gap-2">
-          <p className="lg:text-base text-sm font-bold">
-            {t("Trusted By")} 20,000+ {t("Clients")}
-          </p>
-          <div className="flex items-center gap-0.5">
-            <Star className="fill-[#0F58E5] text-[#0F58E5]" size={15} />
-            <Star className="fill-[#0F58E5] text-[#0F58E5]" size={15} />
-            <Star className="fill-[#0F58E5] text-[#0F58E5]" size={15} />
-            <Star className="fill-[#0F58E5] text-[#0F58E5]" size={15} />
-            <Star className="fill-[#5B7486] text-[#5B7486]" size={15} />
-          </div>
-        </div>
-        <h2 className="lg:text-4xl text-3xl font-bold">
+        <TrustedBy />
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="xl:text-4xl md:text-3xl text-2xl font-bold"
+        >
           {t("These Brands Trust Us")}
-        </h2>
+        </motion.h2>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="w-full flex flex-wrap items-center justify-center lg:gap-12 gap-6 2xl:mt-8 mt-6"
+          className="w-full flex flex-wrap items-center justify-center xl:gap-12 gap-6 2xl:mt-8 md:mt-6 mt-3"
         >
           {brands.map((brand, index) => (
             <Image
@@ -55,7 +50,7 @@ const BrandsTrustSection = () => {
               alt={`brand-${index}`}
               width={300}
               height={100}
-              className="md:w-auto w-[100px] object-contain"
+              className="xl:w-auto lg:w-[120px] md:w-[100px] w-[80px] object-contain"
             />
           ))}
         </motion.div>

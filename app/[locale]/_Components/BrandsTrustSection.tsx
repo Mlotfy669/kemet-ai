@@ -1,5 +1,6 @@
 "use client";
 
+import TrustedBy from "@/components/ui/TrustedBy";
 import orangeBlocks from "@/public/assets/home/orangeBlocks.webp";
 import company1 from "@/public/assets/shared/whyUs/company1.webp";
 import company2 from "@/public/assets/shared/whyUs/company2.webp";
@@ -7,7 +8,6 @@ import company3 from "@/public/assets/shared/whyUs/company3.webp";
 import company4 from "@/public/assets/shared/whyUs/company4.webp";
 import company5 from "@/public/assets/shared/whyUs/company5.webp";
 import { motion } from "framer-motion";
-import { Star } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
@@ -31,18 +31,7 @@ const BrandsTrustSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center flex flex-col items-center gap-4"
         >
-          <div className="flex items-center justify-center gap-2">
-            <p className="lg:text-base text-sm font-bold">
-              {t("Trusted By")} 20,000+ {t("Clients")}
-            </p>
-            <div className="flex items-center gap-0.5">
-              <Star className="fill-[#0F58E5] text-[#0F58E5]" size={15} />
-              <Star className="fill-[#0F58E5] text-[#0F58E5]" size={15} />
-              <Star className="fill-[#0F58E5] text-[#0F58E5]" size={15} />
-              <Star className="fill-[#0F58E5] text-[#0F58E5]" size={15} />
-              <Star className="fill-[#5B7486] text-[#5B7486]" size={15} />
-            </div>
-          </div>
+          <TrustedBy />
           <h2 className="lg:text-4xl text-3xl font-bold">
             {t("These Brands Trust Us")}
           </h2>

@@ -6,6 +6,7 @@ import en from '@/public/assets/shared/en.webp';
 import { Menu, X } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
+import { usePathname, useRouter } from 'next/navigation';
 
 interface NavbarActionsProps {
   mobileMenuOpen: boolean;
@@ -15,12 +16,15 @@ interface NavbarActionsProps {
 const NavbarActions = ({ mobileMenuOpen, setMobileMenuOpen }: NavbarActionsProps) => {
 
   const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
   const t = useTranslations()
 
   const toggleLanguage = () => {
-    const newLocale = locale === "en" ? "ar" : "en";
-    const currentPath = window.location.pathname.replace(`/${locale}`, "");
-    window.location.href = `/${newLocale}${currentPath}`;
+    const nextLocale = locale === 'en' ? 'ar' : 'en';
+    const segments = pathname.split('/');
+    segments[1] = nextLocale;
+    router.push(segments.join('/'));
   };
 
   return (
