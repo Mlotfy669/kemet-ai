@@ -18,18 +18,15 @@ export default async function Home({
   setRequestLocale(locale);
 
   return (
-    <>
-      <main className="flex-1">
-        <HeroSection />
-        <BrandsTrustSection />
-        <IndustrySection />
-        <StatsSection />
-        <IdrakSection />
-        <VisionMissionSection />
-        <LeadershipSection />
-        <CTASection />
-      </main>
-
-    </>
+    <main className="flex-1">
+      <HeroSection />
+      <BrandsTrustSection />
+      <IndustrySection />
+      <StatsSection />
+      <IdrakSection />
+      <VisionMissionSection />
+      <LeadershipSection />
+      <CTASection />
+    </main>
   );
 }
