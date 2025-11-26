@@ -1,4 +1,3 @@
-import Footer from "@/components/layout/footer";
 import { setRequestLocale } from "next-intl/server";
 import BrandsTrustSection from "./_Components/BrandsTrustSection";
 import CTASection from "./_Components/CtaSection";
@@ -30,7 +29,7 @@ export default async function Home({
         <LeadershipSection />
         <CTASection />
       </main>
-      <Footer />
+
     </>
   );
 }

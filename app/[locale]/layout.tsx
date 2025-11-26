@@ -7,6 +7,7 @@ import { notFound } from "next/navigation";
 import NextTopLoader from 'nextjs-toploader';
 import "./globals.css";
 import Navbar from "@/components/layout/navbar";
+import Footer from "@/components/layout/footer";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta-sans",
@@ -50,6 +51,7 @@ export default async function LocaleLayout({
           <div className="flex min-h-screen flex-col">
             <Navbar />
             {children}
+            <Footer />
           </div>
         </NextIntlClientProvider>
       </body>

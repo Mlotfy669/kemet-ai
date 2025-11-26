@@ -34,7 +34,6 @@ const NavbarActions = ({ mobileMenuOpen, setMobileMenuOpen }: NavbarActionsProps
           src={locale === 'en' ? ar : en}
           alt={locale}
           priority
-          quality={100}
           className='size-5'
         />
         <span>{locale === "en" ? "AR" : "EN"}</span>

@@ -163,7 +163,7 @@ export default function TestimonialsSection() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl"
+        className="container mx-auto px-4 sm:px-6 lg:px-8"
       >
         {/* Header */}
         <motion.div
@@ -211,7 +211,7 @@ export default function TestimonialsSection() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 mx-auto"
         >
           {testimonials.map((testimonial, index) => (
             <TestimonialCard

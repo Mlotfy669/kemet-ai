@@ -39,7 +39,7 @@ export default function VisionMissionSection() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl"
+        className="container mx-auto px-4 sm:px-6 lg:px-8"
       >
         <motion.div
           initial={{ opacity: 0 }}

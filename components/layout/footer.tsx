@@ -4,33 +4,19 @@
 import { motion } from "framer-motion";
 import { Mail, Phone } from "lucide-react";
 import Image from "next/image";
-import footerLogo from "@/public/assets/shared/footerLogo.png";
+import footerLogo from "@/public/assets/shared/footerLogo.webp";
+import arrowDown from "@/public/assets/shared/arrowDown.webp";
+import { useTranslations } from "next-intl";
 
 export default function FooterSection() {
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
-  };
+  const t = useTranslations();
 
   return (
-    <footer className="bg-white py-12 md:py-16 lg:py-20">
-      <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-7xl">
+    <footer className="relative bg-white w-full pt-12 md:pt-16 lg:pt-20 pb-6">
+      <Image src={arrowDown} alt="Arrow Down" className="hidden md:block absolute 2xl:h-24 2xl:w-auto xl:w-auto lg:h-16 lg:w-auto md:h-12 md:w-auto size-14 top-0 left-0" />
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -52,23 +38,23 @@ export default function FooterSection() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="lg:col-span-3 space-y-6"
+              className="lg:col-span-3 space-y-4"
             >
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="w-32 md:w-40"
+                className="w-fit"
               >
                 <Image
                   src={footerLogo}
                   alt="Kemet AI Logo"
-                  className="w-full h-auto"
+                  className="w-full object-none"
 
                 />
               </motion.div>
-              
+
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -82,19 +68,19 @@ export default function FooterSection() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
                   href="mailto:help@kemetai.com"
-                  className="flex items-center gap-3 text-black hover:text-primary-normal transition-colors"
+                  className="flex items-center gap-3 text-black font-semibold hover:text-primary-normal transition-colors"
                 >
                   <Mail className="w-5 h-5 text-secondery-normal" />
                   <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>help@kemetai.com</motion.span>
                 </motion.a>
-                
+
                 <motion.a
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
                   href="tel:+01128501210"
-                  className="flex items-center gap-3 text-black hover:text-primary-normal transition-colors"
+                  className="flex items-center gap-3 text-black font-semibold hover:text-primary-normal transition-colors"
                 >
                   <Phone className="w-5 h-5 text-secondery-normal" />
                   <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>+01128501210</motion.span>
@@ -108,23 +94,48 @@ export default function FooterSection() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="lg:col-span-2"
+              className="lg:col-span-2 flex flex-col gap-4"
             >
-              <motion.h3 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-6 text-black capitalize">Links</motion.h3>
-              <motion.ul initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="space-y-3">
-                <motion.li initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-                  <motion.a href="#about" className="text-black hover:text-primary-normal transition-colors capitalize">
-                    About
+              <motion.h3
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="text-black font-bold capitalize text-lg md:text-xl lg:text-2xl xl:text-3xl"
+              >
+                {t("Links")}
+              </motion.h3>
+              <motion.ul
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="space-y-3">
+                <motion.li
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}>
+                  <motion.a href="#about" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
+                    {t("About")}
                   </motion.a>
                 </motion.li>
-                <motion.li initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-                  <motion.a href="#careers" className="text-black hover:text-primary-normal transition-colors capitalize">
-                    Careers
+                <motion.li
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}>
+                  <motion.a href="#careers" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
+                    {t("Careers")}
                   </motion.a>
                 </motion.li>
-                <motion.li initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-                  <motion.a href="#contact" className="text-black hover:text-primary-normal transition-colors capitalize">
-                    Contact
+                <motion.li
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}>
+                  <motion.a href="#contact" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
+                    {t("Contact")}
                   </motion.a>
                 </motion.li>
               </motion.ul>
@@ -132,55 +143,113 @@ export default function FooterSection() {
 
             {/* Legal Column */}
             <motion.div
-                initial={{ opacity: 0 }}
+              initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="lg:col-span-2"
+              className="lg:col-span-2 flex flex-col gap-4"
             >
-              <motion.h3 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-6 text-black capitalize">Legal</motion.h3>
-              <motion.ul initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="space-y-3">
-                <motion.li initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-                  <motion.a href="#terms" className="text-black hover:text-primary-normal transition-colors capitalize">
-                    Terms of Use
-                  </motion.a>
-                </motion.li>
-                <motion.li initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-                  <motion.a href="#privacy" className="text-black hover:text-primary-normal transition-colors capitalize">
-                    Privacy Policy
-                  </motion.a>
-                </motion.li>
-                <motion.li initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-                  <motion.a href="#cookies" className="text-black hover:text-primary-normal transition-colors capitalize">
-                    Cookie Policy
-                  </motion.a>
-                </motion.li>
-              </motion.ul> 
-            </motion.div>
-
-            {/* Resources Column */}
-            <motion.div
+              <motion.h3
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="lg:col-span-2"
+                className="text-black font-bold capitalize text-lg md:text-xl lg:text-2xl xl:text-3xl"
+              >
+                {t("Legal")}
+              </motion.h3>
+              <motion.ul
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="space-y-3"
+              >
+                <motion.li
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <motion.a href="#terms" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
+                    {t("Terms of Use")}
+                  </motion.a>
+                </motion.li>
+                <motion.li
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <motion.a href="#privacy" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
+                    {t("Privacy Policy")}
+                  </motion.a>
+                </motion.li>
+                <motion.li
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <motion.a href="#cookies" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
+                    {t("Cookie Policy")}
+                  </motion.a>
+                </motion.li>
+              </motion.ul>
+            </motion.div>
+
+            {/* Resources Column */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="lg:col-span-2 flex flex-col gap-4"
             >
-              <motion.h3 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-6 text-black capitalize">Resources</motion.h3>
-              <motion.ul initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="space-y-3">
-                <motion.li initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-                  <motion.a href="#blog" className="text-black hover:text-primary-normal transition-colors capitalize">
-                    Blog
+              <motion.h3
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="text-black font-bold capitalize text-lg md:text-xl lg:text-2xl xl:text-3xl"
+              >
+                {t("Resources")}
+              </motion.h3>
+              <motion.ul
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="space-y-3"
+              >
+                <motion.li
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <motion.a href="#blog" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
+                    {t("Blog")}
                   </motion.a>
                 </motion.li>
-                <motion.li initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-                  <motion.a href="#faq-ar" className="text-black hover:text-primary-normal transition-colors capitalize">
-                    FAQ (AR)
+                <motion.li
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <motion.a href="#faq-ar" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
+                    {t("FAQ (AR)")}
                   </motion.a>
                 </motion.li>
-                <motion.li initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-                  <motion.a href="#faq-en" className="text-black hover:text-primary-normal transition-colors capitalize">
-                    FAQ (EN)
+                <motion.li
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <motion.a href="#faq-en" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
+                    {t("FAQ (EN)")}
                   </motion.a>
                 </motion.li>
               </motion.ul>
@@ -188,26 +257,49 @@ export default function FooterSection() {
 
             {/* Newsletter Column */}
             <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="lg:col-span-3 flex flex-col gap-4"
+            >
+              <motion.h3
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="lg:col-span-3"
-            >
-              <motion.h3 initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-2 text-black capitalize">Newsletter</motion.h3>
-              <motion.p initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="mb-6 text-black capitalize">Stay up to date</motion.p>
-              
-              <motion.form initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="relative" onSubmit={(e) => e.preventDefault()}>
+                className="text-black font-bold capitalize text-lg md:text-xl lg:text-2xl xl:text-3xl"
+              >
+                {t("Newsletter")}
+              </motion.h3>
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="text-black font-semibold capitalize"
+              >
+                {t("Stay up to date")}
+              </motion.p>
+
+              <motion.form
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="relative"
+                onSubmit={(e) => e.preventDefault()}
+              >
                 <motion.input
                   type="email"
-                  placeholder="Your email"
-                  className="w-full h-16 md:h-20 px-6 pr-32 md:pr-40 rounded-full border-2 border-[#e1e1e1] bg-white text-black placeholder:text-[#a8a8a8] focus:outline-none focus:border-primatext-primary-normal transition-colors"
+                  placeholder={t("Your email")}
+                  className="w-full h-16 md:h-20 px-6 pr-32 md:pr-40 rounded-full border-2 border-[#e1e1e1] bg-white text-black placeholder:text-[#a8a8a8] focus:outline-none focus:border-primary-normal transition-colors"
                 />
                 <motion.button
                   type="submit"
-                  className="absolute right-2 top-1/2 -translate-y-1/2 h-12 md:h-[60px] px-6 md:px-8 bg-primatext-primary-normal text-white rounded-full hover:bg-[var(--color-primary-dark)] transition-colors capitalize"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 h-12 md:h-[60px] px-6 md:px-8 bg-primary-normal text-white rounded-full hover:bg-primary-dark transition-colors capitalize"
                 >
-                  Subscribe
+                  {t("Subscribe")}
                 </motion.button>
               </motion.form>
             </motion.div>
@@ -219,7 +311,7 @@ export default function FooterSection() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="pt-8 border-t border-[#d9d9d9]"
+            className="pt-8 font-semibold border-t border-[#d9d9d9]"
           >
             <p className="text-center text-black capitalize">
               © Kemet AI – Sovereign Arabic-Native AI

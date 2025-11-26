@@ -59,31 +59,29 @@ export default function CTASection() {
   const t = useTranslations();
 
   return (
-    <section className="relative w-full bg-[#fbfbfb]">
-
-      {/* Decorative Squares */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.6 }}
-        className="hidden lg:block absolute bottom-32 right-24 w-3 h-3 bg-primary-normal"
-      />
-      <motion.div
-        initial={{ opacity: 0, rotate: 0 }}
-        animate={{ opacity: 1, rotate: 45 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        className="hidden lg:block absolute top-24 left-40 w-3 h-3 bg-secondery-normal rotate-45"
-      />
+    <section className="relative w-full py-3">
 
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-6 sm:py-8 md:py-10 lg:py-12"
+        className="container bg-[#fbfbfb] rounded-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-6 sm:py-8 md:py-10 lg:py-12"
       >
-        <Image src={blueBlocks} alt="Hero Background Frame 3" className="hidden md:block absolute 2xl:h-24 2xl:w-auto xl:w-auto lg:h-16 lg:w-auto md:h-12 md:w-auto size-14 bottom-0 left-0 xl:left-18 2xl:left-30" />
-        <Image src={orangeBlocks} alt="Hero Background Frame 3" className="hidden md:block absolute 2xl:h-20 2xl:w-auto xl:h-16 xl:w-auto lg:h-14 lg:w-auto md:h-16 md:w-auto w-[100px]  h-[50px]  top-0 right-0 xl:right-18 2xl:right-30" />
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          className="hidden lg:block absolute bottom-32 right-24 w-3 h-3 bg-primary-normal"
+        />
+        <motion.div
+          initial={{ opacity: 0, rotate: 0 }}
+          animate={{ opacity: 1, rotate: 45 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="hidden lg:block absolute top-24 left-40 w-3 h-3 bg-secondery-normal rotate-45"
+        />
+        <Image src={blueBlocks} alt="Hero Background Frame 3" className="hidden md:block absolute 2xl:h-24 2xl:w-auto xl:w-auto lg:h-16 lg:w-auto md:h-12 md:w-auto size-14 bottom-0 left-0" />
+        <Image src={orangeBlocks} alt="Hero Background Frame 3" className="hidden md:block absolute 2xl:h-20 2xl:w-auto xl:h-16 xl:w-auto lg:h-14 lg:w-auto md:h-16 md:w-auto w-[100px] h-[50px] top-0 right-0" />
         {/* Header */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -140,7 +138,7 @@ export default function CTASection() {
             transition={{ duration: 0.8, delay: 0.6 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-primary-normal w-fit hover:bg-primary-normal-hover text-white px-10 sm:px-12 md:px-14 py-3.5 sm:py-4 md:py-[15px] rounded-full capitalize transition-colors text-base font-extrabold"
+            className="cursor-pointer bg-primary-normal w-fit hover:bg-primary-normal-hover text-white px-10 sm:px-12 md:px-14 py-3.5 sm:py-4 md:py-[15px] rounded-full capitalize transition-colors text-base font-extrabold"
           >
             {t("Book a Demo Now !")}
           </motion.button>
