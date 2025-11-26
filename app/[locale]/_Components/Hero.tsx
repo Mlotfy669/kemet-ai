@@ -18,7 +18,7 @@ const HeroSection = () => {
   const locale = useLocale()
 
   return (
-    <section className="relative h-dvh md:h-screen bg-primary-normal-hover bg-[url('@/public/assets/shared/heroBg.webp')] bg-cover bg-center bg-no-repeat">
+    <section className="relative h-dvh md:h-screen hero-bg">
       <div className="2xl:h-17 xl:h-14 lg:h-15 h-12 container mx-auto" />
       <div className="absolute inset-0 w-full h-full">
         <Image src={heroBgFrame1} alt="Hero Background Frame 1" className="absolute 2xl:size-24 xl:size-22 lg:size-20 md:size-18 size-16 bottom-[19vh] left-0" />
