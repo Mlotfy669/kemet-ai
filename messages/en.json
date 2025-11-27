@@ -78,6 +78,13 @@
   "Institutional Knowledge Management & Academic Efficiency": "Institutional Knowledge Management & Academic Efficiency",
   "Compliance & Audit Automation": "Compliance & Audit Automation",
   "KEMET Solutions for Risk Reduction in Regulated Enterprises": "KEMET.AI Solutions for Risk Reduction in Regulated Enterprises",
+  "The Fintech sector faces increasing compliance and anti-fraud challenges": "The Fintech sector faces increasing compliance and anti-fraud challenges.",
+  "The Fintech sector faces increasing compliance and anti-fraud challenges desc": "KEMET.AI provides Sovereign AI solutions using NLP for automated document auditing, ensuring customer data security and accelerating auditing processes by up to 70%",
+  "Integrated Services": "Integrated Services",
+  "NLP and Vision Analysis for Financial Compliance": "NLP and Vision Analysis for Financial Compliance",
+  "Integrated Services: NLP and Vision Analysis for Financial Compliance desc": "KEMET.AI enables financial institutions to perform Automated Compliance Analysis of documents and regulations. Vision Analysis is used to accurately extract data from scanned documents and complex financing contracts, while NLP ensures the understanding of deep legal terms",
+  "Financial Risk Response": "Financial Risk Response",
+  "Financial Risk Response desc": "The KEMET.AI system can process millions of records to identify anomalies and suspicious patterns in transactions. This allows for immediate fraud risk recognition, significantly reducing financial losses and improving risk detection accuracy",
   "meta": {
     "title": "Kemet - Your Landing Page",
     "description": "Professional landing page built with Next.js 15"

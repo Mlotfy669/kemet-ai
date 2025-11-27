@@ -48,7 +48,7 @@ function StarRating() {
   );
 }
 
-const TrustedBy = () => {
+const TrustedBy = ({ shouldBeCol = true }: { shouldBeCol: boolean }) => {
 
   const t = useTranslations();
 
@@ -58,7 +58,7 @@ const TrustedBy = () => {
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6 }}
-      className="flex flex-col sm:flex-row items-center sm:items-center gap-3 sm:gap-4"
+      className={`flex ${shouldBeCol ? 'flex-col sm:flex-row' : ""} items-center sm:items-center gap-3 sm:gap-4`}
     >
       <motion.p
         initial={{ opacity: 0, x: -50 }}
