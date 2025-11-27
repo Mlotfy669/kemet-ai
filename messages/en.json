@@ -68,6 +68,16 @@
   "Total Data Security desc": "Total Security: Your Data Never Leaves Your Infrastructure: We are committed to the principle of Sovereign AI. Our solutions are deployed securely within your private infrastructure (On-Premises or Private Cloud), ensuring Full Control over sensitive data and Compliance with all local and international data privacy regulations.",
   "Massive Document Capacity": "Massive Document Capacity",
   "Massive Document Capacity desc": "Billions of Documents: Capability to Process and Search Billions of Documents: Our infrastructure is built to handle the Big Data of organizations with massive archives. Our search and analysis engines ensure the ability to process billions of documents, records, and logs without any degradation in performance or speed.",
+  "Compliance Automation and Fraud Prevention": "Compliance Automation and Fraud Prevention",
+  "Get In Touch !": "Get In Touch !",
+  "Vision Analysis by KEMET": "Vision Analysis by KEMET.AI",
+  "Transforming Unstructured Visual Data into Enterprise Intelligence": "Transforming Unstructured Visual Data into Enterprise Intelligence",
+  "KEMET Healthcare Solutions": "KEMET.AI Healthcare Solutions",
+  "Data Sovereignty and Confidential Medical Report Analysis": "Data Sovereignty and Confidential Medical Report Analysis",
+  "KEMET Solutions for Education": "KEMET.AI Solutions for Education",
+  "Institutional Knowledge Management & Academic Efficiency": "Institutional Knowledge Management & Academic Efficiency",
+  "Compliance & Audit Automation": "Compliance & Audit Automation",
+  "KEMET Solutions for Risk Reduction in Regulated Enterprises": "KEMET.AI Solutions for Risk Reduction in Regulated Enterprises",
   "meta": {
     "title": "Kemet - Your Landing Page",
     "description": "Professional landing page built with Next.js 15"

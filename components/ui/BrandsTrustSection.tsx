@@ -18,11 +18,7 @@ const BrandsTrustSection = () => {
 
   return (
     <section className="absolute 2xl:-bottom-20 xl:-bottom-30 lg:-bottom-16 md:-bottom-4 bottom-0 container bg-white p-6 rounded-se-[50px]">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
+      <div
         className="text-center flex flex-col items-center xl:gap-4 gap-2"
       >
         <TrustedBy />
@@ -54,7 +50,7 @@ const BrandsTrustSection = () => {
             />
           ))}
         </motion.div>
-      </motion.div>
+      </div>
     </section>
   );
 }

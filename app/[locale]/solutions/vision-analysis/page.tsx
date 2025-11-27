@@ -2,7 +2,7 @@ import CTASection from "./_Components/CtaSection";
 import FourPillarsSection from "./_Components/FourPillarsSection";
 import HeroSection from "./_Components/Hero";
 
-const FintechPage = () => {
+const VisionAnalysisPage = () => {
   return (
     <main className="flex-1">
       <HeroSection />
@@ -12,4 +12,4 @@ const FintechPage = () => {
   )
 }
 
-export default FintechPage
+export default VisionAnalysisPage

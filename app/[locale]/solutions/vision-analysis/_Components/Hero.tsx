@@ -1,16 +1,16 @@
 "use client";
 
+import BrandsTrustSection from "@/components/ui/BrandsTrustSection";
 import { Link } from "@/i18n/routing";
 import arrowDown from "@/public/assets/shared/heroArrowDown.webp";
 import heroBgFrame1 from "@/public/assets/shared/heroBgFrame1.webp";
 import heroBgFrame2 from "@/public/assets/shared/heroBgFrame2.webp";
 import heroBgFrame3 from "@/public/assets/shared/heroBgFrame3.webp";
 import underline from "@/public/assets/shared/underline.webp";
-import hero from "@/public/assets/solutions/gov/hero.webp";
+import hero from "@/public/assets/solutions/vision-analysis/hero.webp";
 import { motion } from "framer-motion";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
-import BrandsTrustSection from "./BrandsTrustSection";
 
 const HeroSection = () => {
 
@@ -32,23 +32,35 @@ const HeroSection = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-white flex flex-col xl:gap-2 lg:gap-7 md:gap-6 gap-6"
+            className="text-white flex-1 flex flex-col xl:gap-2 lg:gap-7 md:gap-6 gap-6"
           >
-
-            <motion.h1
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className={`font-bold leading-tight relative z-10 ${locale === "ar" ? "2xl:text-[53px] xl:text-[48px] lg:text-[44px] md:text-[36px] text-[27px]" : "2xl:text-7xl xl:text-[50px] lg:text-[44px] md:text-[40px] text-[30px]"}`}
             >
-              <Image
-                src={underline}
-                alt="Title underline"
-                className="absolute left-10 top-1/2 -z-1 xl:w-auto lg:w-[250px] md:w-[230px] w-[200px]"
-              />
-              {t("Sovereign AI")} : <br />
-              {t("Advanced Technical Features for Absolute Data Control")}
-            </motion.h1>
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className={` font-bold leading-tight relative z-10 ${locale === "ar" ? "md:w-4/5 2xl:text-[53px] xl:text-[48px] lg:text-[44px] md:text-[36px] text-[27px]" : "2xl:text-7xl xl:text-[50px] lg:text-[44px] md:text-[40px] text-[30px]"}`}
+              >
+                <Image
+                  src={underline}
+                  alt="Title underline"
+                  className={`absolute ${locale === "ar" ? "right-0" : "left-10"} -bottom-3 -z-1 xl:w-auto lg:w-[250px] md:w-[230px] w-[200px]`}
+                />
+                {t("Vision Analysis by KEMET")} : <br />
+              </motion.h1>
+              <motion.span
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className={`w-[70%] flex font-bold leading-loose relative z-10 ${locale === "ar" ? "2xl:text-4xl xl:text-[30px] lg:text-[28px] md:text-[26px] text-[24px]" : "2xl:text-3xl xl:text-[30px] lg:text-[28px] md:text-[26px] text-[24px]"}`}
+              >
+                {t("Transforming Unstructured Visual Data into Enterprise Intelligence")}
+              </motion.span>
+            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -60,7 +72,7 @@ const HeroSection = () => {
                 href={`/book-demo`}
                 className="rounded-full bg-primary-normal hover:bg-primary-normal-hover transition-all px-16 2xl:py-3.5 py-2.5 2xl:text-base xl:text-[15px] lg:text-[15px] md:text-[15px] text-[13px]"
               >
-                {t("Book Now !")}
+                {t("Get In Touch !")}
               </Link>
             </motion.div>
           </motion.div>
@@ -70,7 +82,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="w-full relative z-10 md:block hidden"
+            className="w-full flex-1 relative z-10 md:block hidden"
           >
             <Image src={arrowDown} alt="Hero Arrow Down" className={`absolute 2xl:size-20 xl:size-18 lg:size-16 md:size-14 size-8 -top-[8vh] ${locale === "ar" ? "left-0 scale-x-[-1]" : "right-0"}`} />
             <Image

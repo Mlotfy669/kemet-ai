@@ -14,6 +14,7 @@ const NavbarMenu = ({ isScrolled }: { isScrolled: boolean }) => {
   const solutions = [
     { title: "Government", href: "/solutions/government", isActive: pathname === "/solutions/government" },
     { title: "Finance & Fintech", href: "/solutions/fintech", isActive: pathname === "/solutions/fintech" },
+    { title: "Vision Analysis", href: "/solutions/vision-analysis", isActive: pathname === "/solutions/vision-analysis" },
     { title: "Healthcare", href: "/solutions/healthcare", isActive: pathname === "/solutions/healthcare" },
     { title: "Education", href: "/solutions/education", isActive: pathname === "/solutions/education" },
     { title: "Compliance & Audit", href: "/solutions/compliance", isActive: pathname === "/solutions/compliance" },
@@ -26,18 +27,18 @@ const NavbarMenu = ({ isScrolled }: { isScrolled: boolean }) => {
 
 
   return (
-    <ul className="hidden lg:flex items-center 2xl:gap-10 xl:gap-8 lg:gap-6 gap-4 2xl:h-10 xl:h-9 lg:h-8 h-7">
+    <ul className="hidden lg:flex items-center 2xl:gap-6 xl:gap-6 lg:gap-6 gap-4 2xl:h-10 xl:h-9 lg:h-8 h-7">
       {/* Home */}
       <li className="h-full flex items-center">
         <Link
           href="/"
-          className={`${pathname === "/" ? `${isScrolled ? `text-primary-darker` : `text-primary-normal`} font-bold` : 'font-medium text-white'} group relative h-full flex items-center overflow-hidden xl:text-base text-sm`}
+          className={`${pathname === "/" ? `${isScrolled ? `text-primary-darker bg-white/20` : `text-primary-normal bg-primary-light-hover/20`} rounded-full font-bold` : 'font-medium text-white'} px-4 group relative h-full flex items-center overflow-hidden xl:text-base text-sm`}
         >
           <span className="block transition-all duration-300 ease-in-out group-hover:-translate-y-4 group-hover:opacity-0">
             {t(`Home`)}
           </span>
 
-          <span className={`absolute ${locale === "ar" ? "right-0" : "left-0"} top-10 ${isScrolled ? `text-primary-darker` : `text-primary-normal`} transition-all duration-300 ease-in-out group-hover:top-2`}>
+          <span className={`absolute ${locale === "ar" ? "right-0" : "left-0"} top-10 ${isScrolled ? `text-primary-darker` : `text-primary-normal`} px-4 transition-all duration-300 ease-in-out group-hover:top-2`}>
             {t(`Home`)}
           </span>
         </Link>
@@ -48,7 +49,7 @@ const NavbarMenu = ({ isScrolled }: { isScrolled: boolean }) => {
         {/* Button: layered label + arrow */}
         <button
           type="button"
-          className={`${pathname.includes("/solutions") ? `${isScrolled ? `text-primary-darker` : `text-primary-normal`} font-bold` : 'font-medium text-white'} flex items-center gap-1 h-full group relative overflow-hidden xl:text-base text-sm`}
+          className={`${pathname.includes("/solutions") ? `${isScrolled ? `text-primary-darker bg-white/20` : `text-primary-normal bg-primary-light-hover/20`} rounded-full font-bold` : 'font-medium text-white'} px-4 flex items-center gap-1 h-full group relative overflow-hidden xl:text-base text-sm`}
           aria-haspopup="true"
           aria-expanded="false"
         >
@@ -56,7 +57,7 @@ const NavbarMenu = ({ isScrolled }: { isScrolled: boolean }) => {
             {t(`Solutions`)}
           </span>
 
-          <span className={`absolute ${locale === "ar" ? "right-0" : "left-0"} top-10 ${isScrolled ? `text-primary-darker` : `text-primary-normal`} font-semibold transition-all duration-300 ease-in-out group-hover:top-2`}>
+          <span className={`absolute ${locale === "ar" ? "right-0" : "left-0"} top-10 ${isScrolled ? `text-primary-darker` : `text-primary-normal`} px-4 font-semibold transition-all duration-300 ease-in-out group-hover:top-2`}>
             {t(`Solutions`)}
           </span>
 
@@ -96,13 +97,13 @@ const NavbarMenu = ({ isScrolled }: { isScrolled: boolean }) => {
       <li className="h-full flex items-center">
         <Link
           href="/idrak"
-          className={`${pathname === "/idrak" ? `${isScrolled ? `text-primary-darker` : `text-primary-normal`} font-bold` : 'font-medium text-white'} group relative h-full flex items-center overflow-hidden xl:text-base text-sm`}
+          className={`${pathname === "/idrak" ? `${isScrolled ? `text-primary-darker bg-white/20` : `text-primary-normal bg-primary-light-hover/20`} rounded-full font-bold` : 'font-medium text-white'} px-4 group relative h-full flex items-center overflow-hidden xl:text-base text-sm`}
         >
           <span className="block transition-all duration-300 ease-in-out group-hover:-translate-y-4 group-hover:opacity-0">
             {t(`Idrak`)}
           </span>
 
-          <span className={`absolute ${locale === "ar" ? "right-0" : "left-0"} top-10 ${isScrolled ? `text-primary-darker` : `text-primary-normal`} transition-all duration-300 ease-in-out group-hover:top-2`}>
+          <span className={`absolute ${locale === "ar" ? "right-0" : "left-0"} top-10 ${isScrolled ? `text-primary-darker` : `text-primary-normal`} px-4 transition-all duration-300 ease-in-out group-hover:top-2`}>
             {t(`Idrak`)}
           </span>
         </Link>
@@ -113,7 +114,7 @@ const NavbarMenu = ({ isScrolled }: { isScrolled: boolean }) => {
         {/* Button: layered label + arrow */}
         <button
           type="button"
-          className={`${pathname.includes("/resources") ? `${isScrolled ? `text-primary-darker` : `text-primary-normal`} font-bold` : 'font-medium text-white'} flex items-center gap-1 h-full group relative overflow-hidden xl:text-base text-sm`}
+          className={`${pathname.includes("/resources") ? `${isScrolled ? `text-primary-darker bg-white/20` : `text-primary-normal bg-primary-light-hover/20`} rounded-full font-bold` : 'font-medium text-white'} px-4 flex items-center gap-1 h-full group relative overflow-hidden xl:text-base text-sm`}
           aria-haspopup="true"
           aria-expanded="false"
         >
@@ -121,7 +122,7 @@ const NavbarMenu = ({ isScrolled }: { isScrolled: boolean }) => {
             {t(`Resources`)}
           </span>
 
-          <span className={`absolute ${locale === "ar" ? "right-0" : "left-0"} top-10 ${isScrolled ? `text-primary-darker` : `text-primary-normal`} font-semibold transition-all duration-300 ease-in-out group-hover:top-2`}>
+          <span className={`absolute ${locale === "ar" ? "right-0" : "left-0"} top-10 ${isScrolled ? `text-primary-darker` : `text-primary-normal`} px-4 font-semibold transition-all duration-300 ease-in-out group-hover:top-2`}>
             {t(`Resources`)}
           </span>
 
@@ -160,13 +161,13 @@ const NavbarMenu = ({ isScrolled }: { isScrolled: boolean }) => {
       <li className="h-full flex items-center">
         <Link
           href="/company"
-          className={`${pathname === "/company" ? `${isScrolled ? `text-primary-darker` : `text-primary-normal`} font-bold` : 'font-medium text-white'} group relative h-full flex items-center overflow-hidden xl:text-base text-sm`}
+          className={`${pathname === "/company" ? `${isScrolled ? `text-primary-darker bg-white/20` : `text-primary-normal bg-primary-light-hover/20`} rounded-full font-bold` : 'font-medium text-white'} px-4 group relative h-full flex items-center overflow-hidden xl:text-base text-sm`}
         >
           <span className="block transition-all duration-300 ease-in-out group-hover:-translate-y-4 group-hover:opacity-0">
             {t(`Company`)}
           </span>
 
-          <span className={`absolute left-0 top-10 ${isScrolled ? `text-primary-darker` : `text-primary-normal`} transition-all duration-300 ease-in-out group-hover:top-2`}>
+          <span className={`absolute left-0 top-10 ${isScrolled ? `text-primary-darker` : `text-primary-normal`} px-4 transition-all duration-300 ease-in-out group-hover:top-2`}>
             {t(`Company`)}
           </span>
         </Link>

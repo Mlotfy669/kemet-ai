@@ -1,7 +1,14 @@
+import CTASection from "./_Components/CtaSection";
+import FourPillarsSection from "./_Components/FourPillarsSection";
+import HeroSection from "./_Components/Hero";
 
 const EducationPage = () => {
   return (
-    <div>EducationPage</div>
+    <main className="flex-1">
+      <HeroSection />
+      <FourPillarsSection />
+      <CTASection />
+    </main>
   )
 }
 
