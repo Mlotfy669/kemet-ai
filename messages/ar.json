@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "title": "كيميت - صفحتك الرئيسية",
+    "description": "صفحة هبوط احترافية مبنية باستخدام Next.js 15"
+  },
   "Home": "الرئيسية",
   "Solutions": "الحلول",
   "Government": "الحكومة",
@@ -85,8 +89,18 @@
   "Integrated Services: NLP and Vision Analysis for Financial Compliance desc": "تُمكّن KEMET.AI المؤسسات المالية من إجراء تحليل آلي للامتثال للمستندات واللوائح. يُستخدم تحليل الرؤية لاستخراج البيانات بدقة من المستندات الممسوحة ضوئيًا وعقود التمويل المعقدة، بينما تضمن معالجة اللغة الطبيعية (NLP) فهم المصطلحات القانونية العميقة",
   "Financial Risk Response": "الاستجابة للمخاطر المالية",
   "Financial Risk Response desc": "يمكن لنظام KEMET.AI معالجة ملايين السجلات لتحديد الحالات الشاذة والأنماط المشبوهة في المعاملات. وهذا يسمح بالتعرف الفوري على مخاطر الاحتيال، مما يقلل بشكل كبير من الخسائر المالية ويحسن دقة كشف المخاطر",
-  "meta": {
-    "title": "كيميت - صفحتك الرئيسية",
-    "description": "صفحة هبوط احترافية مبنية باستخدام Next.js 15"
-  }
+"KEMET strength extends beyond text": "تتجاوز قوة KEMET.AI النصوص.",
+  "KEMET strength extends beyond text desc": "تمكّن خاصية تحليل الرؤية لدينا من تحويل الصور والمستندات الممسوحة ضوئيًا وحتى الفيديو إلى معلومات قابلة للبحث. يُعد هذا الحل بالغ الأهمية للقطاعات التي تعتمد على الأرشيفات الضخمة والعقود المكتوبة، مما يضمن دقة استخراج البيانات بنسبة 100%.",
+  "Reading Physical Documents (OCR) and Linking to AI": "قراءة المستندات المادية (OCR) وربطها بالذكاء الاصطناعي",
+  "Medical Image Analysis": "تحليل الصور الطبية",
+  "Assisting doctors in analyzing X-rays and scans of legacy medical reports": "مساعدة الأطباء في تحليل صور الأشعة السينية والمسح الضوئي للتقارير الطبية القديمة",
+  "Facial Recognition": "التعرف على الوجه",
+  "Security and surveillance applications within closed environments (in compliance with local privacy laws)": "تطبيقات الأمن والمراقبة ضمن البيئات المغلقة (بما يتوافق مع قوانين الخصوصية المحلية)",
+  "Vehicle Recognition": "التعرف على المركبات",
+  "Applications in fleet management, customs, and ports for automated vehicle identification and scanning": "تطبيقات في إدارة الأساطيل، والجمارك، والموانئ لتحديد المركبات ومسحها آلياً",
+  "Retail Customer Analytics": "تحليلات عملاء التجزئة",
+  "Analyzing customer movement patterns in physical stores to optimize the shopping experience": "تحليل أنماط حركة العملاء في المتاجر الفعلية لتحسين تجربة التسوق",
+  "Identifying and verifying individuals in real-time for security and access control": "تحديد هوية الأفراد والتحقق منها في الوقت الفعلي لأغراض الأمن والتحكم في الوصول",
+  "Security and Sovereignty in Image and Video Processing": "الأمن والسيادة في معالجة الصور والفيديو",
+  "Security and Sovereignty in Image and Video Processing desc": "تتم جميع عمليات تحليل الرؤية ضمن بيئة الذكاء الاصطناعي السيادي (في الموقع)، مما يضمن عدم مغادرة أي بيانات حساسة (مثل صور المستندات المالية أو التقارير الحكومية) إلى أي خدمة سحابية خارجية. يحافظ هذا على سيادة البيانات ويزيد من الثقة في معالجة المعلومات المرئية"
 }

@@ -48,7 +48,7 @@ function StarRating() {
   );
 }
 
-const TrustedBy = ({ shouldBeCol = true }: { shouldBeCol: boolean }) => {
+const TrustedBy = ({ shouldBeCol = true }: { shouldBeCol?: boolean }) => {
 
   const t = useTranslations();
 

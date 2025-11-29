@@ -1,11 +1,10 @@
 "use client";
 
+import TrustedBy from "@/components/ui/TrustedBy";
+import orangeBlocks from "@/public/assets/home/idrak/orangeBlocks.webp";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
-import blueBlocks from "@/public/assets/home/ready/blueBlocks.webp";
-import orangeBlocks from "@/public/assets/home/ready/orangesBlocks.webp";
 import Image from "next/image";
-
 
 const svgPaths = {
   p153cc680: "M14.8411 2.69836C8.13488 2.69836 2.69844 8.1348 2.69844 14.841C2.69844 21.5472 8.13488 26.9836 14.8411 26.9836C21.5473 26.9836 26.9837 21.5472 26.9837 14.841C26.9837 8.1348 21.5473 2.69836 14.8411 2.69836ZM8.2948e-05 14.841C8.2948e-05 6.64454 6.64462 0 14.8411 0C23.0375 0 29.6821 6.64454 29.6821 14.841C29.6821 23.0374 23.0375 29.682 14.8411 29.682C6.64462 29.682 8.2948e-05 23.0374 8.2948e-05 14.841Z",
@@ -18,131 +17,92 @@ const svgPaths = {
   pfe67f00: "M28.9701 4.70793C28.8845 4.44465 28.6509 4.25825 28.3758 4.23335L24.6224 3.8926L23.1391 0.419814C23.0296 0.164672 22.7804 0 22.503 0C22.2257 0 21.9764 0.164672 21.8676 0.419814L20.3842 3.8926L16.6303 4.23335C16.3551 4.25875 16.1221 4.44515 16.036 4.70793C15.9504 4.9712 16.0294 5.25997 16.2376 5.4425L19.0748 7.93034L18.2382 11.6148C18.177 11.8857 18.2822 12.1659 18.507 12.3284C18.6278 12.4162 18.7697 12.46 18.9122 12.46C19.0346 12.46 19.1571 12.4275 19.2665 12.362L22.503 10.4268L25.7389 12.362C25.9763 12.5038 26.2748 12.4909 26.4991 12.3284C26.7239 12.1659 26.829 11.8857 26.7678 11.6148L25.9313 7.93034L28.7685 5.4425C28.9765 5.25997 29.0557 4.9718 28.9701 4.70793V4.70793Z",
 }
 
-function StarRating() {
+
+function AbstractShape() {
   return (
-    <div className="flex items-center gap-1">
-      <svg
-        className="w-[77px] h-[12.46px]"
-        fill="none"
-        viewBox="0 0 77 13"
-      >
-        <g>
-          <path
-            d={svgPaths.pebddb00}
-            fill="var(--color-primary-normal)"
-          />
-          <path
-            d={svgPaths.pfe67f00}
-            fill="var(--color-primary-normal)"
-          />
-          <path
-            d={svgPaths.p16e62b00}
-            fill="var(--color-primary-normal)"
-          />
-          <path
-            d={svgPaths.p9e70880}
-            fill="var(--color-primary-normal)"
-          />
-          <path
-            d={svgPaths.p3d52aa00}
-            fill="#5B7486"
-            opacity="0.3"
-          />
-        </g>
-      </svg>
-    </div>
+    <svg
+      className="w-[90px] h-[90px]"
+      fill="none"
+      viewBox="0 0 119 103"
+    >
+      <path
+        clipRule="evenodd"
+        d={svgPaths.p364c8380}
+        fill="var(--color-primary-normal)"
+        fillRule="evenodd"
+      />
+    </svg>
   );
 }
 
-export default function CTASection() {
+export default function StrengthExtends() {
 
-  const t = useTranslations();
+  const t = useTranslations()
+
 
   return (
-    <section className="relative w-full py-3">
+    <section className="relative w-full bg-[#fbfbfb] py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
+      <motion.div
+        initial={{ opacity: 0, rotate: 0 }}
+        animate={{ opacity: 1, rotate: 45 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="hidden md:block absolute top-4 left-8 lg:left-20 w-3 h-3 bg-secondery-normal rotate-45"
+      />
 
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="container bg-[#fbfbfb] rounded-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-6 sm:py-8 md:py-10 lg:py-12"
+        initial={{ opacity: 0, rotate: 0 }}
+        animate={{ opacity: 1, rotate: 81.509 }}
+        transition={{ duration: 0.8 }}
+        className="hidden lg:block absolute top-40 left-0 xl:left-0"
+        style={{ transform: "rotate(81.509deg)" }}
       >
+        <AbstractShape />
+      </motion.div>
+
+      <Image src={orangeBlocks} alt="Hero Background Frame 3" className="absolute 2xl:h-20 2xl:w-auto xl:h-16 xl:w-auto lg:h-14 lg:w-auto md:h-12 md:w-auto size-8 top-30 -right-4" />
+
+
+      <motion.div
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ duration: 0.8 }}
+        className="container mx-auto px-4 sm:px-6 lg:px-8"
+      >
+        {/* Header Section */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="hidden lg:block absolute bottom-32 right-24 w-3 h-3 bg-primary-normal"
-        />
-        <motion.div
-          initial={{ opacity: 0, rotate: 0 }}
-          animate={{ opacity: 1, rotate: 45 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="hidden lg:block absolute top-24 left-40 w-3 h-3 bg-secondery-normal rotate-45"
-        />
-        <Image src={blueBlocks} alt="Hero Background Frame 3" className="hidden md:block absolute 2xl:h-24 2xl:w-auto xl:w-auto lg:h-16 lg:w-auto md:h-12 md:w-auto size-14 bottom-0 left-0" />
-        <Image src={orangeBlocks} alt="Hero Background Frame 3" className="hidden md:block absolute 2xl:h-20 2xl:w-auto xl:h-16 xl:w-auto lg:h-14 lg:w-auto md:h-16 md:w-auto w-[100px] h-[50px] top-0 right-0" />
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center flex flex-col items-center gap-2"
+          className="max-w-3xl mb-6 sm:mb-8 md:mb-7 2xl:mb-10"
         >
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-3"
-          >
-            <motion.p
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.6 }}
-              className="lg:text-base text-sm font-bold"
-            >
-              {t("Trusted By")} 20,000+ {t("Clients")}
-            </motion.p>
-            <StarRating />
-          </motion.div>
+          {/* Trusted Badge */}
+          <TrustedBy />
 
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          {/* Main Heading */}
+          <motion.h1
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-3xl sm:text-4xl md:text-[42px] text-black font-bold capitalize mb-4"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] max-w-full md:max-w-[650px] text-black capitalize font-bold mt-1 mb-3 sm:mb-5 md:mb-7 2xl:mb-10"
           >
-            {t("Invest in Trustworthy and Secure AI")}
-          </motion.h2>
+            {t("KEMET strength extends beyond text")}
+          </motion.h1>
 
-          {/* Subtitle */}
+          {/* Description */}
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-sm sm:text-base md:text-lg text-black capitalize mb-4"
+            className="text-sm sm:text-base text-black capitalize leading-relaxed max-w-full md:max-w-[670px]"
           >
-            {t("Request a Technical Consultation to Integrate KEMET")}
+            {t("KEMET strength extends beyond text desc")}
           </motion.p>
-
-          {/* CTA Button */}
-          <motion.button
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="cursor-pointer bg-primary-normal w-fit hover:bg-primary-normal-hover text-white px-10 sm:px-12 md:px-14 py-3.5 sm:py-4 md:py-[15px] rounded-full capitalize transition-colors text-base font-extrabold"
-          >
-            {t("Book a Demo Now !")}
-          </motion.button>
         </motion.div>
+        
       </motion.div>
     </section>
   );

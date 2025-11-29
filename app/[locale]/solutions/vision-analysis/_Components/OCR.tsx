@@ -79,38 +79,24 @@ function BackgroundBlobs() {
 
 const industries = [
   {
-    title: "Finance & Fintech",
-    description:
-      "Comprehensive automation of compliance (KYC/AML) and fraud risk reduction",
+    title: "Medical Image Analysis",
+    description: "Assisting doctors in analyzing X-rays and scans of legacy medical reports",
   },
   {
-    title: "Healthcare",
-    description:
-      "Analysis of medical records and research while preserving patient data privacy",
+    title: "Facial Recognition",
+    description: "Security and surveillance applications within closed environments (in compliance with local privacy laws)",
   },
   {
-    title: "Goverment",
-    description:
-      "Transforming massive archives into instant intelligence for strategic decision support",
+    title: "Vehicle Recognition",
+    description: "Applications in fleet management, customs, and ports for automated vehicle identification and scanning",
   },
   {
-    title: "Education",
-    description:
-      "Institutional knowledge management and protection of academic/administrative data",
-  },
-  {
-    title: "NLP",
-    description:
-      "Comprehensive automation of compliance (KYC/AML) and fraud risk reduction",
-  },
-  {
-    title: "Vision Analysis",
-    description:
-      "Comprehensive automation of compliance (KYC/AML) and fraud risk reduction",
-  },
+    title: "Retail Customer Analytics",
+    description: "Analyzing customer movement patterns in physical stores to optimize the shopping experience",
+  }
 ];
 
-const IndustrySection = () => {
+const OCR = () => {
 
   const t = useTranslations();
 
@@ -126,36 +112,22 @@ const IndustrySection = () => {
         className="relative z-10 container mx-auto px-6 flex flex-col lg:gap-13 md:gap-10 gap-8"
       >
         {/* Header */}
-        <motion.div
-          transition={{ duration: 0.8 }}
-          className="text-center"
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="lg:text-4xl text-2xl max-w-[630px] text-center mx-auto font-bold text-black mb-3"
         >
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
-            className="lg:text-4xl text-3xl font-bold text-black mb-3"
-          >
-            {t("One Platform for Every Industry")}
-          </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
-            className="lg:text-[19px] text-base text-black/40 max-w-[370px] mx-auto"
-          >
-            {t("Kemet AI empowers governments and banks with secure, Arabic-native AI")}
-          </motion.p>
-        </motion.div>
+          {t("Reading Physical Documents (OCR) and Linking to AI")}
+        </motion.h2>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-20 lg:gap-y-12 md:gap-y-8 gap-y-4"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 2xl:gap-x-8 gap-x-4 lg:gap-y-12 md:gap-y-8 gap-y-4"
         >
           {industries.map((industry, index) => (
             <motion.div
@@ -164,14 +136,14 @@ const IndustrySection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className=" bg-white rounded-[10px] border border-[#f3f3f3] shadow-[0px_61.49px_76.86px_0px_rgba(185,192,201,0.2)] lg:p-6 lg:pb-10 md:p-4 md:pb-8 p-4 pb-6 flex flex-col lg:gap-5 md:gap-4 gap-3 items-center text-center"
+              className="bg-white rounded-[10px] border border-[#f3f3f3] shadow-[0px_61.49px_76.86px_0px_rgba(185,192,201,0.2)] 2xl:p-6 p-4 flex flex-col lg:gap-5 md:gap-4 gap-3 items-center text-center"
             >
               <motion.h3
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="capitalize lg:text-2xl text-xl md:text-lg text-primary-normal font-bold"
+                className="capitalize flex 2xl:text-3xl xl:text-2xl lg:text-xl text-xl md:text-lg text-primary-normal font-bold 2xl:max-w-4/5"
               >
                 {t(industry.title)}
               </motion.h3>
@@ -180,7 +152,7 @@ const IndustrySection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="capitalize lg:text-base text-sm max-w-[260px] lg:max-w-full"
+                className="capitalize lg:text-base text-sm 2xl:max-w-3/4 flex"
               >
                 {t(industry.description)}
               </motion.p>
@@ -192,4 +164,4 @@ const IndustrySection = () => {
   );
 }
 
-export default IndustrySection
+export default OCR

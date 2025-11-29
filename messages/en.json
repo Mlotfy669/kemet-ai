@@ -1,4 +1,8 @@
 {
+  "meta": {
+    "title": "Kemet - Your Landing Page",
+    "description": "Professional landing page built with Next.js 15"
+  },
   "Home": "Home",
   "Solutions": "Solutions",
   "Government": "Government",
@@ -85,8 +89,18 @@
   "Integrated Services: NLP and Vision Analysis for Financial Compliance desc": "KEMET.AI enables financial institutions to perform Automated Compliance Analysis of documents and regulations. Vision Analysis is used to accurately extract data from scanned documents and complex financing contracts, while NLP ensures the understanding of deep legal terms",
   "Financial Risk Response": "Financial Risk Response",
   "Financial Risk Response desc": "The KEMET.AI system can process millions of records to identify anomalies and suspicious patterns in transactions. This allows for immediate fraud risk recognition, significantly reducing financial losses and improving risk detection accuracy",
-  "meta": {
-    "title": "Kemet - Your Landing Page",
-    "description": "Professional landing page built with Next.js 15"
-  }
+  "KEMET strength extends beyond text": "KEMET.AI's strength extends beyond text.",
+  "KEMET strength extends beyond text desc": "Our Vision Analysis capability transforms images, scanned documents, and even video into searchable information. This solution is crucial for sectors relying on vast archives and written contracts, ensuring 100% data extraction accuracy",
+  "Reading Physical Documents (OCR) and Linking to AI": "Reading Physical Documents (OCR) and Linking to AI",
+  "Medical Image Analysis": "Medical Image Analysis",
+  "Assisting doctors in analyzing X-rays and scans of legacy medical reports": "Assisting doctors in analyzing X-rays and scans of legacy medical reports",
+  "Facial Recognition": "Facial Recognition",
+  "Security and surveillance applications within closed environments (in compliance with local privacy laws)": "Security and surveillance applications within closed environments (in compliance with local privacy laws)",
+  "Vehicle Recognition": "Vehicle Recognition",
+  "Applications in fleet management, customs, and ports for automated vehicle identification and scanning": "Applications in fleet management, customs, and ports for automated vehicle identification and scanning",
+  "Retail Customer Analytics": "Retail Customer Analytics",
+  "Analyzing customer movement patterns in physical stores to optimize the shopping experience": "Analyzing customer movement patterns in physical stores to optimize the shopping experience",
+  "Identifying and verifying individuals in real-time for security and access control": "Identifying and verifying individuals in real-time for security and access control",
+  "Security and Sovereignty in Image and Video Processing": "Security and Sovereignty in Image and Video Processing",
+  "Security and Sovereignty in Image and Video Processing desc": "All Vision Analysis operations run within the Sovereign AI environment (On-Premises), ensuring that no sensitive data (like images of financial documents or government reports) leaves for any external cloud service. This maintains data sovereignty and increases trust in visual information processing"
 }

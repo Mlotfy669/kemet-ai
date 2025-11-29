@@ -1,13 +1,15 @@
-import CTASection from "./_Components/CtaSection";
-import FourPillarsSection from "./_Components/FourPillarsSection";
+import OCR from "./_Components/OCR";
+import StrengthExtends from "./_Components/StrengthExtends";
+import Security from "./_Components/Security";
 import HeroSection from "./_Components/Hero";
 
 const VisionAnalysisPage = () => {
   return (
     <main className="flex-1">
       <HeroSection />
-      <FourPillarsSection />
-      <CTASection />
+      <StrengthExtends />
+      <OCR />
+      <Security />
     </main>
   )
 }
