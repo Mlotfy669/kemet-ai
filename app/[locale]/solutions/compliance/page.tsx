@@ -1,13 +1,17 @@
-import CTASection from "./_Components/CtaSection"
-import FourPillarsSection from "./_Components/FourPillarsSection"
-import HeroSection from "./_Components/Hero"
+import RegulatoryCompliance from "./_Components/RegulatoryCompliance";
+import HeroSection from "./_Components/Hero";
+import FullTransparency from "./_Components/FullTransparency";
+import Transitioning from "./_Components/Transitioning";
+import CtaSection from "./_Components/CtaSection";
 
 const CompliancePage = () => {
   return (
     <main className="flex-1">
       <HeroSection />
-      <FourPillarsSection />
-      <CTASection />
+      <RegulatoryCompliance />
+      <Transitioning />
+      <FullTransparency />
+      <CtaSection />
     </main>
   )
 }

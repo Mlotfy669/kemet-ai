@@ -7,7 +7,7 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 
-export default function Compliance() {
+export default function FullTransparency() {
 
   const t = useTranslations()
 
@@ -45,7 +45,8 @@ export default function Compliance() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl sm:text-3xl md:text-[30px] xl:text-[37px] 2xl:text-[42px] max-w-full md:max-w-[550px] text-black capitalize font-bold"
           >
-            {t("Compliance and Data Privacy Protection")}
+            {t("Full Transparency")} : <br />
+            {t("Ensuring Audit Accuracy and Reducing Review Time")}
           </motion.h1>
 
           {/* Description */}
@@ -56,7 +57,7 @@ export default function Compliance() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="md:max-w-[510px] text-sm md:text-base xl:text-[20px] text-black/50 capitalize max-w-full mb-2"
           >
-            {t("Compliance and Data Privacy Protection desc")}
+            {t("Full Transparency desc")}
           </motion.p>
 
           <motion.div
