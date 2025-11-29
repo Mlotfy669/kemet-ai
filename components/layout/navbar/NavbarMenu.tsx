@@ -75,7 +75,7 @@ const NavbarMenu = ({ isScrolled }: { isScrolled: boolean }) => {
               <li key={s.title} className="h-full w-full flex items-center">
                 <Link
                   href={s.href}
-                  className={`${pathname === s.href ? `${isScrolled ? `text-primary-darker` : `text-primary-normal`} font-bold` : 'font-medium text-black'} group/item h-8 w-full flex items-center overflow-hidden relative xl:text-base text-sm`}
+                  className={`${pathname === s.href ? `text-primary-normal font-bold` : 'font-medium text-black'} group/item h-8 w-full flex items-center overflow-hidden relative xl:text-base text-sm`}
 
                   role="menuitem"
                 >
@@ -140,7 +140,7 @@ const NavbarMenu = ({ isScrolled }: { isScrolled: boolean }) => {
               <li key={s.title} className="h-full w-full flex items-center">
                 <Link
                   href={s.href}
-                  className={`${pathname === s.href ? `${isScrolled ? `text-primary-darker` : `text-primary-normal`} font-bold` : 'font-medium text-black'} group/item h-8 w-full flex items-center overflow-hidden relative xl:text-base text-sm`}
+                  className={`${pathname === s.href ? `text-primary-normal font-bold` : 'font-medium text-black'} group/item h-8 w-full flex items-center overflow-hidden relative xl:text-base text-sm`}
                   role="menuitem"
                 >
                   <span className="block transition-all duration-300 ease-in-out group-hover/item:-translate-y-4 group-hover/item:opacity-0">
