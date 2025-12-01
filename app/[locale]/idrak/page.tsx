@@ -1,7 +1,26 @@
 
+import BrandsTrustSection from "./_Components/BrandsTrustSection";
+import CTASection from "./_Components/CtaSection";
+import HeroSection from "./_Components/Hero";
+import IdrakSection from "./_Components/IdrakSection";
+import AwarenessSection from "./_Components/AwarenessSection";
+import LeadershipSection from "./_Components/LeadershipSection";
+import StatsSection from "./_Components/StatsSection";
+import VisionMissionSection from "./_Components/VisionMissionSection";
+
+
 const IdrakPage = () => {
   return (
-    <div>IdrakPage</div>
+    <main className="flex-1">
+      <HeroSection />
+      <AwarenessSection />
+      <BrandsTrustSection />
+      <StatsSection />
+      <IdrakSection />
+      <VisionMissionSection />
+      <LeadershipSection />
+      <CTASection />
+    </main>
   )
 }
 
