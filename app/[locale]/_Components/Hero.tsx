@@ -26,20 +26,20 @@ const HeroSection = () => {
         <Image src={heroBgFrame2} alt="Hero Background Frame 2" className="absolute 2xl:size-20 xl:size-18 lg:size-16 md:size-14 size-12 bottom-[10vh] right-0" />
         <Image src={heroBgFrame3} alt="Hero Background Frame 3" className="absolute 2xl:size-20 xl:size-18 lg:size-16 md:size-14 size-8 top-[15vh] left-0" />
       </div>
-      <div className="container mx-auto relative 2xl:py-2 xl:py-4 lg:py-3 py-2">
+      <div className="container mx-auto relative 2xl:py-2 xl:py-4 lg:py-3 py-10">
         <div className={`flex flex-col items-center gap-4 mx-auto ${locale === "ar" ? "xl:max-w-[850px] lg:max-w-[750px] md:max-w-[700px] max-w-[550px]" : "2xl:max-w-[840px] xl:max-w-[630px] lg:max-w-[550px] md:max-w-[450px] max-w-[415px]"}`}>
           {/* upper Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-white flex flex-col items-center lg:gap-2 md:gap-7 gap-6"
+            className="text-white flex flex-col items-center lg:gap-2 md:gap-7 gap-10"
           >
             <motion.span
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="rounded-full bg-[#ffc17a3d] px-4 py-0.5 xl:text-sm text-xs font-light text-white"
+              className="rounded-full bg-[#ffc17a3d] px-4 py-0.5 text-sm font-light text-white"
             >
               {t("Trusted By")} <b className="font-bold mx-0.5">150,000+</b> {t("Users")} <span className="text-base">👋</span>
             </motion.span>
@@ -67,7 +67,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="mt-4 text-center 2xl:text-lg xl:text-[17px] text-[15px]"
+              className="mt-4 text-center 2xl:text-lg text-[17px]"
             >
               {t("Trusted Sovereign AI Experts for Enterprise & Critical Sector Solutions Slogan")}
             </motion.p>
@@ -76,11 +76,11 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
-              className="2xl:my-8 xl:my-4 lg:my-3 md:my-4 my-3"
+              className="2xl:my-8 xl:my-4 lg:my-3 my-4"
             >
               <Link
                 href={`/book-demo`}
-                className="rounded-full bg-primary-normal hover:bg-primary-normal-hover transition-all px-16 2xl:py-3.5 py-2.5 2xl:text-base xl:text-[15px] lg:text-[15px] md:text-[15px] text-[13px]"
+                className="rounded-full bg-primary-normal hover:bg-primary-normal-hover transition-all px-16 2xl:py-3.5 py-3 2xl:text-base md:text-[15px] text-sm"
               >
                 {t("Book Now !")}
               </Link>

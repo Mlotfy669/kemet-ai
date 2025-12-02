@@ -40,8 +40,25 @@
 }
 
 
-@layer base {
+html,
+body {
+  width: 100%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
+
+@layer base {
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 0px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--primary-normal);
+    border-radius: 10px;
+  }
+}
+
 .hero-bg {
   background-image: url('/assets/shared/heroBg.webp');
   background-size: cover;

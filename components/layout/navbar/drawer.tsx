@@ -1,6 +1,6 @@
 "use client";
 
-import { Link } from "@/i18n/routing";
+import { Link, usePathname } from "@/i18n/routing";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -14,6 +14,7 @@ interface NavbarDrawerProps {
 const solutions = [
   { title: "Government", href: "/solutions/government" },
   { title: "Finance & Fintech", href: "/solutions/fintech" },
+  { title: "Vision Analysis", href: "/solutions/vision-analysis" },
   { title: "Healthcare", href: "/solutions/healthcare" },
   { title: "Education", href: "/solutions/education" },
   { title: "Compliance & Audit", href: "/solutions/compliance" },
@@ -27,6 +28,7 @@ const resourcesMenuItems = [
 const NavbarDrawer = ({ isOpen, onClose }: NavbarDrawerProps) => {
 
   const t = useTranslations();
+  const pathname = usePathname()
   const [solutionsOpen, setSolutionsOpen] = useState(false);
   const [resourcesOpen, setResourcesOpen] = useState(false);
 

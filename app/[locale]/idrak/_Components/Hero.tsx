@@ -38,14 +38,14 @@ const HeroSection = () => {
               <Image
                 src={underline}
                 alt="Title underline"
-                className="absolute right-0 lg:-bottom-9 -bottom-5 -z-1 xl:w-auto lg:w-[250px] md:w-[230px] w-[200px]"
+                className="absolute right-0 lg:-bottom-9 -bottom-2 -z-1 xl:w-auto lg:w-[250px] md:w-[230px] w-[200px]"
               />
               {t("Idraak's Enterprise-Grade RAG")}
             </h1>
-            <h2 className={`2xl:mb-8 mb-3 font-bold leading-tight relative z-10 2xl:text-5xl xl:text-[48px] lg:text-[42px] md:text-[37px] text-[22px]`}>
+            <h2 className={`2xl:mb-8 mb-3 font-bold leading-tight relative z-10 2xl:text-5xl xl:text-[48px] lg:text-[42px] md:text-[37px] text-[21px]`}>
               ({t("Retrieval-Augmented Generation")})
             </h2>
-            <h2 className={`2xl:mb-4 mb-1 font-bold leading-tight relative z-10 2xl:text-5xl xl:text-[48px] lg:text-[42px] md:text-[37px] text-[25px]`}>
+            <h2 className={`2xl:mb-4 mb-1 font-bold leading-tight relative z-10 2xl:text-5xl xl:text-[48px] lg:text-[42px] md:text-[37px] text-[21px]`}>
               {t(`platform`)}
             </h2>
 
@@ -62,11 +62,11 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
-              className="2xl:my-8 xl:my-4 lg:my-3 md:my-4 my-3"
+              className="2xl:my-8 xl:my-4 lg:my-3 md:my-4 my-6"
             >
               <Link
                 href={`/book-demo`}
-                className="rounded-full bg-primary-normal hover:bg-primary-normal-hover transition-all px-16 2xl:py-3.5 py-2.5 2xl:text-base text-[15px]"
+                className="rounded-full bg-primary-normal hover:bg-primary-normal-hover transition-all px-16 2xl:py-3.5 py-3 2xl:text-base text-[15px]"
               >
                 {t("Book Now !")}
               </Link>

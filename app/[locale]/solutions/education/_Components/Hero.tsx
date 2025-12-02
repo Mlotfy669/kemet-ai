@@ -32,7 +32,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-white flex-1 flex flex-col xl:gap-2 lg:gap-7 md:gap-6 gap-6"
+            className="text-white flex-1 flex flex-col xl:gap-2 lg:gap-7 md:gap-6 gap-10"
           >
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -43,12 +43,12 @@ const HeroSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className={`font-bold mb-4 leading-tight relative z-10 ${locale === "ar" ? "md:w-[80%] mb-4 2xl:text-6xl xl:text-[52px] lg:text-[44px] md:text-[36px] text-[27px]" : "2xl:text-7xl xl:text-[50px] lg:text-[44px] md:text-[40px] text-[30px]"}`}
+                className={`font-bold mb-4 leading-tight relative z-10 ${locale === "ar" ? "md:w-[80%] mb-4 2xl:text-6xl xl:text-[52px] lg:text-[44px] md:text-[36px] text-[32px]" : "2xl:text-7xl xl:text-[50px] lg:text-[44px] md:text-[40px] text-[32px]"}`}
               >
                 <Image
                   src={underline}
                   alt="Title underline"
-                  className="absolute left-10 top-1/2 -z-1 xl:w-auto lg:w-[250px] md:w-[230px] w-[200px]"
+                  className="absolute left-10 md:top-1/2 top-10 -z-1 xl:w-auto lg:w-[250px] md:w-[230px] w-[200px]"
                 />
                 {t("KEMET Solutions for Education")} : <br />
               </motion.h1>

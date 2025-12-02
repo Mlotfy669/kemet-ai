@@ -32,7 +32,7 @@ const HeroSection = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-white flex-1 flex flex-col xl:gap-2 lg:gap-7 md:gap-6 gap-6"
+            className="text-white flex-1 flex flex-col xl:gap-2 lg:gap-7 md:gap-6 gap-10"
           >
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -43,7 +43,7 @@ const HeroSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className={` font-bold leading-tight relative z-10 ${locale === "ar" ? "md:w-4/5 2xl:text-[53px] xl:text-[48px] lg:text-[44px] md:text-[36px] text-[27px]" : "2xl:text-7xl xl:text-[50px] lg:text-[44px] md:text-[40px] text-[30px]"}`}
+                className={` font-bold leading-tight relative z-10 ${locale === "ar" ? "md:w-4/5 2xl:text-[53px] xl:text-[48px] lg:text-[44px] md:text-[36px] text-[32px]" : "2xl:text-7xl xl:text-[50px] lg:text-[44px] md:text-[40px] text-[32px]"}`}
               >
                 <Image
                   src={underline}
@@ -56,7 +56,7 @@ const HeroSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className={`w-[70%] flex font-bold leading-loose relative z-10 ${locale === "ar" ? "2xl:text-4xl xl:text-[30px] lg:text-[28px] md:text-[26px] text-[24px]" : "2xl:text-3xl xl:text-[30px] lg:text-[28px] md:text-[26px] text-[24px]"}`}
+                className={`md:w-[70%] flex font-bold leading-loose relative z-10 ${locale === "ar" ? "2xl:text-4xl xl:text-[30px] lg:text-[28px] md:text-[26px] text-[24px]" : "2xl:text-3xl xl:text-[30px] lg:text-[28px] md:text-[26px] text-[25px]"}`}
               >
                 {t("Transforming Unstructured Visual Data into Enterprise Intelligence")}
               </motion.span>

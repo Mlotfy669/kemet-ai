@@ -54,7 +54,7 @@ const NavbarActions = ({ mobileMenuOpen, setMobileMenuOpen }: NavbarActionsProps
       {/* Mobile Menu Toggle */}
       <button
         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        className="text-white lg:hidden"
+        className="text-white lg:hidden me-4"
       >
         {mobileMenuOpen ? (
           <X className="h-6 w-6" />

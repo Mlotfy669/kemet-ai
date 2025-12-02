@@ -20,23 +20,13 @@ const BrandsTrustSection = () => {
     <section className="absolute 2xl:-bottom-20 xl:-bottom-30 lg:-bottom-16 md:-bottom-4 bottom-0 container bg-white p-6 rounded-se-[50px]">
       <div className="text-center flex flex-col items-center xl:gap-4 gap-2">
         <TrustedBy />
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 , delay: 0.2 }}
+        <h2
           className="xl:text-4xl md:text-3xl text-2xl font-bold"
         >
           {t("These Brands Trust Us")}
-        </motion.h2>
+        </h2>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="w-full flex flex-wrap items-center justify-center xl:gap-12 gap-6 2xl:mt-8 md:mt-6 mt-3"
-        >
+        <div className="w-full flex flex-wrap items-center justify-center xl:gap-12 gap-6 2xl:mt-8 md:mt-6 mt-3">
           {brands.map((brand, index) => (
             <Image
               key={index}
@@ -47,7 +37,7 @@ const BrandsTrustSection = () => {
               className="xl:w-auto lg:w-[120px] md:w-[100px] w-[80px] object-contain"
             />
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

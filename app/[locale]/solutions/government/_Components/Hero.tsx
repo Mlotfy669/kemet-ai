@@ -32,14 +32,14 @@ const HeroSection = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-white flex flex-col xl:gap-2 lg:gap-7 md:gap-6 gap-6"
+            className="text-white flex flex-col xl:gap-2 lg:gap-7 md:gap-6 gap-10"
           >
 
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className={`font-bold leading-snug relative z-10 ${locale === "ar" ? "2xl:text-[53px] xl:text-[48px] lg:text-[44px] md:text-[36px] text-[27px]" : "2xl:text-7xl xl:text-[50px] lg:text-[44px] md:text-[40px] text-[30px]"}`}
+              className={`font-bold leading-snug relative z-10 ${locale === "ar" ? "2xl:text-[53px] xl:text-[48px] lg:text-[44px] md:text-[36px] text-[27px]" : "2xl:text-7xl xl:text-[50px] lg:text-[44px] md:text-[40px] text-[32px]"}`}
             >
               <Image
                 src={underline}
@@ -58,7 +58,7 @@ const HeroSection = () => {
             >
               <Link
                 href={`/book-demo`}
-                className="rounded-full bg-primary-normal hover:bg-primary-normal-hover transition-all px-16 2xl:py-3.5 py-2.5 2xl:text-base xl:text-[15px] lg:text-[15px] md:text-[15px] text-[13px]"
+                className="rounded-full bg-primary-normal hover:bg-primary-normal-hover transition-all px-16 2xl:py-3.5 py-3 2xl:text-base md:text-[15px] text-sm"
               >
                 {t("Book Now !")}
               </Link>

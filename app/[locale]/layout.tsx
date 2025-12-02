@@ -8,6 +8,7 @@ import NextTopLoader from 'nextjs-toploader';
 import "./globals.css";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
+import ScrollToTopButton from "@/components/ui/GoToTop";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta-sans",
@@ -51,6 +52,7 @@ export default async function LocaleLayout({
           <div className="flex min-h-screen flex-col">
             <Navbar />
             {children}
+            <ScrollToTopButton />
             <Footer />
           </div>
         </NextIntlClientProvider>
