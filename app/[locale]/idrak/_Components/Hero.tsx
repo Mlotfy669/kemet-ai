@@ -24,7 +24,7 @@ const HeroSection = () => {
         <Image src={heroBgFrame2} alt="Hero Background Frame 2" className="absolute 2xl:size-20 xl:size-18 lg:size-16 md:size-14 size-12 bottom-[10vh] right-0" />
         <Image src={heroBgFrame3} alt="Hero Background Frame 3" className="absolute 2xl:size-16 xl:size-15 lg:size-14 md:size-13 size-8 top-[15vh] left-0 lg:flex hidden" />
       </div>
-      <div className="container mx-auto relative 2xl:py-10 xl:py-6 lg:py-3 py-2 md:px-6 px-3">
+      <div className="container mx-auto relative 2xl:py-10 xl:py-6 lg:py-3 py-10 md:px-6 px-3">
         <div className={`flex flex-col gap-4 mx-auto`}>
           {/* upper Content */}
           <motion.div
@@ -34,7 +34,7 @@ const HeroSection = () => {
             className="text-white flex flex-col lg:gap-2 md:gap-3 gap-3"
           >
 
-            <h1 className={`2xl:mb-8 mb-3 w-fit font-bold leading-tight relative z-10 2xl:text-6xl xl:text-[52px] lg:text-[44px] md:text-[40px] text-[23px]`}>
+            <h1 className={`2xl:mb-8 mb-3 w-fit font-bold leading-tight relative z-10 2xl:text-6xl xl:text-[52px] lg:text-[44px] md:text-[40px] text-[25px]`}>
               <Image
                 src={underline}
                 alt="Title underline"
@@ -42,10 +42,10 @@ const HeroSection = () => {
               />
               {t("Idraak's Enterprise-Grade RAG")}
             </h1>
-            <h2 className={`2xl:mb-8 mb-3 font-bold leading-tight relative z-10 2xl:text-5xl xl:text-[48px] lg:text-[42px] md:text-[37px] text-[20px]`}>
+            <h2 className={`2xl:mb-8 mb-3 font-bold leading-tight relative z-10 2xl:text-5xl xl:text-[48px] lg:text-[42px] md:text-[37px] text-[22px]`}>
               ({t("Retrieval-Augmented Generation")})
             </h2>
-            <h2 className={`2xl:mb-4 mb-1 font-bold leading-tight relative z-10 2xl:text-5xl xl:text-[48px] lg:text-[42px] md:text-[37px] text-[20px]`}>
+            <h2 className={`2xl:mb-4 mb-1 font-bold leading-tight relative z-10 2xl:text-5xl xl:text-[48px] lg:text-[42px] md:text-[37px] text-[25px]`}>
               {t(`platform`)}
             </h2>
 
@@ -53,7 +53,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="mt-4 2xl:text-[22px] xl:text-xl text-[15px] lg:max-w-1/2 md:max-w-full"
+              className="mt-4 2xl:text-[22px] xl:text-xl text-xl lg:max-w-1/2 md:max-w-full"
             >
               {t("delivers accurate, reference-backed answers from your internal documents")}
             </motion.p>
@@ -66,7 +66,7 @@ const HeroSection = () => {
             >
               <Link
                 href={`/book-demo`}
-                className="rounded-full bg-primary-normal hover:bg-primary-normal-hover transition-all px-16 2xl:py-3.5 py-2.5 2xl:text-base xl:text-[15px] lg:text-[15px] md:text-[15px] text-[13px]"
+                className="rounded-full bg-primary-normal hover:bg-primary-normal-hover transition-all px-16 2xl:py-3.5 py-2.5 2xl:text-base text-[15px]"
               >
                 {t("Book Now !")}
               </Link>
@@ -80,14 +80,14 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="md:w-4/5 w-full relative z-10 flex justify-start"
           >
-            <Image src={arrowDown} alt="Hero Arrow Down" className={`absolute 2xl:size-24 xl:size-20 lg:size-16 md:size-14 size-8 -top-[12vh] ${locale === "ar" ? "left-0 -scale-x-100" : "right-0"}`} />
+            <Image src={arrowDown} alt="Hero Arrow Down" className={`absolute 2xl:size-24 xl:size-20 lg:size-16 md:size-14 size-12 xl:-top-[12vh] -top-[7vh] ${locale === "ar" ? "left-0 -scale-x-100" : "right-0"}`} />
             <Image
               src={idrak}
               alt="KEMET.AI Dashboard"
               width={1200}
               height={610}
               priority
-              className="w-full 2xl:max-h-[610px] xl:max-h-[440px] lg:max-h-[400px] md:max-h-[350px] object-fill"
+              className="w-full 2xl:max-h-[610px] xl:max-h-[440px] lg:max-h-[400px] md:max-h-[350px]  object-fill"
             />
           </motion.div>
         </div>

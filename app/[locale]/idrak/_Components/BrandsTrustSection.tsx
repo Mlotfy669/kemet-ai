@@ -1,7 +1,6 @@
 "use client";
 
 import TrustedBy from "@/components/ui/TrustedBy";
-import orangeBlocks from "@/public/assets/home/orangeBlocks.webp";
 import company1 from "@/public/assets/shared/whyUs/company1.webp";
 import company2 from "@/public/assets/shared/whyUs/company2.webp";
 import company3 from "@/public/assets/shared/whyUs/company3.webp";
@@ -19,11 +18,7 @@ const BrandsTrustSection = () => {
 
   return (
     <section className="relative bg-white 2xl:py-16 xl:py-10 py-8">
-      <div className="absolute inset-0 w-full h-full">
-        <Image src={orangeBlocks} alt="Hero Background Frame 3" className="absolute 2xl:size-20 xl:size-18 lg:size-16 md:size-14 size-8 bottom-0 left-0" />
-      </div>
       <div className="relative container mx-auto px-6">
-        <span className="size-3 bg-secondery-normal absolute top-0 md:right-0 right-6 rotate-45"></span>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

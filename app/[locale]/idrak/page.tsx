@@ -1,12 +1,12 @@
 
+import AwarenessSection from "./_Components/AwarenessSection";
 import BrandsTrustSection from "./_Components/BrandsTrustSection";
 import CTASection from "./_Components/CtaSection";
+import DiscoverThePower from "./_Components/DiscoverThePower";
 import HeroSection from "./_Components/Hero";
-import IdrakSection from "./_Components/IdrakSection";
-import AwarenessSection from "./_Components/AwarenessSection";
-import LeadershipSection from "./_Components/LeadershipSection";
+import HowIdrakWork from "./_Components/HowIdrakWork";
 import StatsSection from "./_Components/StatsSection";
-import VisionMissionSection from "./_Components/VisionMissionSection";
+import UseCases from "./_Components/UseCases";
 
 
 const IdrakPage = () => {
@@ -15,10 +15,10 @@ const IdrakPage = () => {
       <HeroSection />
       <AwarenessSection />
       <BrandsTrustSection />
+      <HowIdrakWork />
       <StatsSection />
-      <IdrakSection />
-      <VisionMissionSection />
-      <LeadershipSection />
+      <DiscoverThePower />
+      <UseCases />
       <CTASection />
     </main>
   )
