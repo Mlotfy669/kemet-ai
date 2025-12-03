@@ -182,7 +182,7 @@ export default function FooterSection() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
                 >
-                  <Link href="/privacy" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
+                  <Link href="/policy" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
                     {t("Privacy Policy")}
                   </Link>
                 </motion.li>

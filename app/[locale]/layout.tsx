@@ -48,7 +48,7 @@ export default async function LocaleLayout({
     <html lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
       <body className={`${plusJakartaSans.variable} ${cairo.variable} antialiased ${locale === "ar" ? "font-cairo" : "font-plus-jakarta-sans"}`}>
         <NextIntlClientProvider messages={messages}>
-          <NextTopLoader showSpinner={false} color="#208E9A" />
+          <NextTopLoader showSpinner={false} color="#ffffff" />
           <div className="flex min-h-screen flex-col">
             <Navbar />
             {children}
