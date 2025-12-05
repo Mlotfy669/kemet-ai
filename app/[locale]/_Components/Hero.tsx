@@ -99,7 +99,7 @@ const HeroSection = () => {
               controlsList="nodownload"
               preload="metadata"
               poster='/assets/home/thupnail.png'
-              className="w-full 2xl:h-[500px] xl:h-[300px] lg:h-[320px] md:h-[220px] h-[200px] object-fill 2xl:rounded-4xl xl:rounded-3xl lg:rounded-2xl rounded-xl"
+              className="w-full 2xl:h-[500px] xl:h-[300px] lg:h-80 md:h-[220px] h-[200px] object-fill 2xl:rounded-4xl xl:rounded-3xl lg:rounded-2xl rounded-xl"
             >
               <source src={`/assets/home/kemet.mp4`} type="video/mp4" />
               متصفحك مش بيدعم عرض الفيديو.

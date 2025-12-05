@@ -121,7 +121,7 @@ export default function IdraakHero() {
             poster='/assets/idrak/hero.png'
             className="md:w-[90%] w-full md:h-[65vh] h-[45vh] object-fill 2xl:rounded-3xl xl:rounded-2xl lg:rounded-xl rounded-lg"
           >
-            <source src={`/assets/idrak/Idraak.mp4`} type="video/mp4" />
+            <source src={`/assets/idrak/idraak.mp4`} type="video/mp4" />
             متصفحك مش بيدعم عرض الفيديو.
           </video>
         </motion.div>

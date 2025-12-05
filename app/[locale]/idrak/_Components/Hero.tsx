@@ -16,7 +16,7 @@ const HeroSection = () => {
   const locale = useLocale()
 
   return (
-    <section className="relative h-screen hero-bg 2xl:mb-[320px] xl:mb-[250px] lg:mb-[150px] md:mb-[120px]">
+    <section className="relative h-screen hero-bg 2xl:mb-80 xl:mb-[250px] lg:mb-[150px] md:mb-[120px]">
       <div className="2xl:h-17 xl:h-14 lg:h-15 h-12 container mx-auto" />
       <div className="absolute inset-0 w-full h-full">
         <Image src={heroBgFrame1} alt="Hero Background Frame 1" className="absolute 2xl:size-24 xl:size-22 lg:size-20 md:size-18 size-16 bottom-[19vh] left-0" />
@@ -87,7 +87,7 @@ const HeroSection = () => {
               poster='/assets/idrak/hero.png'
               className="w-full 2xl:h-[610px] xl:h-[440px] lg:h-[400px] md:h-[350px] h-[250px] object-fill 2xl:rounded-4xl xl:rounded-3xl lg:rounded-2xl rounded-xl"
             >
-              <source src={`/assets/idrak/Idraak.mp4`} type="video/mp4" />
+              <source src={`/assets/idrak/idraak.mp4`} type="video/mp4" />
               متصفحك مش بيدعم عرض الفيديو.
             </video>
           </motion.div>
