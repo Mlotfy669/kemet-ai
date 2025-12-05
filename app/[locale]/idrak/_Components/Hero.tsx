@@ -1,7 +1,6 @@
 "use client";
 
 import { Link } from "@/i18n/routing";
-import idrak from "@/public/assets/idrak/hero.png";
 import arrowDown from "@/public/assets/shared/heroArrowDown.webp";
 import heroBgFrame1 from "@/public/assets/shared/heroBgFrame1.webp";
 import heroBgFrame2 from "@/public/assets/shared/heroBgFrame2.webp";
@@ -81,14 +80,16 @@ const HeroSection = () => {
             className="md:w-4/5 w-full relative z-10 flex justify-start"
           >
             <Image src={arrowDown} alt="Hero Arrow Down" className={`absolute 2xl:size-24 xl:size-20 lg:size-16 md:size-14 size-12 xl:-top-[12vh] -top-[7vh] ${locale === "ar" ? "left-0 -scale-x-100" : "right-0"}`} />
-            <Image
-              src={idrak}
-              alt="KEMET.AI Dashboard"
-              width={1200}
-              height={610}
-              priority
-              className="w-full 2xl:max-h-[610px] xl:max-h-[440px] lg:max-h-[400px] md:max-h-[350px]  object-fill"
-            />
+            <video
+              controls
+              controlsList="nodownload"
+              preload="metadata"
+              poster='/assets/idrak/hero.png'
+              className="w-full 2xl:h-[610px] xl:h-[440px] lg:h-[400px] md:h-[350px] h-[250px] object-fill 2xl:rounded-4xl xl:rounded-3xl lg:rounded-2xl rounded-xl"
+            >
+              <source src={`/assets/idrak/Idraak.mp4`} type="video/mp4" />
+              متصفحك مش بيدعم عرض الفيديو.
+            </video>
           </motion.div>
         </div>
       </div>

@@ -20,11 +20,6 @@ const NavbarMenu = ({ isScrolled }: { isScrolled: boolean }) => {
     { title: "Compliance & Audit", href: "/solutions/compliance", isActive: pathname === "/solutions/compliance" },
   ];
 
-  const resourcesMenuItems = [
-    { title: "Blog", href: "/resources/blog", isActive: pathname === "/resources/blog" },
-    { title: "FAQ", href: "/resources/faq", isActive: pathname === "/resources/faq" }
-  ]
-
 
   return (
     <ul className="hidden lg:flex items-center 2xl:gap-6 xl:gap-6 lg:gap-6 gap-4 2xl:h-10 xl:h-9 lg:h-8 h-7">
@@ -109,52 +104,20 @@ const NavbarMenu = ({ isScrolled }: { isScrolled: boolean }) => {
         </Link>
       </li>
 
-      {/* Resources (dropdown) */}
-      <li className="relative group h-full flex items-center">
-        {/* Button: layered label + arrow */}
-        <button
-          type="button"
-          className={`${pathname.includes("/resources") ? `${isScrolled ? `text-primary-darker bg-white/20` : `text-primary-normal bg-primary-light-hover/20`} rounded-full font-bold` : 'font-medium text-white'} px-4 flex items-center gap-1 h-full group relative overflow-hidden xl:text-base text-sm`}
-          aria-haspopup="true"
-          aria-expanded="false"
+      {/* Resources */}
+      <li className="h-full flex items-center">
+        <Link
+          href="/blogs"
+          className={`${pathname === "/blogs" ? `${isScrolled ? `text-primary-darker bg-white/20` : `text-primary-normal bg-primary-light-hover/20`} rounded-full font-bold` : 'font-medium text-white'} px-4 group relative h-full flex items-center overflow-hidden xl:text-base text-sm`}
         >
           <span className="block transition-all duration-300 ease-in-out group-hover:-translate-y-4 group-hover:opacity-0">
             {t(`Resources`)}
           </span>
 
-          <span className={`absolute ${locale === "ar" ? "right-0" : "left-0"} top-10 ${isScrolled ? `text-primary-darker` : `text-primary-normal`} px-4 font-semibold transition-all duration-300 ease-in-out group-hover:top-2`}>
+          <span className={`absolute ${locale === "ar" ? "right-0" : "left-0"} top-10 ${isScrolled ? `text-primary-darker` : `text-primary-normal`} px-4 transition-all duration-300 ease-in-out group-hover:top-2`}>
             {t(`Resources`)}
           </span>
-
-          <ChevronDown size={17} className={`transition-transform duration-300 ${isScrolled ? `group-hover:text-primary-darker` : `group-hover:text-primary-normal`} group-hover:rotate-180`} />
-        </button>
-
-        {/* Dropdown panel */}
-        <div
-          className="pointer-events-none absolute left-0 top-full z-40 w-52 rounded-md bg-white shadow-lg opacity-0 translate-y-3 transition-all duration-200 group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto"
-          role="menu"
-          aria-label="Resources submenu"
-        >
-          <ul className="grid grid-cols-1 gap-1 p-3">
-            {resourcesMenuItems.map((s) => (
-              <li key={s.title} className="h-full w-full flex items-center">
-                <Link
-                  href={s.href}
-                  className={`${pathname === s.href ? `text-primary-normal font-bold` : 'font-medium text-black'} group/item h-8 w-full flex items-center overflow-hidden relative xl:text-base text-sm`}
-                  role="menuitem"
-                >
-                  <span className="block transition-all duration-300 ease-in-out group-hover/item:-translate-y-4 group-hover/item:opacity-0">
-                    {t(s.title)}
-                  </span>
-
-                  <span className={`absolute ${locale === "ar" ? "right-0" : "left-0"} top-10 text-primary-normal font-bold transition-all duration-300 ease-in-out group-hover/item:top-2`}>
-                    {t(s.title)}
-                  </span>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+        </Link>
       </li>
 
       {/* Company */}
@@ -169,6 +132,22 @@ const NavbarMenu = ({ isScrolled }: { isScrolled: boolean }) => {
 
           <span className={`absolute left-0 top-10 ${isScrolled ? `text-primary-darker` : `text-primary-normal`} px-4 transition-all duration-300 ease-in-out group-hover:top-2`}>
             {t(`Company`)}
+          </span>
+        </Link>
+      </li>
+
+      {/* Contact */}
+      <li className="h-full flex items-center">
+        <Link
+          href="/contact-us"
+          className={`${pathname === "/contact-us" ? `${isScrolled ? `text-primary-darker bg-white/20` : `text-primary-normal bg-primary-light-hover/20`} rounded-full font-bold` : 'font-medium text-white'} px-4 group relative h-full flex items-center overflow-hidden xl:text-base text-sm`}
+        >
+          <span className="block transition-all duration-300 ease-in-out group-hover:-translate-y-4 group-hover:opacity-0">
+            {t(`Contact Us`)}
+          </span>
+
+          <span className={`absolute left-0 top-10 ${isScrolled ? `text-primary-darker` : `text-primary-normal`} px-4 transition-all duration-300 ease-in-out group-hover:top-2`}>
+            {t(`Contact Us`)}
           </span>
         </Link>
       </li>

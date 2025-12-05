@@ -1,6 +1,6 @@
 "use client";
 
-import { Link, usePathname } from "@/i18n/routing";
+import { Link } from "@/i18n/routing";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -20,17 +20,10 @@ const solutions = [
   { title: "Compliance & Audit", href: "/solutions/compliance" },
 ];
 
-const resourcesMenuItems = [
-  { title: "Blog", href: "/resources/blog" },
-  { title: "FAQ", href: "/resources/faq" }
-];
-
 const NavbarDrawer = ({ isOpen, onClose }: NavbarDrawerProps) => {
 
   const t = useTranslations();
-  const pathname = usePathname()
   const [solutionsOpen, setSolutionsOpen] = useState(false);
-  const [resourcesOpen, setResourcesOpen] = useState(false);
 
   if (!isOpen) return null;
 
@@ -94,38 +87,15 @@ const NavbarDrawer = ({ isOpen, onClose }: NavbarDrawerProps) => {
             {t(`Idrak`)}
           </Link>
 
-          {/* Resources (expandable) */}
-          <div className="flex flex-col gap-2">
-            <button
-              onClick={() => setResourcesOpen(!resourcesOpen)}
-              className="flex items-center justify-between text-white font-medium hover:text-primary-darker transition-colors text-sm"
-            >
-              <span>{t(`Resources`)}</span>
-              <ChevronDown size={16} className={`transition-transform duration-300 ${resourcesOpen ? "rotate-180" : ""}`} />
-            </button>
-            <AnimatePresence>
-              {resourcesOpen && (
-                <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: "auto" }}
-                  exit={{ opacity: 0, height: 0 }}
-                  transition={{ duration: 0.2 }}
-                  className="flex flex-col gap-2 ps-4 overflow-hidden"
-                >
-                  {resourcesMenuItems.map((resource) => (
-                    <Link
-                      key={resource.title}
-                      href={resource.href}
-                      className="text-white/80 text-sm hover:text-primary-darker transition-colors"
-                      onClick={onClose}
-                    >
-                      {t(resource.title)}
-                    </Link>
-                  ))}
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </div>
+          {/* Resources */}
+          <Link
+            href="/blogs"
+            className="text-white font-medium hover:text-primary-darker transition-colors text-sm"
+            onClick={onClose}
+          >
+            {t(`Resources`)}
+          </Link>
+
 
           {/* Company */}
           <Link
@@ -134,6 +104,15 @@ const NavbarDrawer = ({ isOpen, onClose }: NavbarDrawerProps) => {
             onClick={onClose}
           >
             {t(`Company`)}
+          </Link>
+
+          {/* Contact */}
+          <Link
+            href="/contact-us"
+            className="text-white font-medium hover:text-primary-darker transition-colors text-sm"
+            onClick={onClose}
+          >
+            {t(`Contact Us`)}
           </Link>
         </div>
       </div>

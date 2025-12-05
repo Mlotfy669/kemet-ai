@@ -10,7 +10,6 @@ import heroBgFrame3 from "@/public/assets/shared/heroBgFrame3.webp";
 import titleCorner from "@/public/assets/home/hero/titleCorner.webp";
 import underline from "@/public/assets/shared/underline.webp";
 import arrowDown from "@/public/assets/shared/heroArrowDown.webp";
-import idrak from "@/public/assets/home/hero/idrak.webp";
 import { Link } from "@/i18n/routing";
 
 const HeroSection = () => {
@@ -92,18 +91,19 @@ const HeroSection = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="w-full relative z-10"
+            className="w-full relative z-10 px-3"
           >
             <Image src={arrowDown} alt="Hero Arrow Down" className="absolute 2xl:size-20 xl:size-18 lg:size-16 md:size-14 size-8 -top-[10vh] right-0" />
-            <Image
-              src={idrak}
-              alt="KEMET.AI Dashboard"
-              width={1200}
-              height={700}
-              priority
-              className="w-full lg:rounded-b-[40px] rounded-[20px] shadow-sm object-cover"
-              sizes="(max-width: 768px) 100vw, 1200px"
-            />
+            <video
+              controls
+              controlsList="nodownload"
+              preload="metadata"
+              poster='/assets/home/thupnail.png'
+              className="w-full 2xl:h-[500px] xl:h-[300px] lg:h-[320px] md:h-[220px] h-[200px] object-fill 2xl:rounded-4xl xl:rounded-3xl lg:rounded-2xl rounded-xl"
+            >
+              <source src={`/assets/home/kemet.mp4`} type="video/mp4" />
+              متصفحك مش بيدعم عرض الفيديو.
+            </video>
           </motion.div>
         </div>
       </div>

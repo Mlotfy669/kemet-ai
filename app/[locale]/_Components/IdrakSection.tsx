@@ -4,7 +4,6 @@
 import { motion } from "framer-motion";
 import orangeBlocks from "@/public/assets/home/idrak/orangeBlocks.webp";
 import blueBlocks from "@/public/assets/home/idrak/blueBlocks.webp";
-import idrakImg from "@/public/assets/home/idrak.webp";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
@@ -115,13 +114,16 @@ export default function IdraakHero() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="mb-6 sm:mb-8 md:mb-10 rounded-3xl overflow-hidden"
         >
-          <Image
-            alt="Idraak Demo Video"
-            className="md:w-[90%] w-full md:h-[62vh] h-[35vh]"
-            width={1062}
-            height={595}
-            src={idrakImg}
-          />
+          <video
+            controls
+            controlsList="nodownload"
+            preload="metadata"
+            poster='/assets/idrak/hero.png'
+            className="md:w-[90%] w-full md:h-[65vh] h-[45vh] object-fill 2xl:rounded-3xl xl:rounded-2xl lg:rounded-xl rounded-lg"
+          >
+            <source src={`/assets/idrak/Idraak.mp4`} type="video/mp4" />
+            متصفحك مش بيدعم عرض الفيديو.
+          </video>
         </motion.div>
 
         {/* CTA Section */}
