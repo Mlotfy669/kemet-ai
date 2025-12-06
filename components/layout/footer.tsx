@@ -68,11 +68,11 @@ export default function FooterSection() {
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
-                  href="mailto:help@kemetai.com"
+                  href="mailto:Sales@kemetai.com"
                   className="flex items-center gap-3 text-black font-semibold hover:text-primary-normal transition-colors"
                 >
                   <Mail className="w-5 h-5 text-secondery-normal" />
-                  <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>help@kemetai.com</motion.span>
+                  <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>Sales@kemetai.com</motion.span>
                 </motion.a>
 
                 <motion.a
@@ -80,11 +80,22 @@ export default function FooterSection() {
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
-                  href="tel:+01128501210"
+                  href="tel:+20 114 744 4698"
                   className="flex items-center gap-3 text-black font-semibold hover:text-primary-normal transition-colors"
                 >
                   <Phone className="w-5 h-5 text-secondery-normal" />
-                  <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>+01128501210</motion.span>
+                  <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>+20 114 744 4698</motion.span>
+                </motion.a>
+                <motion.a
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                  href="tel:+20 110 113 1892"
+                  className="flex items-center gap-3 text-black font-semibold hover:text-primary-normal transition-colors"
+                >
+                  <Phone className="w-5 h-5 text-secondery-normal" />
+                  <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>+20 110 113 1892</motion.span>
                 </motion.a>
               </motion.div>
             </motion.div>
@@ -117,7 +128,7 @@ export default function FooterSection() {
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}>
-                  <Link href="/about" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
+                  <Link href="/company" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
                     {t("About")}
                   </Link>
                 </motion.li>
@@ -126,17 +137,8 @@ export default function FooterSection() {
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}>
-                  <Link href="/careers" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
-                    {t("Careers")}
-                  </Link>
-                </motion.li>
-                <motion.li
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6 }}>
-                  <Link href="/contact" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
-                    {t("Contact")}
+                  <Link href="/contact-us" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
+                    {t("Contact Us")}
                   </Link>
                 </motion.li>
               </motion.ul>
@@ -186,16 +188,6 @@ export default function FooterSection() {
                     {t("Privacy Policy")}
                   </Link>
                 </motion.li>
-                <motion.li
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <Link href="/cookies" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
-                    {t("Cookie Policy")}
-                  </Link>
-                </motion.li>
               </motion.ul>
             </motion.div>
 
@@ -229,7 +221,7 @@ export default function FooterSection() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
                 >
-                  <Link href="/blog" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
+                  <Link href="/blogs" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
                     {t("Blog")}
                   </Link>
                 </motion.li>
@@ -239,7 +231,7 @@ export default function FooterSection() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
                 >
-                  <Link href="/faq" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
+                  <Link href="/blogs" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
                     {t("FAQ")}
                   </Link>
                 </motion.li>
@@ -247,7 +239,7 @@ export default function FooterSection() {
             </motion.div>
 
             {/* Newsletter Column */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
@@ -293,7 +285,7 @@ export default function FooterSection() {
                   {t("Subscribe")}
                 </motion.button>
               </motion.form>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
 
           {/* Copyright Section */}

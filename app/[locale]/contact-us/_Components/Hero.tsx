@@ -15,7 +15,6 @@ const HeroSection = () => {
 
   return (
     <section className="relative md:h-[470px] h-[380px] hero-bg">
-      <div className={`absolute bottom-0 lg:w-[90%] md:w-[95%] w-full h-[150px] bg-white rounded-se-[50px] ${locale === "ar" ? "right-0" : "left-0"}`} />
       <div className="2xl:h-17 xl:h-14 lg:h-15 h-12 container mx-auto" />
       <div className="absolute inset-0 w-full h-full">
         <Image
