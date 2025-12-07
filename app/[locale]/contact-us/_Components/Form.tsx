@@ -144,7 +144,7 @@ export default function ContactForm() {
       setIsSubmitting(true);
       try {
         const formData = new FormData(e.target as HTMLFormElement);
-        formData.append("access_key", process.env.NEXT_PUBLIC_WEB_FORM_ACCESS_KEY as string);
+        formData.append("access_key", 'b110e726-5f58-4fbe-b2f0-a37dab803889');
 
         const response = await fetch("https://api.web3forms.com/submit", {
           method: "POST",
