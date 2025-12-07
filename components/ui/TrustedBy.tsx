@@ -67,7 +67,7 @@ const TrustedBy = ({ shouldBeCol = true }: { shouldBeCol?: boolean }) => {
         transition={{ duration: 0.6 }}
         className="lg:text-base text-sm font-bold"
       >
-        {t("Trusted By")} 20,000+ {t("Clients")}
+        {t("Trusted By")} 100+ {t("Clients")}
       </motion.p>
       <StarRating />
     </motion.div>

@@ -41,17 +41,17 @@ function StatItem({ value, label, index, t }: StatItemProps) {
   );
 }
 
-const stats = [
-  { value: "99.5%", label: "Understanding Accuracy" },
-  { value: "2s", label: "Response Time" },
-  { value: "100%", label: "Data Sovereignty" },
-  { value: "24/7", label: "Availability" },
-];
 
 
 const StatsSection = () => {
-
+  
   const t = useTranslations();
+  const stats = [
+    { value: "99%", label: "Understanding Accuracy" },
+    { value: t("sec", { count: 5 }), label: "Response Time" },
+    { value: "100%", label: "Data Sovereignty" },
+    { value: "24/7", label: "Availability" },
+  ];
 
 
   return (

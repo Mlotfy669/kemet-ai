@@ -62,7 +62,7 @@ export default function FooterSection() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="space-y-4"
+                className="space-y-2"
               >
                 <motion.a
                   initial={{ opacity: 0 }}
@@ -76,6 +76,17 @@ export default function FooterSection() {
                   <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>Sales@kemetai.com</motion.span>
                 </motion.a>
 
+                <motion.a
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                  href="tel:+20 106 443 6853"
+                  className="flex items-center gap-3 text-black font-semibold hover:text-primary-normal transition-colors"
+                >
+                  <Phone className="w-5 h-5 text-secondery-normal" />
+                  <motion.span style={{ direction: "ltr" }} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>+20 106 443 6853</motion.span>
+                </motion.a>
                 <motion.a
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
