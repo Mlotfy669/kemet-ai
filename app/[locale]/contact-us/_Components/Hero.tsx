@@ -14,7 +14,7 @@ const HeroSection = () => {
   const locale = useLocale()
 
   return (
-    <section className="relative md:h-[470px] h-[380px] hero-bg">
+    <section className="relative 2xl:h-[400px] h-[350px] hero-bg">
       <div className="2xl:h-17 xl:h-14 lg:h-15 h-12 container mx-auto" />
       <div className="absolute inset-0 w-full h-full">
         <Image
@@ -28,7 +28,7 @@ const HeroSection = () => {
           className="absolute 2xl:size-20 xl:size-16 lg:size-16 md:size-14 size-8 top-[15vh] left-0"
         />
       </div>
-      <div className="container mx-auto relative px-6 xl:py-10 lg:py-10 md:py-20 py-10">
+      <div className="container mx-auto relative px-6 xl:py-10 lg:py-10 md:py-6 py-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

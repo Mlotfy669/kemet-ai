@@ -52,7 +52,7 @@ const HeroSection = () => {
               <Image
                 src={titleCorner}
                 alt="Title Corner"
-                className="absolute lg:left-2 left-0 lg:-top-4 md:-top-2 2xl:size-10 xl:size-8 md:size-6 size-2"
+                className={`absolute lg:-left-6 left-0 lg:-top-4 md:-top-2 2xl:size-10 xl:size-8 md:size-6 size-2 ${locale === "ar" ? "lg:right-2 right-0 scale-x-[-1]" : "lg:-left-6 left-0"}`}
               />
               <Image
                 src={underline}
