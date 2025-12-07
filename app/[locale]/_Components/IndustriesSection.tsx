@@ -101,12 +101,12 @@ const industries = [
   {
     title: "NLP",
     description:
-      "Comprehensive automation of compliance (KYC/AML) and fraud risk reduction",
+      "nlp desc",
   },
   {
     title: "Vision Analysis",
     description:
-      "Comprehensive automation of compliance (KYC/AML) and fraud risk reduction",
+      "vision desc",
   },
 ];
 
@@ -171,7 +171,7 @@ const IndustrySection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="capitalize lg:text-2xl text-xl md:text-lg text-primary-normal font-bold"
+                className="lg:text-2xl text-xl md:text-lg text-primary-normal font-bold"
               >
                 {t(industry.title)}
               </motion.h3>
@@ -180,7 +180,7 @@ const IndustrySection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="capitalize lg:text-base text-sm max-w-[260px] lg:max-w-full"
+                className="lg:text-base text-sm max-w-[260px] lg:max-w-full"
               >
                 {t(industry.description)}
               </motion.p>

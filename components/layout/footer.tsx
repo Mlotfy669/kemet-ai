@@ -6,12 +6,13 @@ import { Mail, Phone } from "lucide-react";
 import Image from "next/image";
 import footerLogo from "@/public/assets/shared/footerLogo.webp";
 import arrowDown from "@/public/assets/shared/arrowDown.webp";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 
 export default function FooterSection() {
 
   const t = useTranslations();
+  const locale = useLocale();
 
   return (
     <footer className="relative bg-white w-full pt-12 md:pt-16 lg:pt-20 pb-6">
@@ -84,7 +85,7 @@ export default function FooterSection() {
                   className="flex items-center gap-3 text-black font-semibold hover:text-primary-normal transition-colors"
                 >
                   <Phone className="w-5 h-5 text-secondery-normal" />
-                  <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>+20 114 744 4698</motion.span>
+                  <motion.span style={{ direction: "ltr" }} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>+20 114 744 4698</motion.span>
                 </motion.a>
                 <motion.a
                   initial={{ opacity: 0 }}
@@ -95,7 +96,7 @@ export default function FooterSection() {
                   className="flex items-center gap-3 text-black font-semibold hover:text-primary-normal transition-colors"
                 >
                   <Phone className="w-5 h-5 text-secondery-normal" />
-                  <motion.span initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>+20 110 113 1892</motion.span>
+                  <motion.span style={{ direction: "ltr" }} initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>+20 110 113 1892</motion.span>
                 </motion.a>
               </motion.div>
             </motion.div>
@@ -106,14 +107,14 @@ export default function FooterSection() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="lg:col-span-2 flex flex-col gap-4"
+              className="lg:col-span-3 flex flex-col gap-4"
             >
               <motion.h3
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="text-black font-bold capitalize text-lg md:text-xl lg:text-2xl xl:text-3xl"
+                className="text-black font-bold text-lg md:text-xl lg:text-2xl xl:text-3xl"
               >
                 {t("Links")}
               </motion.h3>
@@ -128,7 +129,7 @@ export default function FooterSection() {
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}>
-                  <Link href="/company" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
+                  <Link href="/company" className="text-black font-semibold hover:text-primary-normal transition-colors">
                     {t("About")}
                   </Link>
                 </motion.li>
@@ -137,7 +138,7 @@ export default function FooterSection() {
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}>
-                  <Link href="/contact-us" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
+                  <Link href="/contact-us" className="text-black font-semibold hover:text-primary-normal transition-colors">
                     {t("Contact Us")}
                   </Link>
                 </motion.li>
@@ -150,14 +151,14 @@ export default function FooterSection() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="lg:col-span-2 flex flex-col gap-4"
+              className="lg:col-span-3 flex flex-col gap-4"
             >
               <motion.h3
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="text-black font-bold capitalize text-lg md:text-xl lg:text-2xl xl:text-3xl"
+                className="text-black font-bold  text-lg md:text-xl lg:text-2xl xl:text-3xl"
               >
                 {t("Legal")}
               </motion.h3>
@@ -174,7 +175,7 @@ export default function FooterSection() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
                 >
-                  <Link href="/terms" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
+                  <Link href="/terms" className="text-black font-semibold hover:text-primary-normal transition-colors ">
                     {t("Terms of Use")}
                   </Link>
                 </motion.li>
@@ -184,7 +185,7 @@ export default function FooterSection() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
                 >
-                  <Link href="/policy" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
+                  <Link href="/policy" className="text-black font-semibold hover:text-primary-normal transition-colors ">
                     {t("Privacy Policy")}
                   </Link>
                 </motion.li>
@@ -197,14 +198,14 @@ export default function FooterSection() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="lg:col-span-2 flex flex-col gap-4"
+              className="lg:col-span-3 flex flex-col gap-4"
             >
               <motion.h3
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="text-black font-bold capitalize text-lg md:text-xl lg:text-2xl xl:text-3xl"
+                className="text-black font-bold  text-lg md:text-xl lg:text-2xl xl:text-3xl"
               >
                 {t("Resources")}
               </motion.h3>
@@ -215,77 +216,28 @@ export default function FooterSection() {
                 transition={{ duration: 0.6 }}
                 className="space-y-3"
               >
-                <motion.li
+                {/* <motion.li
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
                 >
-                  <Link href="/blogs" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
+                  <Link href="/blogs" className="text-black font-semibold hover:text-primary-normal transition-colors ">
                     {t("Blog")}
                   </Link>
-                </motion.li>
+                </motion.li> */}
                 <motion.li
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
                 >
-                  <Link href="/blogs" className="text-black font-semibold hover:text-primary-normal transition-colors capitalize">
+                  <Link href="/faq" className="text-black font-semibold hover:text-primary-normal transition-colors ">
                     {t("FAQ")}
                   </Link>
                 </motion.li>
               </motion.ul>
             </motion.div>
-
-            {/* Newsletter Column */}
-            {/* <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="lg:col-span-3 flex flex-col gap-4"
-            >
-              <motion.h3
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="text-black font-bold capitalize text-lg md:text-xl lg:text-2xl xl:text-3xl"
-              >
-                {t("Newsletter")}
-              </motion.h3>
-              <motion.p
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="text-black font-semibold capitalize"
-              >
-                {t("Stay up to date")}
-              </motion.p>
-
-              <motion.form
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="relative"
-                onSubmit={(e) => e.preventDefault()}
-              >
-                <motion.input
-                  type="email"
-                  placeholder={t("Your email")}
-                  className="w-full h-16 md:h-20 px-6 pr-32 md:pr-40 rounded-full border-2 border-[#e1e1e1] bg-white text-black placeholder:text-[#a8a8a8] focus:outline-none focus:border-primary-normal transition-colors"
-                />
-                <motion.button
-                  type="submit"
-                  className="absolute right-2 top-1/2 -translate-y-1/2 h-12 md:h-[60px] px-6 md:px-8 bg-primary-normal text-white rounded-full hover:bg-primary-dark transition-colors capitalize"
-                >
-                  {t("Subscribe")}
-                </motion.button>
-              </motion.form>
-            </motion.div> */}
           </motion.div>
 
           {/* Copyright Section */}
@@ -296,7 +248,7 @@ export default function FooterSection() {
             transition={{ duration: 0.6 }}
             className="pt-8 font-semibold border-t border-[#d9d9d9]"
           >
-            <p className="text-center text-black capitalize">
+            <p className="text-center text-black ">
               © Kemet AI – Sovereign Arabic-Native AI
             </p>
           </motion.div>

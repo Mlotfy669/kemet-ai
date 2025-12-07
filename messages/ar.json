@@ -28,6 +28,8 @@
   "Kemet AI empowers governments and banks with secure, Arabic-native AI": "تعمل Kemet AI على تمكين الحكومات والبنوك بذكاء اصطناعي آمن وناطق باللغة العربية.",
   "Comprehensive automation of compliance (KYC/AML) and fraud risk reduction": "أتمتة شاملة للامتثال (KYC/AML) وتقليل مخاطر الاحتيال.",
   "NLP": "معالجة اللغة الطبيعية (NLP)",
+  "nlp desc": "تُعد معالجة اللغة الطبيعية (NLP) هي الذكاء الأساسي لمنصة KEMET.AI. نحن نتجاوز مجرد قراءة النصوص؛ فنحن نفهم السياق، ونحلل المشاعر، ونستخرج الكيانات من البيانات غير المهيكلة باللغتين العربية والإنجليزية.",
+  "vision desc": "تمكّن خاصية تحليل الرؤية لدينا من تحويل الصور والمستندات الممسوحة ضوئيًا وحتى الفيديو إلى معلومات قابلة للبحث. يُعد هذا الحل بالغ الأهمية للقطاعات التي تعتمد على الأرشيفات الضخمة والعقود المكتوبة، مما يضمن دقة استخراج البيانات بنسبة 100%.",
   "Analysis of medical records and research while preserving patient data privacy": "تحليل السجلات الطبية والأبحاث مع الحفاظ على خصوصية بيانات المريض.",
   "Transforming massive archives into instant intelligence for strategic decision support": "تحويل الأرشيفات الضخمة إلى استخبارات فورية لدعم القرار الاستراتيجي.",
   "Institutional knowledge management and protection of academic/administrative data": "إدارة المعرفة المؤسسية وحماية البيانات الأكاديمية/الإدارية.",
@@ -284,5 +286,11 @@
   "Project details are required": "تفاصيل المشروع مطلوبة",
   "Please Describe How We Can Help You": "يرجى وصف كيف يمكننا مساعدتك",
   "Form submitted successfully!": "تم إرسال النموذج بنجاح!",
-  "Thank you! The form has been submitted successfully We will reply to you soon!": "شكراً لك! تم إرسال النموذج بنجاح. سنرد عليك قريباً!"
+  "Thank you! The form has been submitted successfully We will reply to you soon!": "شكراً لك! تم إرسال النموذج بنجاح. سنرد عليك قريباً!",
+  "abdo desc": "رائد أعمال تقني بخبرة تزيد عن 15 عامًا في الذكاء الاصطناعي، الأمن السيبراني، وتكنولوجيا المعلومات للمؤسسات، يعمل على بناء منتجات قابلة للتطوير وحلول رقمية مع قيادة الابتكار والشراكات الاستراتيجية.",
+  "hakim desc": "مدير منتجات مجموعة رائد في الذكاء الاصطناعي والتعلم الآلي، يعمل على تطوير حلول قائمة على الذكاء الاصطناعي وقابلة للتطوير، وتوجيه الفرق، وقيادة الابتكار الذي يربط بين التكنولوجيا والأهداف التجارية.",
+  "CEO & Founder": "الرئيس التنفيذي والمؤسس",
+  "Lead Group Product Manager": "مدير منتجات مجموعة رائد",
+  "Abdo Farouk": "عبده فاروق",
+  "Mohamed Hakim": "محمد حكيم"
 }

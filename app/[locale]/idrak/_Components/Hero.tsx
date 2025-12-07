@@ -64,7 +64,7 @@ const HeroSection = () => {
               className="2xl:my-8 xl:my-4 lg:my-3 md:my-4 my-6"
             >
               <Link
-                href={`/book-demo`}
+                href={`/contact-us`}
                 className="rounded-full bg-primary-normal hover:bg-primary-normal-hover transition-all px-16 2xl:py-3.5 py-3 2xl:text-base text-[15px]"
               >
                 {t("Book Now !")}

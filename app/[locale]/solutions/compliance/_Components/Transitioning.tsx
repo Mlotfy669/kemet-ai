@@ -1,6 +1,6 @@
 "use client";
 
-import automatingAccess from "@/public/assets/solutions/education/AutomatingAccess.png";
+import automatingAccess from "@/public/assets/solutions/compliance/automated.png";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -60,7 +60,7 @@ export default function Transitioning() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl sm:text-3xl md:text-[30px] xl:text-[37px] 2xl:text-[42px] max-w-full md:max-w-[550px] text-black capitalize font-bold"
+            className="text-xl sm:text-3xl md:text-[30px] xl:text-[37px] 2xl:text-[42px] max-w-full md:max-w-[550px] text-black font-bold"
           >
             {t("Transitioning from Manual Review to Automated, Documented Analysis")}
           </motion.h1>
@@ -71,7 +71,7 @@ export default function Transitioning() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "100px" }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="md:max-w-[510px] text-sm md:text-base xl:text-[20px] text-black/50 capitalize max-w-full mb-2"
+            className="md:max-w-[510px] text-sm md:text-base xl:text-[20px] text-black/50 max-w-full mb-2"
           >
             {t("Transitioning from Manual Review to Automated, Documented Analysis desc")}
           </motion.p>

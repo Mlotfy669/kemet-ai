@@ -24,7 +24,7 @@ function StatItem({ value, label, index, t }: StatItemProps) {
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
-        className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] text-black font-bold capitalize mb-2 sm:mb-3"
+        className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] text-black font-bold mb-2 sm:mb-3"
       >
         {value}
       </motion.p>
@@ -33,7 +33,7 @@ function StatItem({ value, label, index, t }: StatItemProps) {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
-        className="text-base sm:text-lg md:text-xl lg:text-[20px] text-black font-medium capitalize"
+        className="text-base sm:text-lg md:text-xl lg:text-[20px] text-black font-medium"
       >
         {t(label)}
       </motion.p>

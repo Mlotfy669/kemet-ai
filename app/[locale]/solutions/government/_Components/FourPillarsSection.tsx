@@ -94,7 +94,7 @@ export default function FourPillarsSection() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] max-w-full md:max-w-[700px] text-black capitalize font-bold mt-1 mb-3 sm:mb-5 md:mb-7 2xl:mb-10"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] max-w-full md:max-w-[700px] text-black  font-bold mt-1 mb-3 sm:mb-5 md:mb-7 2xl:mb-10"
             >
               {t("The Four Pillars of Secure AI from KEMET")}
             </motion.h2>
@@ -122,7 +122,7 @@ export default function FourPillarsSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="capitalize lg:text-2xl md:text-xl text-lg text-primary-normal font-bold max-w-full 2xl:max-w-[70%]"
+                  className=" lg:text-2xl md:text-xl text-lg text-primary-normal font-bold max-w-full 2xl:max-w-[70%]"
                 >
                   {t(pillar.title)}
                 </motion.h3>
@@ -131,7 +131,7 @@ export default function FourPillarsSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="capitalize text-black max-w-full 2xl:max-w-[90%] text-sm md:text-base"
+                  className=" text-black max-w-full 2xl:max-w-[90%] text-sm md:text-base"
                 >
                   {t(pillar.description)}
                 </motion.p>

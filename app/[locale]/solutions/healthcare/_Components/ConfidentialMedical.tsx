@@ -60,7 +60,7 @@ export default function ConfidentialMedical() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl sm:text-3xl md:text-[30px] xl:text-[37px] 2xl:text-[42px] max-w-full md:max-w-[470px] text-black capitalize font-bold"
+            className="text-xl sm:text-3xl md:text-[30px] xl:text-[37px] 2xl:text-[42px] max-w-full md:max-w-[470px] text-black font-bold"
           >
             {t("Confidential Medical Decision Support and Research Analysis")}
           </motion.h1>
@@ -71,7 +71,7 @@ export default function ConfidentialMedical() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "100px" }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="md:max-w-[510px] text-sm md:text-base xl:text-[20px] text-black/50 capitalize max-w-full mb-2"
+            className="md:max-w-[510px] text-sm md:text-base xl:text-[20px] text-black/50 max-w-full mb-2"
           >
             {t("Confidential Medical Decision Support and Research Analysis desc")}
           </motion.p>

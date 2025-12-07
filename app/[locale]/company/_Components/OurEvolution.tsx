@@ -28,7 +28,7 @@ const Stage: React.FC<StageProps> = ({ title, bgColor, textColor = 'text-black' 
           <circle cx="58.4932" cy="58.4932" fill={bgColor} r="58.4932" />
         </svg>
         <div className={`absolute inset-0 flex items-center justify-center px-2 ${textColor}`}>
-          <p className="text-center capitalize font-extrabold text-[14px] sm:text-[16px] lg:text-[18px] leading-tight">
+          <p className="text-center font-extrabold text-[14px] sm:text-[16px] lg:text-[18px] leading-tight">
             {title}
           </p>
         </div>
@@ -118,7 +118,7 @@ export default function OurEvolution() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="capitalize text-center md:text-start font-bold text-[32px] sm:text-[38px] lg:text-[42px] text-black tracking-tight leading-tight"
+            className="text-center md:text-start font-bold text-[32px] sm:text-[38px] lg:text-[42px] text-black tracking-tight leading-tight"
           >
             {t(`Our Evolution`)}
           </motion.h2>

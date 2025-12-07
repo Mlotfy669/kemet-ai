@@ -2,16 +2,17 @@
 
 import TrustedBy from "@/components/ui/TrustedBy";
 import orangeBlocks from "@/public/assets/home/orangeBlocks.webp";
-import company1 from "@/public/assets/shared/whyUs/company1.webp";
-import company2 from "@/public/assets/shared/whyUs/company2.webp";
-import company3 from "@/public/assets/shared/whyUs/company3.webp";
-import company4 from "@/public/assets/shared/whyUs/company4.webp";
-import company5 from "@/public/assets/shared/whyUs/company5.webp";
+import company1 from "@/public/assets/shared/partner/1.svg";
+import company2 from "@/public/assets/shared/partner/2.svg";
+import company3 from "@/public/assets/shared/partner/3.svg";
+import company4 from "@/public/assets/shared/partner/4.svg";
+import company5 from "@/public/assets/shared/partner/5.svg";
+import company6 from "@/public/assets/shared/partner/6.svg";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
-const brands = [company1, company2, company3, company4, company5];
+const brands = [company1, company2, company3, company4, company5, company6];
 
 const BrandsTrustSection = () => {
 
@@ -50,7 +51,7 @@ const BrandsTrustSection = () => {
                 alt={`brand-${index}`}
                 width={300}
                 height={100}
-                className="md:w-auto w-[100px] object-contain"
+                className="md:w-[190px] w-[140px]"
               />
             ))}
           </motion.div>

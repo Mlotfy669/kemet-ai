@@ -45,7 +45,7 @@ const NavbarActions = ({ mobileMenuOpen, setMobileMenuOpen }: NavbarActionsProps
 
       {/* Book Demo Button */}
       <Link
-        href="/book-demo"
+        href="/contact-us"
         className="hidden rounded-full border border-primary-normal hover:bg-primary-normal-hover px-4 xl:py-2.5 py-1.5 xl:text-sm text-xs xl:font-semibold font-medium text-white transition-all lg:block"
       >
         {t(`Book A Demo`)}

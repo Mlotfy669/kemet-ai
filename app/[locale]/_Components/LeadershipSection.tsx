@@ -9,12 +9,13 @@ import Image from "next/image";
 
 interface TestimonialCardProps {
   name: string;
-  testimonial: string;
+  desc: string;
+  job: string;
   image: any;
   index: number;
 }
 
-function TestimonialCard({ name, testimonial, image, index }: TestimonialCardProps) {
+function TestimonialCard({ name, desc, job, image, index }: TestimonialCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -56,18 +57,23 @@ function TestimonialCard({ name, testimonial, image, index }: TestimonialCardPro
           className="flex-1"
         >
           <motion.h3
-            className="text-xl sm:text-2xl capitalize text-black font-bold mb-4"
+            className="text-xl sm:text-2xl text-black font-bold mb-2"
           >
             {name}
+          </motion.h3>
+          <motion.h3
+            className="text-base sm:text-lg text-primary-normal font-bold mb-1"
+          >
+            {job}
           </motion.h3>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5, delay: index * 0.2 + 0.4 }}
-            className="text-sm sm:text-base text-black/60 capitalize"
+            className="text-sm sm:text-base text-black/60"
           >
-            {testimonial}
+            {desc}
           </motion.p>
         </motion.div>
       </motion.div>
@@ -81,16 +87,16 @@ export default function LeadershipSection() {
 
   const testimonials = [
     {
-      name: "Hakim Mohamed",
-      testimonial:
-        "Sed eu in tincidunt arcu et faucibus a. Arcu, risus sapien ac odio ipsum risus imperdiet. Sed eu in tincidunt arcu et faucibus a. Arcu, risus sapien ac odio ipsum risus imperdiet.",
-      image: hakim,
+      name: t("Abdo Farouk"),
+      desc: t("abdo desc"),
+      job: t("CEO & Founder"),
+      image: abdo,
     },
     {
-      name: "Abdo Farouk",
-      testimonial:
-        "Sed eu in tincidunt arcu et faucibus a. Arcu, risus sapien ac odio ipsum risus imperdiet. Sed eu in tincidunt arcu et faucibus a. Arcu, risus sapien ac odio ipsum risus imperdiet.",
-      image: abdo,
+      name: t("Mohamed Hakim"),
+      job: t("Lead Group Product Manager"),
+      desc: t("hakim desc"),
+      image: hakim,
     },
   ];
 
@@ -124,10 +130,10 @@ export default function LeadershipSection() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12 sm:mb-16 lg:mb-20"
+          className="flex flex-col justify-center items-center gap-2 mb-12 sm:mb-16 lg:mb-20"
         >
           {/* Trusted Badge */}
-          <TrustedBy />
+          <TrustedBy shouldBeCol={false} />
 
           {/* Main Heading */}
           <motion.h2
@@ -135,7 +141,7 @@ export default function LeadershipSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] text-black capitalize font-bold max-w-4xl mx-auto px-4"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] text-black font-bold max-w-4xl mx-auto px-4"
           >
             {t("Leadership at KEMET")}
           </motion.h2>
@@ -153,7 +159,8 @@ export default function LeadershipSection() {
             <TestimonialCard
               key={testimonial.name}
               name={testimonial.name}
-              testimonial={testimonial.testimonial}
+              desc={testimonial.desc}
+              job={testimonial.job}
               image={testimonial.image}
               index={index}
             />

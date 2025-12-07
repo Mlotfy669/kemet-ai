@@ -144,7 +144,7 @@ export default function ContactForm() {
       setIsSubmitting(true);
       try {
         const formData = new FormData(e.target as HTMLFormElement);
-        formData.append("access_key", "a6297c09-48b8-4b4b-9e94-41ba842bdf65");
+        formData.append("access_key", process.env.NEXT_PUBLIC_WEB_FORM_ACCESS_KEY as string);
 
         const response = await fetch("https://api.web3forms.com/submit", {
           method: "POST",
@@ -208,7 +208,7 @@ export default function ContactForm() {
 
       <div className="w-full max-w-[680px] mx-auto px-3">
         <div className="bg-[#f2f2f2] rounded-[31px] flex flex-col gap-4 p-4 md:p-8">
-          <h2 className="capitalize text-primary-normal md:text-xl text-lg font-bold">
+          <h2 className="text-primary-normal md:text-xl text-lg font-bold">
             {t(`Contact Us`)}
           </h2>
 

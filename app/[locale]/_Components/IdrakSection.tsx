@@ -89,7 +89,7 @@ export default function IdraakHero() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] max-w-full md:max-w-[650px] text-black capitalize font-bold mt-1 mb-3 sm:mb-5 md:mb-7 2xl:mb-10"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] max-w-full md:max-w-[650px] text-black font-bold mt-1 mb-3 sm:mb-5 md:mb-7 2xl:mb-10"
           >
             {t("Idraak is the advanced RAG engine launched by KEMET")}
           </motion.h1>
@@ -100,7 +100,7 @@ export default function IdraakHero() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-sm sm:text-base text-black capitalize leading-relaxed max-w-full md:max-w-[670px]"
+            className="text-sm sm:text-base text-black leading-relaxed max-w-full md:max-w-[670px]"
           >
             {t("Its mission is to transform billions of internal data points into accurate")}
           </motion.p>
@@ -139,7 +139,7 @@ export default function IdraakHero() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="text-lg sm:text-xl md:text-[24px] font-bold text-black capitalize mb-6 sm:mb-8 max-w-md mx-auto"
+            className="text-lg sm:text-xl md:text-[24px] font-bold text-black mb-6 sm:mb-8 max-w-md mx-auto"
           >
             {t("Discover the power of Idraak in boosting your team's efficiency")}
           </motion.h2>
@@ -154,7 +154,7 @@ export default function IdraakHero() {
           >
             <Link
               href="/idrak"
-              className="bg-primary-normal hover:bg-primary-normal-hover text-white sm:text-lg text-base px-6 sm:px-12 py-3 sm:py-4 rounded-full capitalize transition-colors"
+              className="bg-primary-normal hover:bg-primary-normal-hover text-white sm:text-lg text-base px-6 sm:px-12 py-3 sm:py-4 rounded-full transition-colors"
             >
               {t("Discover Idrak Now !")}
             </Link>

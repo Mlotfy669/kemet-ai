@@ -246,7 +246,7 @@ const UseCases = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="capitalize flex 2xl:text-[28px] xl:text-2xl lg:text-xl text-xl md:text-lg text-primary-normal font-bold 2xl:max-w-4/5"
+                className="flex 2xl:text-[28px] xl:text-2xl lg:text-xl text-xl md:text-lg text-primary-normal font-bold 2xl:max-w-4/5"
               >
                 {t(industry.title)}
               </motion.h3>
@@ -256,7 +256,7 @@ const UseCases = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "100px" }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className={`flex flex-col items-center gap-2 list-disc text-black capitalize max-w-[280px] w-full mb-2 ${locale === "ar" ? "text-base md:text-lg xl:text-xl 2xl:text-2xl" : "text-base md:text-lg xl:text-lg 2xl:text-xl"}`}
+                className={`flex flex-col items-center gap-2 list-disc text-black max-w-[280px] w-full mb-2 ${locale === "ar" ? "text-base md:text-lg xl:text-xl 2xl:text-2xl" : "text-base md:text-lg xl:text-lg 2xl:text-xl"}`}
               >
                 <motion.li
                   initial={{ opacity: 0, y: 30 }}

@@ -68,7 +68,7 @@ export default function VisionMissionSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-2xl sm:text-3xl md:text-[42px] text-black font-bold capitalize mb-0 sm:mb-8"
+                className="text-2xl sm:text-3xl md:text-[42px] text-black font-bold mb-0 sm:mb-8"
               >
                 {t("Our Vision")}
               </motion.h2>
@@ -84,7 +84,7 @@ export default function VisionMissionSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.6, delay: 0.3 }}
-                  className="text-sm sm:text-base text-black/50 capitalize leading-relaxed"
+                  className="text-sm sm:text-base text-black/50 leading-relaxed"
                 >
                   {t("To be the key player in the EMEA region providing world-class digital transformation services through Sovereign AI")}
                 </motion.p>
@@ -103,7 +103,7 @@ export default function VisionMissionSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6, delay: 0.5 }}
-                className="text-2xl sm:text-3xl md:text-[42px] text-black font-bold capitalize mb-0 sm:mb-8"
+                className="text-2xl sm:text-3xl md:text-[42px] text-black font-bold mb-0 sm:mb-8"
               >
                 {t("Our Mission")}
               </motion.h2>
@@ -119,7 +119,7 @@ export default function VisionMissionSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.6, delay: 0.6 }}
-                  className="text-sm sm:text-base text-black/50 capitalize leading-relaxed"
+                  className="text-sm sm:text-base text-black/50 leading-relaxed"
                 >
                   {t("We are committed to solving complex technology problems by providing simple, efficient, and effective solutions for transforming businesses into the digital world")}
                 </motion.p>

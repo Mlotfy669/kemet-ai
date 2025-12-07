@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import blueBlocks from "@/public/assets/home/ready/blueBlocks.webp";
 import orangeBlocks from "@/public/assets/home/ready/orangesBlocks.webp";
 import Image from "next/image";
+import { Link } from "@/i18n/routing";
 
 
 const svgPaths = {
@@ -114,7 +115,7 @@ export default function CTASection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-3xl sm:text-4xl md:text-[42px] text-black font-bold capitalize mb-4"
+            className="text-3xl sm:text-4xl md:text-[42px] text-black font-bold mb-4"
           >
             {t("Invest in Trustworthy and Secure AI")}
           </motion.h2>
@@ -125,23 +126,27 @@ export default function CTASection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-sm sm:text-base md:text-lg text-black capitalize mb-4"
+            className="text-sm sm:text-base md:text-lg text-black mb-4"
           >
             {t("Request a Technical Consultation to Integrate KEMET")}
           </motion.p>
 
           {/* CTA Button */}
-          <motion.button
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.6 }}
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, delay: 0.8 }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="cursor-pointer bg-primary-normal w-fit hover:bg-primary-normal-hover text-white px-10 sm:px-12 md:px-14 py-3.5 sm:py-4 md:py-[15px] rounded-full capitalize transition-colors text-base font-extrabold"
           >
-            {t("Book a Demo Now !")}
-          </motion.button>
+            <Link
+              href="/contact-us"
+              className="bg-primary-normal hover:bg-primary-normal-hover text-white sm:text-lg text-base px-6 sm:px-12 py-3 sm:py-4 rounded-full transition-colors"
+            >
+              {t("Book a Demo Now !")}
+            </Link>
+          </motion.div>
         </motion.div>
       </motion.div>
     </section>

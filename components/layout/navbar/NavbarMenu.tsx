@@ -105,7 +105,7 @@ const NavbarMenu = ({ isScrolled }: { isScrolled: boolean }) => {
       </li>
 
       {/* Resources */}
-      <li className="h-full flex items-center">
+      {/* <li className="h-full flex items-center">
         <Link
           href="/blogs"
           className={`${pathname === "/blogs" ? `${isScrolled ? `text-primary-darker bg-white/20` : `text-primary-normal bg-primary-light-hover/20`} rounded-full font-bold` : 'font-medium text-white'} px-4 group relative h-full flex items-center overflow-hidden xl:text-base text-sm`}
@@ -118,7 +118,7 @@ const NavbarMenu = ({ isScrolled }: { isScrolled: boolean }) => {
             {t(`Resources`)}
           </span>
         </Link>
-      </li>
+      </li> */}
 
       {/* Company */}
       <li className="h-full flex items-center">

@@ -86,7 +86,7 @@ export default function EducationSector() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] max-w-full md:max-w-1/2 text-black capitalize font-bold mt-1 mb-3 sm:mb-5 md:mb-7 2xl:mb-10"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] max-w-full md:max-w-1/2 text-black font-bold mt-1 mb-3 sm:mb-5 md:mb-7 2xl:mb-10"
           >
             {t("The Education sector struggles with massive volumes")}
           </motion.h1>
@@ -97,7 +97,7 @@ export default function EducationSector() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-sm sm:text-base text-black capitalize leading-relaxed max-w-full md:max-w-[670px]"
+            className="text-sm sm:text-base text-black leading-relaxed max-w-full md:max-w-[670px]"
           >
             {t("The Education sector struggles with massive volumes desc")}
           </motion.p>

@@ -88,13 +88,13 @@ const NavbarDrawer = ({ isOpen, onClose }: NavbarDrawerProps) => {
           </Link>
 
           {/* Resources */}
-          <Link
+          {/* <Link
             href="/blogs"
             className="text-white font-medium hover:text-primary-darker transition-colors text-sm"
             onClick={onClose}
           >
             {t(`Resources`)}
-          </Link>
+          </Link> */}
 
 
           {/* Company */}

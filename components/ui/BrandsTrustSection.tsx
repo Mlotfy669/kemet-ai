@@ -1,16 +1,16 @@
 "use client";
 
 import TrustedBy from "@/components/ui/TrustedBy";
-import company1 from "@/public/assets/shared/whyUs/company1.webp";
-import company2 from "@/public/assets/shared/whyUs/company2.webp";
-import company3 from "@/public/assets/shared/whyUs/company3.webp";
-import company4 from "@/public/assets/shared/whyUs/company4.webp";
-import company5 from "@/public/assets/shared/whyUs/company5.webp";
-import { motion } from "framer-motion";
+import company1 from "@/public/assets/shared/partner/1.svg";
+import company2 from "@/public/assets/shared/partner/2.svg";
+import company3 from "@/public/assets/shared/partner/3.svg";
+import company4 from "@/public/assets/shared/partner/4.svg";
+import company5 from "@/public/assets/shared/partner/5.svg";
+import company6 from "@/public/assets/shared/partner/6.svg";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
-const brands = [company1, company2, company3, company4, company5];
+const brands = [company1, company2, company3, company4, company5, company6];
 
 const BrandsTrustSection = () => {
 
@@ -26,15 +26,15 @@ const BrandsTrustSection = () => {
           {t("These Brands Trust Us")}
         </h2>
 
-        <div className="w-full flex flex-wrap items-center justify-center xl:gap-12 gap-6 2xl:mt-8 md:mt-6 mt-3">
+        <div className="w-full flex flex-wrap items-center justify-center 2xl:gap-8 xl:gap-6 gap-2 2xl:mt-8 md:mt-6 mt-2">
           {brands.map((brand, index) => (
             <Image
               key={index}
               src={brand}
               alt={`brand-${index}`}
               width={300}
-              height={100}
-              className="xl:w-auto lg:w-[120px] md:w-[100px] w-[80px] object-contain"
+              height={50}
+              className="2xl:w-[190px] xl:w-[160px] md:w-[140px] w-[100px]"
             />
           ))}
         </div>

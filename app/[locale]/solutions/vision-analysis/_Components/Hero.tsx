@@ -25,7 +25,7 @@ const HeroSection = () => {
         <Image src={heroBgFrame2} alt="Hero Background Frame 2" className="absolute 2xl:size-20 xl:size-18 lg:size-16 md:size-14 size-12 bottom-[10vh] right-0" />
         <Image src={heroBgFrame3} alt="Hero Background Frame 3" className="absolute 2xl:size-20 xl:size-12 lg:size-16 md:size-14 size-8 top-[15vh] left-0" />
       </div>
-      <div className="container h-full mx-auto relative px-6 2xl:py-32 xl:py-6 lg:py-10 md:py-20 py-30">
+      <div className="container h-full mx-auto relative px-6 2xl:py-20 xl:py-6 lg:py-10 md:py-10 py-8">
         <div className={`flex h-full items-start md:flex-row flex-col xl:gap-20 lg:gap-12 md:gap-8 gap-8 mx-auto`}>
           {/* left Content */}
           <motion.div
@@ -69,8 +69,8 @@ const HeroSection = () => {
               className="2xl:my-8 xl:my-4 lg:my-3 md:my-4 my-3"
             >
               <Link
-                href={`/book-demo`}
-                className="rounded-full bg-primary-normal hover:bg-primary-normal-hover transition-all px-16 2xl:py-3.5 py-2.5 2xl:text-base xl:text-[15px] lg:text-[15px] md:text-[15px] text-[13px]"
+                href={`/contact-us`}
+                className="rounded-full bg-primary-normal hover:bg-primary-normal-hover transition-all px-16 2xl:py-3.5 py-3 2xl:text-base xl:text-[15px] lg:text-[15px] md:text-[15px] text-[13px]"
               >
                 {t("Get In Touch !")}
               </Link>
