@@ -87,7 +87,7 @@ const HeroSection = () => {
               poster='/assets/idrak/hero.png'
               className="w-full 2xl:h-[610px] xl:h-[440px] lg:h-[400px] md:h-[350px] h-[250px] object-fill 2xl:rounded-4xl xl:rounded-3xl lg:rounded-2xl rounded-xl"
             >
-              <source src={`/assets/idrak/idraak.mp4`} type="video/mp4" />
+              <source src={`/assets/idrak/Idraak.mp4`} type="video/mp4" />
               متصفحك مش بيدعم عرض الفيديو.
             </video>
           </motion.div>
