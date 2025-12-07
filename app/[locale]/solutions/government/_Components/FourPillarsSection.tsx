@@ -8,8 +8,8 @@ import Image from "next/image";
 
 const pillars = [
   {
-    title: "Built Specifically for Government (Multi-Layered Architecture)",
-    description: "Built Specifically for Government (Multi-Layered Architecture) desc",
+    title: "Built Specifically for Government",
+    description: "Built Specifically for Government desc",
   },
   {
     title: "Instant Respond",
