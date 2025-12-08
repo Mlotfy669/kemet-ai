@@ -41,7 +41,7 @@ export default function RegulatoryCompliance() {
 
 
   return (
-    <section className="relative w-full bg-[#fbfbfb] py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
+    <section className="relative w-full bg-[#fbfbfb] py-12 sm:py-16 md:py-20 lg:py-16 overflow-hidden bg-fixed bg-[url('/assets/solutions/compliance/compliance-sec2-bg.png')] bg-size-[100%_100%] bg-no-repeat">
       <motion.div
         initial={{ opacity: 0, rotate: 0 }}
         animate={{ opacity: 1, rotate: 45 }}

@@ -134,9 +134,16 @@ const AwarenessSection = () => {
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{
+                y: -8,
+                scale: 1.02,
+                boxShadow: "0px 80px 100px 0px rgba(185,192,201,0.35)",
+                borderColor: "var(--color-primary-normal)",
+                transition: { duration: 0.3, ease: "easeOut" }
+              }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white rounded-[10px] border border-[#f3f3f3] shadow-[0px_61.49px_76.86px_0px_rgba(185,192,201,0.2)] 2xl:p-6 p-4 flex flex-col lg:gap-5 md:gap-4 gap-3 items-center text-center"
+              className="cursor-pointer bg-white rounded-[10px] border border-[#f3f3f3] shadow-[0px_61.49px_76.86px_0px_rgba(185,192,201,0.2)] 2xl:p-6 p-4 flex flex-col lg:gap-5 md:gap-4 gap-3 items-center text-center"
             >
               <motion.h3
                 initial={{ opacity: 0, y: 30 }}

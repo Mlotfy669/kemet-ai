@@ -18,6 +18,7 @@ const solutions = [
   { title: "Healthcare", href: "/solutions/healthcare" },
   { title: "Education", href: "/solutions/education" },
   { title: "Compliance & Audit", href: "/solutions/compliance" },
+  { title: "Solution NLP", href: "/solutions/nlp" },
 ];
 
 const NavbarDrawer = ({ isOpen, onClose }: NavbarDrawerProps) => {

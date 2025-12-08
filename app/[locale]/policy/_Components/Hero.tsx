@@ -41,7 +41,8 @@ const HeroSection = () => {
             alt="Title underline"
             className="absolute left-0 md:-bottom-5 -bottom-5 -z-1 lg:w-[230px] md:w-[230px] w-[200px]"
           />
-          {t("Privacy Policy")}
+          <span className="text-[#FFC27A]">{t(`Privacy Policy`).split(' ').slice(0, 1).join(" ")}</span> {` `}
+          {t(`Privacy Policy`).split(' ').slice(1).join(" ")}
         </motion.h1>
       </div>
     </section>

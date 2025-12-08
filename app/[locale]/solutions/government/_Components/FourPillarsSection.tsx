@@ -69,7 +69,7 @@ export default function FourPillarsSection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="container mx-auto px-4 md:px-6 lg:px-8"
+        className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10"
       >
 
         <motion.div
@@ -113,9 +113,16 @@ export default function FourPillarsSection() {
                 key={index}
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
+                whileHover={{
+                  y: -8,
+                  scale: 1.02,
+                  boxShadow: "0px 80px 100px 0px rgba(185,192,201,0.35)",
+                  borderColor: "var(--color-primary-normal)",
+                  transition: { duration: 0.3, ease: "easeOut" }
+                }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="flex flex-col lg:gap-5 md:gap-4 gap-3 bg-white rounded-[10px] p-3 md:p-5 2xl:p-10 shadow-[0px_61.494px_76.868px_0px_rgba(185,192,201,0.2)] hover:shadow-[0px_80px_100px_0px_rgba(185,192,201,0.3)] transition-shadow duration-300"
+                className=" cursor-pointer flex flex-col lg:gap-5 md:gap-4 gap-3 bg-white rounded-[10px] p-3 md:p-5 2xl:p-10 shadow-[0px_61.494px_76.868px_0px_rgba(185,192,201,0.2)] hover:shadow-[0px_80px_100px_0px_rgba(185,192,201,0.3)] transition-shadow duration-300"
               >
                 <motion.h3
                   initial={{ opacity: 0, y: 30 }}

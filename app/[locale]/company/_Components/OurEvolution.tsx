@@ -22,7 +22,19 @@ const svgPaths = {
 
 const Stage: React.FC<StageProps> = ({ title, bgColor, textColor = 'text-black' }) => {
   return (
-    <div className="flex flex-col items-center gap-2">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      whileHover={{
+        y: -8,
+        scale: 1.02,
+        boxShadow: "0px 80px 100px 0px rgba(185,192,201,0.35)",
+        borderColor: "var(--color-primary-normal)",
+        transition: { duration: 0.3, ease: "easeOut" }
+      }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.6 }}
+      className="cursor-pointer flex flex-col items-center gap-2">
       <div className="relative size-[80px] sm:size-[100px] lg:size-[117px]">
         <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 117 117">
           <circle cx="58.4932" cy="58.4932" fill={bgColor} r="58.4932" />
@@ -33,7 +45,7 @@ const Stage: React.FC<StageProps> = ({ title, bgColor, textColor = 'text-black' 
           </p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

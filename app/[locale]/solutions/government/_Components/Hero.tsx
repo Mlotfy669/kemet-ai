@@ -1,6 +1,5 @@
 "use client";
 
-import BrandsTrustSection from "@/components/ui/BrandsTrustSection";
 import { Link } from "@/i18n/routing";
 import arrowDown from "@/public/assets/shared/heroArrowDown.webp";
 import heroBgFrame1 from "@/public/assets/shared/heroBgFrame1.webp";
@@ -18,28 +17,28 @@ const HeroSection = () => {
   const locale = useLocale()
 
   return (
-    <section className="relative h-screen hero-bg mb-20 lg:mb-40">
+    <section className="relative 2xl:h-[80vh] xl:h-[85vh] lg:h-[60vh] md:h-[45vh] h-[45vh] hero-bg">
       <div className="2xl:h-17 xl:h-14 lg:h-15 h-12 container mx-auto" />
       <div className="absolute inset-0 w-full h-full">
-        <Image src={heroBgFrame1} alt="Hero Background Frame 1" className="absolute 2xl:size-24 xl:size-22 lg:size-20 md:size-18 size-16 bottom-[19vh] left-0" />
+        <Image src={heroBgFrame1} alt="Hero Background Frame 1" className="absolute 2xl:size-24 xl:size-22 lg:size-20 md:size-18 size-16 bottom-[19vh] left-0 lg:block hidden" />
         <Image src={heroBgFrame2} alt="Hero Background Frame 2" className="absolute 2xl:size-20 xl:size-18 lg:size-16 md:size-14 size-12 bottom-[10vh] right-0" />
-        <Image src={heroBgFrame3} alt="Hero Background Frame 3" className="absolute 2xl:size-20 xl:size-12 lg:size-16 md:size-14 size-8 top-[15vh] left-0" />
+        <Image src={heroBgFrame3} alt="Hero Background Frame 3" className="absolute 2xl:size-20 xl:size-12 lg:size-16 md:size-14 size-8 top-[15vh] left-0 lg:block hidden" />
       </div>
-      <div className="container h-full mx-auto relative px-6 2xl:py-20 xl:py-6 lg:py-10 md:py-10 py-8">
+      <div className="container h-full mx-auto relative px-6 2xl:py-20 xl:py-6 lg:py-10 md:py-10 py-6">
         <div className={`flex h-full items-start md:flex-row flex-col xl:gap-20 lg:gap-12 md:gap-8 gap-8 mx-auto`}>
           {/* left Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-white flex flex-col xl:gap-2 lg:gap-7 md:gap-6 gap-10"
+            className="text-white flex flex-col xl:gap-2 lg:gap-7 gap-6"
           >
 
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className={`font-bold leading-snug relative z-10 ${locale === "ar" ? "2xl:text-[53px] xl:text-[48px] lg:text-[44px] md:text-[36px] text-[27px]" : "2xl:text-7xl xl:text-[50px] lg:text-[44px] md:text-[40px] text-[32px]"}`}
+              className={`font-bold leading-snug relative z-10 ${locale === "ar" ? "2xl:text-[53px] xl:text-[48px] lg:text-[44px] md:text-[36px] text-[26px]" : "2xl:text-7xl xl:text-[50px] lg:text-[44px] md:text-[40px] text-[33px]"}`}
             >
               <Image
                 src={underline}
@@ -79,12 +78,11 @@ const HeroSection = () => {
               width={600}
               height={600}
               priority
-              className="lg:rounded-b-[45px] rounded-[20px] shadow-sm 2xl:w-[600px] xl:w-[490px] lg:w-[400px] md:w-[300px] w-full"
+              className="lg:rounded-b-[45px] rounded-[20px] shadow-sm max-h-[65vh] 2xl:w-[600px] xl:w-[490px] lg:w-[400px] md:w-[300px] w-full"
             />
           </motion.div>
         </div>
       </div>
-      <BrandsTrustSection />
     </section>
   );
 }

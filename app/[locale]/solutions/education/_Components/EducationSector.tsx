@@ -41,7 +41,7 @@ export default function EducationSector() {
 
 
   return (
-    <section className="relative w-full bg-[#fbfbfb] py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
+    <section className="relative w-full bg-[#fbfbfb] py-12 sm:py-16 md:py-20 lg:py-16 overflow-hidden bg-fixed bg-[url('/assets/solutions/education/education-sec2-bg.png')] bg-size-[100%_100%] bg-no-repeat">
       <motion.div
         initial={{ opacity: 0, rotate: 0 }}
         animate={{ opacity: 1, rotate: 45 }}
@@ -75,7 +75,6 @@ export default function EducationSector() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="mb-6 sm:mb-8 md:mb-7 2xl:mb-10"
         >
           {/* Trusted Badge */}
           <TrustedBy />

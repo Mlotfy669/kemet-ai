@@ -18,6 +18,7 @@ const NavbarMenu = ({ isScrolled }: { isScrolled: boolean }) => {
     { title: "Healthcare", href: "/solutions/healthcare", isActive: pathname === "/solutions/healthcare" },
     { title: "Education", href: "/solutions/education", isActive: pathname === "/solutions/education" },
     { title: "Compliance & Audit", href: "/solutions/compliance", isActive: pathname === "/solutions/compliance" },
+    { title: "Solution NLP", href: "/solutions/nlp", isActive: pathname === "/solutions/nlp" },
   ];
 
 

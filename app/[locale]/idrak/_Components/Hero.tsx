@@ -39,7 +39,15 @@ const HeroSection = () => {
                 alt="Title underline"
                 className="absolute right-0 lg:-bottom-9 -bottom-2 -z-1 xl:w-auto lg:w-[250px] md:w-[230px] w-[200px]"
               />
-              {t("Idraak's Enterprise-Grade RAG")}
+              {
+                t(`Idraak's Enterprise-Grade RAG`)
+                  .split(/(RAG)/g)
+                  .map((part, i) =>
+                    part === 'RAG' ? (
+                      <span key={i} className="text-[#FFC27A]">{part}</span>
+                    ) : part
+                  )
+              }
             </h1>
             <h2 className={`2xl:mb-8 mb-3 font-bold leading-tight relative z-10 2xl:text-5xl xl:text-[48px] lg:text-[42px] md:text-[37px] text-[21px]`}>
               ({t("Retrieval-Augmented Generation")})

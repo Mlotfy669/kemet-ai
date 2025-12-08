@@ -1,7 +1,6 @@
 "use client";
 
 import TrustedBy from "@/components/ui/TrustedBy";
-import orangeBlocks from "@/public/assets/home/idrak/orangeBlocks.webp";
 import { motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -41,7 +40,7 @@ export default function StrengthExtends() {
 
 
   return (
-    <section className="relative w-full bg-[#fbfbfb] py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
+    <section className="relative w-full bg-[#fbfbfb] py-12 sm:py-16 md:py-20 lg:py-16 overflow-hidden bg-fixed bg-[url('/assets/solutions/vision-analysis/vision-sec2-bg.png')] bg-size-[100%_100%] bg-no-repeat">
       <motion.div
         initial={{ opacity: 0, rotate: 0 }}
         animate={{ opacity: 1, rotate: 45 }}
@@ -59,9 +58,6 @@ export default function StrengthExtends() {
         <AbstractShape />
       </motion.div>
 
-      <Image src={orangeBlocks} alt="Hero Background Frame 3" className="absolute 2xl:h-20 2xl:w-auto xl:h-16 xl:w-auto lg:h-14 lg:w-auto md:h-12 md:w-auto size-8 top-30 -right-4" />
-
-
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -75,7 +71,7 @@ export default function StrengthExtends() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="max-w-3xl mb-6 sm:mb-8 md:mb-7 2xl:mb-10"
+          className="max-w-3xl"
         >
           {/* Trusted Badge */}
           <TrustedBy />

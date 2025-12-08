@@ -1,12 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
+import TrustedBy from "@/components/ui/TrustedBy";
 import blueBlocks from "@/public/assets/home/ready/blueBlocks.webp";
 import orangeBlocks from "@/public/assets/home/ready/orangesBlocks.webp";
+import { motion } from "framer-motion";
+import { Download } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
-import TrustedBy from "@/components/ui/TrustedBy";
-import { Link } from "@/i18n/routing";
 
 export default function WorkWithUs() {
 
@@ -68,21 +68,36 @@ export default function WorkWithUs() {
           </motion.p>
 
           {/* CTA Button */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Link
-              href="/contact-us"
-              className="bg-primary-normal hover:bg-primary-normal-hover text-white sm:text-lg text-base px-6 sm:px-12 py-3 sm:py-4 rounded-full transition-colors"
+          <div className="flex items-center gap-3">
+            <motion.a
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="group bg-primary-normal hover:bg-primary-normal-hover text-white sm:text-base text-sm px-4 sm:px-7 py-2 sm:py-3 flex items-center gap-2 rounded-full transition-colors"
+              href="/assets/company/Idraak-Marketing-Presentation.pdf"
+              download
             >
-              {t("Book Now !")}
-            </Link>
-          </motion.div>
+              Idraak Presentation{" "}
+              <Download className="opacit y-60 group-hover:translate-y-1 transition" />
+            </motion.a>
+            <motion.a
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              href="/assets/company/KEMET-AI-PROFILE.pdf"
+              className="group bg-primary-normal hover:bg-primary-normal-hover text-white sm:text-base text-sm px-4 sm:px-7 py-2 sm:py-3 flex items-center gap-2 rounded-full transition-colors"
+              download
+            >
+              KEMET AI Profile{" "}
+              <Download className="opacit y-60 group-hover:translate-y-1 transition" />
+            </motion.a>
+          </div>
         </motion.div>
       </motion.div>
     </section>

@@ -18,15 +18,15 @@ const HeroSection = () => {
   const locale = useLocale()
 
   return (
-    <section className="relative h-screen hero-bg mb-20 lg:mb-40">
+    <section className="relative xl:h-[80vh] lg:h-[60vh] md:h-[45vh] h-[53vh] hero-bg">
       <div className="2xl:h-17 xl:h-14 lg:h-15 h-12 container mx-auto" />
       <div className="absolute inset-0 w-full h-full">
-        <Image src={heroBgFrame1} alt="Hero Background Frame 1" className="absolute 2xl:size-24 xl:size-22 lg:size-20 md:size-18 size-16 bottom-[19vh] left-0" />
+        <Image src={heroBgFrame1} alt="Hero Background Frame 1" className="absolute 2xl:size-24 xl:size-22 lg:size-20 md:size-18 size-16 bottom-[19vh] left-0 lg:block hidden" />
         <Image src={heroBgFrame2} alt="Hero Background Frame 2" className="absolute 2xl:size-20 xl:size-18 lg:size-16 md:size-14 size-12 bottom-[10vh] right-0" />
-        <Image src={heroBgFrame3} alt="Hero Background Frame 3" className="absolute 2xl:size-20 xl:size-12 lg:size-16 md:size-14 size-8 top-[15vh] left-0" />
+        <Image src={heroBgFrame3} alt="Hero Background Frame 3" className="absolute 2xl:size-20 xl:size-12 lg:size-16 md:size-14 size-8 top-[15vh] left-0 lg:block hidden" />
       </div>
-      <div className="container h-full mx-auto relative px-6 2xl:py-20 xl:py-6 lg:py-10 md:py-10 py-8">
-        <div className={`flex h-full items-start md:flex-row flex-col xl:gap-10 lg:gap-12 md:gap-8 gap-8 mx-auto`}>
+      <div className="container h-full mx-auto relative px-6 2xl:py-20 xl:py-12 lg:py-10 md:py-10 py-6">
+        <div className={`flex h-full items-start md:flex-row flex-col xl:gap-20 lg:gap-12 md:gap-3 gap-3 mx-auto`}>
           {/* left Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -43,14 +43,22 @@ const HeroSection = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className={`font-bold md:mb-4 mb-6 leading-tight relative z-10 ${locale === "ar" ? "md:w-[90%] mb-8 2xl:text-6xl xl:text-[52px] lg:text-[44px] md:text-[36px] text-[27px]" : "2xl:text-[70px] xl:text-[60px] lg:text-[44px] md:text-[40px] text-[31px]"}`}
+                className={`font-bold md:mb-4 mb-6 leading-tight relative z-10 ${locale === "ar" ? "mb-8 2xl:text-6xl xl:text-[52px] lg:text-[44px] md:text-[36px] text-[27px]" : "2xl:text-[70px] xl:text-[60px] lg:text-[44px] md:text-[40px] text-[31px]"}`}
               >
                 <Image
                   src={underline}
                   alt="Title underline"
                   className={`absolute -bottom-5 -z-1 lg:w-[250px] md:w-[230px] w-[200px] ${locale === "ar" ? "left-20" : "right-10"}`}
                 />
-                {t("We've Been Building Applied AI Since 2020")}
+                {
+                  t(`We've Been Building Applied AI Since 2020`)
+                    .split(/(AI|الذكاء الاصطناعي)/g)
+                    .map((part, i) =>
+                      (part === 'AI' || part === 'الذكاء الاصطناعي') ? (
+                        <span key={i} className="text-[#FFC27A]">{part}</span>
+                      ) : part
+                    )
+                }
               </motion.h1>
               <motion.span
                 initial={{ opacity: 0, y: 20 }}
@@ -100,7 +108,6 @@ const HeroSection = () => {
           </motion.div>
         </div>
       </div>
-      <BrandsTrustSection />
     </section>
   );
 }
