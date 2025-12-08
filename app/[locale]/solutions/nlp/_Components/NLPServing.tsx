@@ -167,7 +167,7 @@ const NLPServing = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="flex 2xl:text-3xl xl:text-2xl lg:text-xl text-xl md:text-lg text-primary-normal font-bold 2xl:max-w-4/5"
+                className="flex 2xl:text-3xl xl:text-2xl lg:text-xl text-xl md:text-lg text-primary-normal font-bold"
               >
                 {t(industry.title)}
               </motion.h3>
