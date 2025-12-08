@@ -1,6 +1,5 @@
 
 import AwarenessSection from "./_Components/AwarenessSection";
-import BrandsTrustSection from "./_Components/BrandsTrustSection";
 import CTASection from "./_Components/CtaSection";
 import DiscoverThePower from "./_Components/DiscoverThePower";
 import HeroSection from "./_Components/Hero";
@@ -14,7 +13,6 @@ const IdrakPage = () => {
     <main className="flex-1">
       <HeroSection />
       <AwarenessSection />
-      <BrandsTrustSection />
       <HowIdrakWork />
       <StatsSection />
       <DiscoverThePower />
