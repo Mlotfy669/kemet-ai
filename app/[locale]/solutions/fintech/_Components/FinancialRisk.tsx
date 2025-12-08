@@ -14,7 +14,7 @@ export default function FinancialRisk() {
 
 
   return (
-    <section className="relative w-full bg-[#fbfbfb] py-12 sm:py-12 md:py-20 lg:py-24 overflow-hidden">
+    <section className="relative w-full bg-[#fbfbfb] pt-12 sm:pt-12 md:pt-20 lg:pt-24 overflow-hidden">
       <motion.div
         initial={{ opacity: 0, rotate: 0 }}
         animate={{ opacity: 1, rotate: 45 }}

@@ -11,7 +11,7 @@ export default function Transitioning() {
 
 
   return (
-    <section className="relative w-full bg-[#fbfbfb] py-12 sm:py-12 md:py-20 lg:py-24 overflow-hidden">
+    <section className="relative w-full bg-[#fbfbfb] p-12 sm:p-12 md:p-20 lg:p-24 overflow-hidden">
       <motion.div
         initial={{ opacity: 0, rotate: 0 }}
         animate={{ opacity: 1, rotate: 45 }}

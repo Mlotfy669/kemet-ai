@@ -13,7 +13,7 @@ export default function FullTransparency() {
 
 
   return (
-    <section className="relative w-full bg-[#fbfbfb] py-12 sm:py-12 md:py-20 lg:py-24 overflow-hidden">
+    <section className="relative w-full bg-[#fbfbfb] pb-10 overflow-hidden">
       <motion.div
         initial={{ opacity: 0, rotate: 0 }}
         animate={{ opacity: 1, rotate: 45 }}
