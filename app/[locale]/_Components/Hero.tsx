@@ -40,7 +40,7 @@ const HeroSection = () => {
               transition={{ delay: 0.2 }}
               className="rounded-full bg-[#ffc17a3d] px-4 py-0.5 text-sm font-light text-white"
             >
-              {t("Trusted By")} <b className="font-bold mx-0.5">150,000+</b> {t("Users")} <span className="text-base">👋</span>
+              {t("Trusted By")} <b className="font-bold mx-0.5">50,000+</b> {t("Users")} <span className="text-base">👋</span>
             </motion.span>
 
             <motion.h1

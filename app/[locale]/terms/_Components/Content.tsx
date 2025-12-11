@@ -135,18 +135,6 @@ const TermsContent = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="max-w-[700px] flex flex-col md:gap-5 gap-3">
-          <SectionHeader title="Limitation of Liability" />
-          <motion.p className="md:ms-6 ms-5 text-base md:text-[19px]">
-            {t('Limitation of Liability desc')}
-          </motion.p>
-        </motion.section>
-
-        {/* Section 6 */}
-        <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="max-w-[700px] flex flex-col md:gap-5 gap-3">
           <SectionHeader title="Governing Law" />
           <motion.p className="md:ms-6 ms-5 text-base md:text-[19px]">
             {t('Governing Law desc')}

@@ -20,6 +20,14 @@ function StarRating() {
         fill="none"
         viewBox="0 0 77 13"
       >
+        <defs>
+          <clipPath id="leftHalf">
+            <rect x="64" y="0" width="6.5" height="13" />
+          </clipPath>
+          <clipPath id="rightHalf">
+            <rect x="70.5" y="0" width="6.5" height="13" />
+          </clipPath>
+        </defs>
         <g>
           <path
             d={svgPaths.pebddb00}
@@ -37,6 +45,13 @@ function StarRating() {
             d={svgPaths.p9e70880}
             fill="var(--color-primary-normal)"
           />
+          {/* Left half - primary color */}
+          <path
+            d={svgPaths.p3d52aa00}
+            fill="var(--color-primary-normal)"
+            clipPath="url(#leftHalf)"
+          />
+          {/* Right half - gray color */}
           <path
             d={svgPaths.p3d52aa00}
             fill="#5B7486"
