@@ -153,6 +153,16 @@ export default function FooterSection() {
                     {t("Contact Us")}
                   </Link>
                 </motion.li>
+                <motion.li
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <Link href="/faq" className="text-black font-semibold hover:text-primary-normal transition-colors ">
+                    {t("FAQ")}
+                  </Link>
+                </motion.li>
               </motion.ul>
             </motion.div>
 
@@ -202,8 +212,7 @@ export default function FooterSection() {
                 </motion.li>
               </motion.ul>
             </motion.div>
-
-            {/* Resources Column */}
+            {/* Address Column */}
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -216,38 +225,18 @@ export default function FooterSection() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
-                className="text-black font-bold  text-lg md:text-xl lg:text-2xl xl:text-3xl"
+                className="text-black font-bold text-lg md:text-xl lg:text-2xl xl:text-3xl"
               >
-                {t("Resources")}
+                {t("Address")}
               </motion.h3>
-              <motion.ul
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-                className="space-y-3"
-              >
-                {/* <motion.li
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <Link href="/blogs" className="text-black font-semibold hover:text-primary-normal transition-colors ">
-                    {t("Blog")}
-                  </Link>
-                </motion.li> */}
-                <motion.li
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <Link href="/faq" className="text-black font-semibold hover:text-primary-normal transition-colors ">
-                    {t("FAQ")}
-                  </Link>
-                </motion.li>
-              </motion.ul>
+              <div className="flex flex-col gap-3">
+                <a href="" target="_blank" rel="noopener noreferrer" className="text-black font-semibold text-sm">
+                  {t("Qatar Address")}
+                </a>
+                <a href="https://maps.app.goo.gl/6Q9dYYr8Ksp34fxXA" target="_blank" rel="noopener noreferrer" className="text-black font-semibold text-sm">
+                  {t("Egypt Address")}
+                </a>
+              </div>
             </motion.div>
           </motion.div>
 
@@ -265,6 +254,6 @@ export default function FooterSection() {
           </motion.div>
         </motion.div>
       </div>
-    </footer>
+    </footer >
   );
 }
