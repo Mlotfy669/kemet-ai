@@ -5,10 +5,11 @@ import orangeBlocks from "@/public/assets/home/orangeBlocks.webp";
 import company1 from "@/public/assets/shared/partner/1.svg";
 import company2 from "@/public/assets/shared/partner/2.svg";
 import company3 from "@/public/assets/shared/partner/3.svg";
-import company5 from "@/public/assets/shared/partner/4.svg";
 import company7 from "@/public/assets/shared/partner/5.svg";
 import company6 from "@/public/assets/shared/partner/6.svg";
 import company4 from "@/public/assets/shared/partner/7.svg";
+import company5 from "@/public/assets/shared/partner/8.svg";
+
 import { motion } from "framer-motion";
 import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
