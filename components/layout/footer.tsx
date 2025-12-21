@@ -9,7 +9,7 @@ import arrowDown from "@/public/assets/shared/arrowDown.webp";
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 
-export default function FooterSection() {
+export default function Footer() {
 
   const t = useTranslations();
   const locale = useLocale();
