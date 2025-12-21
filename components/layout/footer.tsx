@@ -230,7 +230,7 @@ export default function FooterSection() {
                 {t("Address")}
               </motion.h3>
               <div className="flex flex-col gap-3">
-                <a href="" target="_blank" rel="noopener noreferrer" className="text-black font-semibold text-sm">
+                <a href="https://maps.app.goo.gl/ZpnHaambNZR5WkDH8?g_st=iw" target="_blank" rel="noopener noreferrer" className="text-black font-semibold text-sm">
                   {t("Qatar Address")}
                 </a>
                 <a href="https://maps.app.goo.gl/6Q9dYYr8Ksp34fxXA" target="_blank" rel="noopener noreferrer" className="text-black font-semibold text-sm">
